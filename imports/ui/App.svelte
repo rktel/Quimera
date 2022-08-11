@@ -11,7 +11,7 @@
   let reports = [];
   const jgetReports = (_) => {
 
-     switch (dateViewSelected) {
+     switch (dateReportSelected) {
        case 0:
          Meteor.call('reports.getTodayReport');
          break;
