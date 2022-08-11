@@ -17,5 +17,12 @@ Meteor.methods({
         console.log(startToday);
         const reports = Reports.find({}, { dateAndTime: { $gte: startToday }, sort:{serverTime: -1} }).fetch();
         return reports;
+    },
+    'reports.getYesterdayReport': function () {
+        let startYesterday = new Date();
+        startYesterday.setDate(startYesterday.getTime()-1);
+        console.log(startYesterday);
+        //const reports = Reports.find({}, { dateAndTime: { $gte: startToday }, sort:{serverTime: -1} }).fetch();
+        //return reports;
     }
 })
