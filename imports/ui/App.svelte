@@ -13,10 +13,10 @@
 
      switch (dateReportSelected) {
        case 0:
-         Meteor.call('reports.getTodayReport');
+         Meteor.call('reports.getTodayReport', (e,r)=> console.log(r));
          break;
        case 1:
-         Meteor.call('reports.getYesterdayReport');
+         Meteor.call('reports.getYesterdayReport', (e,r)=> console.log(r));
          break;
        case 2:
          Meteor.call('reports.query', (e,r)=> console.log(r));
