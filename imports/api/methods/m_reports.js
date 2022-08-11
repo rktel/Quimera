@@ -15,7 +15,7 @@ Meteor.methods({
         let startToday = new Date();
         startToday.setHours(0, 0, 0, 0);
         console.log(startToday);
-        const reports = Reports.find({}, { dateAndTime: { $gte: startToday } }).fetch();
+        const reports = Reports.find({}, { dateAndTime: { $gte: startToday }, sort:{_id: -1} }).fetch();
         return reports;
     }
 })
