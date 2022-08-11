@@ -15,18 +15,18 @@ Meteor.methods({
         let startToday = new Date();
         startToday.setHours(0, 0, 0, 0);
         console.log(startToday);
-        const reports = Reports.find({}, { dateAndTime: { $gte: startToday }, sort:{serverTime: -1} }).fetch();
+        const reports = Reports.find({ dateAndTime: { $gte: startToday } }).fetch().reverse();
         return reports;
     },
     'reports.getYesterdayReport': function () {
         let startYesterday = new Date();
-        startYesterday.setDate(startYesterday.getDate()-1);
-        startYesterday.setHours(0,0,0,0);
+        startYesterday.setDate(startYesterday.getDate() - 1);
+        startYesterday.setHours(0, 0, 0, 0);
         let endYesterday = new Date();
-        endYesterday.setDate(endYesterday.getDate()-1);
-        endYesterday.setHours(23,59,59,999);
-        console.log(startYesterday," & " ,endYesterday);
-        const reports = Reports.find({}, { dateAndTime: { $gte: startYesterday, $lte:endYesterday  }, sort:{serverTime: -1} }).fetch();
+        endYesterday.setDate(endYesterday.getDate() - 1);
+        endYesterday.setHours(23, 59, 59, 999);
+        console.log(startYesterday, " & ", endYesterday);
+        const reports = Reports.find({ dateAndTime: { $gte: startYesterday, $lte: endYesterday } }).fetch().reverse();
         return reports;
     }
 })
