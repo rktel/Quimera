@@ -10,7 +10,7 @@
   let imei;
   let reports = [];
   const jgetReports = (_) => {
-    Meteor.call('reports.query', (error,result)=> {
+    Meteor.call('reports.getTodayReport', (error,result)=> {
       console.log(result);
     })
     // switch (dateViewSelected) {
