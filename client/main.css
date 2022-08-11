@@ -118,5 +118,8 @@ select{
   padding: 6px 8px;
   color: var(--white);
   text-transform: uppercase;
-  border: 1px peru dashed;
+  border: 1px turquoise dashed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
