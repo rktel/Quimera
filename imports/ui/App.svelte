@@ -6,11 +6,11 @@
   import TimerSandFull from "./components/icons/TimerSandFull.svelte";
   import Navbar from "./components/Navbar.svelte";
 
-  let dateViewSelected = 0;
+  let dateReportSelected = 0;
   let imei;
-  let views = [];
-  const jgetViews = (_) => {
-    Meteor.call('views.query', (error,result)=> {
+  let reports = [];
+  const jgetReports = (_) => {
+    Meteor.call('reports.query', (error,result)=> {
       console.log(result);
     })
     // switch (dateViewSelected) {
@@ -28,18 +28,18 @@
     // }
   };
   $: {
-    console.log(dateViewSelected);
+    console.log(dateReportSelected);
   }
 </script>
 
 <Navbar>
   <div slot="left" class="item-container">
-    <select name="dateView" id="dateView" bind:value={dateViewSelected}>
+    <select name="dateView" id="dateView" bind:value={dateReportSelected}>
       <option value={0}>HOY</option>
       <option value={1}>AYER</option>
       <option value={2}>FECHA</option>
     </select>
-    {#if dateViewSelected === 2}
+    {#if dateReportSelected === 2}
       <div class="item-container" transition:fly={{ x: -200, duration: 500 }}>
         <span class="span">
           <TimerSandEmpty size="1.4em" />
@@ -58,7 +58,7 @@
       placeholder="IMEI"
       bind:value={imei}
     />
-    <button class="btn primary" disabled={!imei} on:click={jgetViews}>
+    <button class="btn primary" disabled={!imei} on:click={jgetReports}>
       <DatabaseEye size="1.4em" />
     </button>
   </div>
