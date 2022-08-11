@@ -20,7 +20,7 @@ Meteor.methods({
     },
     'reports.getYesterdayReport': function () {
         let startYesterday = new Date();
-        startYesterday.setDate(startYesterday.getTime()-1);
+        startYesterday.setDate(startYesterday.getDate()-1);
         console.log(startYesterday);
         //const reports = Reports.find({}, { dateAndTime: { $gte: startToday }, sort:{serverTime: -1} }).fetch();
         //return reports;
