@@ -10,22 +10,20 @@
   let imei;
   let reports = [];
   const jgetReports = (_) => {
-    Meteor.call('reports.getYesterdayReport', (error,result)=> {
-      console.log(result);
-    })
-    // switch (dateViewSelected) {
-    //   case 0:
-    //     Meteor.call("views.today");
-    //     break;
-    //   case 1:
-    //     Meteor.call("views.yesterday");
-    //     break;
-    //   case 2:
-    //     Meteor.call("views.dates");
-    //     break;
-    //   default:
-    //     break;
-    // }
+
+     switch (dateViewSelected) {
+       case 0:
+         Meteor.call('reports.getTodayReport');
+         break;
+       case 1:
+         Meteor.call('reports.getYesterdayReport');
+         break;
+       case 2:
+         Meteor.call('reports.query');
+         break;
+       default:
+         break;
+     }
   };
   $: {
     console.log(dateReportSelected);

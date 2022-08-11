@@ -26,7 +26,7 @@ Meteor.methods({
         endYesterday.setDate(endYesterday.getDate()-1);
         endYesterday.setHours(23,59,59,999);
         console.log(startYesterday," & " ,endYesterday);
-        //const reports = Reports.find({}, { dateAndTime: { $gte: startToday }, sort:{serverTime: -1} }).fetch();
-        //return reports;
+        const reports = Reports.find({}, { dateAndTime: { $gte: startYesterday, $lte:endYesterday  }, sort:{serverTime: -1} }).fetch();
+        return reports;
     }
 })
