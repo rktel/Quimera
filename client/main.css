@@ -1,0 +1,122 @@
+:root{
+  --font-family: 'Chakra Petch', sans-serif;
+  --font-size: 13px;
+  --primary: #1F4690;
+  --primary-a: #2F66a0;
+  --secondary: #F57979;
+  --secondary-a: #F05454;
+  --dark: #323232;
+  --dark-a: #353535;
+  --white: #eaeaea;
+  --nature: #5BB318;
+  --hover-brightness: 1.2;
+  --border-radius: 2px;
+}
+
+*{
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+body{
+  overflow: hidden;
+  background-color: var(--dark);
+  color: var(--white);
+}
+/* BUTTONS */
+.btn{
+  border: none;
+  min-width: 30px;
+  min-height: 40px;
+  border-radius: var(--border-radius);
+  padding: 6px 8px;
+  color: var(--white);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn:active{
+  filter: brightness(var(--hover-brightness));
+}
+.btn:disabled{
+  background-color: var(--dark-a);
+  cursor: default;
+}
+/*COLORS*/
+.primary{
+  background-color: var(--primary);
+}
+.secondary{
+  background-color: var(--secondary);
+}
+.darka{
+  background-color: var(--dark-a);
+}
+/* NAVBAR */
+.navbar{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 18px;
+  height: 50px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+.navbar .item-container{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-v{
+  height: 100vh;
+  width: 60px;
+  position: absolute;
+  top: 0;
+  background-color: var(--secondary-a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  padding: 20px 0;
+}
+.navbar-v .item{
+  cursor: pointer;
+  width: 30px;
+  height: 40px;
+}
+
+/* DRAWER */
+.drawer{
+  height: 100vh;
+  width: 360px;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  background-color: var(--primary-a);
+  box-shadow: -7px 0 7px -7px rgba(0,0,0,0.2);
+}
+
+/* INPUT & SELECT*/
+input[type="text"], input[type="date"]{
+  padding: 4px 4px;
+  width: 130px;
+  border-radius: var(--border-radius);
+}
+select{
+  padding: 4px 4px;
+}
+/* SPAN */
+.span{
+  border: none;
+  min-width: 30px;
+  min-height: 40px;
+  border-radius: var(--border-radius);
+  padding: 6px 8px;
+  color: var(--white);
+  text-transform: uppercase;
+  border: 1px peru dashed;
+}
