@@ -19,7 +19,7 @@
          Meteor.call('reports.getYesterdayReport');
          break;
        case 2:
-         Meteor.call('reports.query');
+         Meteor.call('reports.query', (e,r)=> console.log(r));
          break;
        default:
          break;
