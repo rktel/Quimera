@@ -12,7 +12,7 @@ Meteor.methods({
     },
     'sessions.getSingle': async function(imei){
         imei = Number(imei);
-        const session = await Sessions.findOne(imei);
+        const session = await Sessions.find({imei}).fetch();
         return session;
     }
 });
