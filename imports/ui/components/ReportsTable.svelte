@@ -26,11 +26,11 @@
         <tbody>
             {#each reports as report }
             <tr>
-                <td>{report.serverTimeFormat}</td>
-                <td>{report.dateAndTimeFormat}</td>
+                <td class="w-220">{report.serverTimeFormat}</td>
+                <td class="w-220">{report.dateAndTimeFormat}</td>
                 <td>{report.imei}</td>
                 <td>{report.numberOfRecord}</td>
-                <td>{report.latitude}, {report.longitude}</td>
+                <td class="w-220">{report.latitude}, {report.longitude}</td>
                 <td>{report.altitude}</td>
                 <td>{report.speed}</td>
                 <td>{report.direction}</td>

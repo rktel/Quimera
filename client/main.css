@@ -143,3 +143,7 @@ select{
 .table tbody tr:nth-child(odd){
   background-color: var(--dark-a);
 }
+/* EXTRAS */
+.w-220{
+  width: 220px;
+}
