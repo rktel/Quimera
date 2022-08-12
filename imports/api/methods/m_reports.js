@@ -28,5 +28,8 @@ Meteor.methods({
         console.log(startYesterday, " & ", endYesterday);
         const reports = await Reports.find({ dateAndTime: { $gte: startYesterday, $lte: endYesterday } }).fetch().reverse();
         return reports;
+    },
+    'reports.getRangeReport': async function(startDay,endDay){
+        console.log(startDay,"&&",endDay);
     }
 })

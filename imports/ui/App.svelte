@@ -7,6 +7,7 @@
   import Navbar from "./components/Navbar.svelte";
 
   let dateReportSelected = 0;
+  let startDay,endDay;
   let imei;
   let reports = [];
   const jgetReports = (_) => {
@@ -19,7 +20,7 @@
          Meteor.call('reports.getYesterdayReport', (e,r)=> console.log(r));
          break;
        case 2:
-         Meteor.call('reports.query', (e,r)=> console.log(r));
+         Meteor.call('reports.getRangeReport',(startDay, endDay) ,(e,r)=> console.log(r));
          break;
        default:
          break;
@@ -42,11 +43,11 @@
         <span class="span">
           <TimerSandEmpty size="1.4em" />
         </span>
-        <input type="date" name="date-start" id="date-start" />
+        <input type="date" name="date-start" id="date-start" bind:value={startDay}/>
         <span class="span">
           <TimerSandFull size="1.4em" />
         </span>
-        <input type="date" name="date-end" id="date-end" />
+        <input type="date" name="date-end" id="date-end" bind:value={endDay}/>
       </div>
     {/if}
     <input
