@@ -36,6 +36,7 @@ Meteor.methods({
         endDay.setHours(23, 59, 59, 999);
         console.log(startDay,"&&",endDay);
         const reports = await Reports.find({ dateAndTime: { $gte: startDay, $lte: endDay } }).fetch().reverse();
+        console.log(reports);
         return reports;
     }
 })
