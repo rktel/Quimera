@@ -7,11 +7,11 @@
     <table class="table">
         <thead>
             <tr>
-                <th>FechaHoraServer</th>
-                <th>FechaHoraGPS</th>
+                <th class="w-220">FechaHoraServer</th>
+                <th class="w-220">FechaHoraGPS</th>
                 <th>IMEI</th>
                 <th>Record</th>
-                <th>Coordenadas</th>
+                <th class="w-220">Coordenadas</th>
                 <th>Altitud</th>
                 <th>Velocidad</th>
                 <th>Rumbo</th>
@@ -26,11 +26,11 @@
         <tbody>
             {#each reports as report }
             <tr>
-                <td class="w-220">{report.serverTimeFormat}</td>
-                <td class="w-220">{report.dateAndTimeFormat}</td>
+                <td>{report.serverTimeFormat}</td>
+                <td>{report.dateAndTimeFormat}</td>
                 <td>{report.imei}</td>
                 <td>{report.numberOfRecord}</td>
-                <td class="w-220">{report.latitude}, {report.longitude}</td>
+                <td>{report.latitude}, {report.longitude}</td>
                 <td>{report.altitude}</td>
                 <td>{report.speed}</td>
                 <td>{report.direction}</td>

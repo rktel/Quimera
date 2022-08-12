@@ -144,6 +144,6 @@ select{
   background-color: var(--dark-a);
 }
 /* EXTRAS */
-.w-220{
-  width: 220px;
+.w-300{
+  width: 300px !important;
 }
