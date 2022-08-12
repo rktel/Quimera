@@ -144,6 +144,6 @@ select{
   background-color: var(--dark-a);
 }
 /* EXTRAS */
-.w-300{
+.table th .w-300{
   width: 300px !important;
 }
