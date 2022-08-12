@@ -6,7 +6,7 @@ Meteor.methods({
         const {imei,_session,serverTimeFormat} = dataObject;
         Sessions.upsert(imei, {
             $set:{
-                _session,serverTimeFormat
+                _session,serverTimeFormat,imei
             }
         })
     }
