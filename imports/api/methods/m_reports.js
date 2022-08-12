@@ -11,14 +11,14 @@ Meteor.methods({
             const report = Reports.insert(report_array[key]);
         }
     },
-    'reports.getTodayReport': function () {
+    'reports.getTodayReport': async function () {
         let startToday = new Date();
         startToday.setHours(0, 0, 0, 0);
         console.log(startToday);
-        const reports = Reports.find({ dateAndTime: { $gte: startToday } }).fetch().reverse();
+        const reports = await Reports.find({ dateAndTime: { $gte: startToday } }).fetch().reverse();
         return reports;
     },
-    'reports.getYesterdayReport': function () {
+    'reports.getYesterdayReport': async function () {
         let startYesterday = new Date();
         startYesterday.setDate(startYesterday.getDate() - 1);
         startYesterday.setHours(0, 0, 0, 0);
@@ -26,7 +26,7 @@ Meteor.methods({
         endYesterday.setDate(endYesterday.getDate() - 1);
         endYesterday.setHours(23, 59, 59, 999);
         console.log(startYesterday, " & ", endYesterday);
-        const reports = Reports.find({ dateAndTime: { $gte: startYesterday, $lte: endYesterday } }).fetch().reverse();
+        const reports = await Reports.find({ dateAndTime: { $gte: startYesterday, $lte: endYesterday } }).fetch().reverse();
         return reports;
     }
 })
