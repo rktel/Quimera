@@ -3,6 +3,7 @@ import { Commands } from '../collections/c_commands';
 
 Meteor.methods({
     'commands.insert': function(imei, command){
+        console.log(imei, command);
         Meteor.call('sessions.getSingle',imei, (e,r)=>{
             console.log(r);
         });
