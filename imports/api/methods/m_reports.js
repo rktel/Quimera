@@ -30,6 +30,10 @@ Meteor.methods({
         return reports;
     },
     'reports.getRangeReport': async function(startDay,endDay){
+        startDay = new Date(startDay);
+        startDay.setHours(0, 0, 0, 0);
+        endDay = new Date(endDay);
+        endDay.setHours(23, 59, 59, 999);
         console.log(startDay,"&&",endDay);
     }
 })
