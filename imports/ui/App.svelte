@@ -4,13 +4,17 @@
   import DatabaseEye from "svelte-material-icons/DatabaseEye.svelte";
   import TimerSandEmpty from "svelte-material-icons/TimerSandEmpty.svelte";
   import TimerSandFull from "./components/icons/TimerSandFull.svelte";
+  import VisualStudioCode from "./components/icons/VisualStudioCode.svelte";
   import Navbar from "./components/Navbar.svelte";
   import ReportsTable from "./components/ReportsTable.svelte";
 
   let dateReportSelected = 0;
   let startDay,endDay;
-  let imei;
+  let imei,command;
   let reports = [];
+  const jsendCommand = (_) => {
+    console.log(command);
+  }
   const jgetReports = (_) => {
 
      switch (dateReportSelected) {
@@ -60,16 +64,32 @@
         <input type="date" name="date-end" id="date-end" bind:value={endDay}/>
       </div>
     {/if}
-    <input
-      type="text"
-      name="imei"
-      id="imei"
-      placeholder="IMEI"
-      bind:value={imei}
-    />
-    <button class="btn primary" disabled={!imei} on:click={jgetReports}>
-      <DatabaseEye size="1.4em" />
-    </button>
+      <div class="item-container">
+          <input
+          type="text"
+          name="imei"
+          id="imei"
+          placeholder="IMEI"
+          bind:value={imei}
+        />
+        <button class="btn primary" disabled={!imei} on:click={jgetReports}>
+          <DatabaseEye size="1.4em" />
+        </button>
+      </div>
+    {#if reports.length > 0}
+      <div class="item-container" transition:fly={{ x: 0, duration: 300 }}>
+          <input
+          type="text"
+          name="command"
+          id="command"
+          placeholder="Comando"
+          bind:value={command}
+        />
+        <button class="btn secondary" disabled={!command} on:click={jsendCommand}>
+          <VisualStudioCode size="1.4em" />
+        </button>
+      </div>
+    {/if}
   </div>
   <!-- <div slot="center" class="item-container">George</div>-->
   <div slot="right" class="item-container" />

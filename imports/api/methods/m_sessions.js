@@ -9,5 +9,10 @@ Meteor.methods({
                 _session, serverTime, serverTimeFormat
             }
         })
+    },
+    'sessions.getSingle': async function(imei){
+        imei = Number(imei);
+        const session = await Sessions.findOne(imei);
+        return session;
     }
 });
