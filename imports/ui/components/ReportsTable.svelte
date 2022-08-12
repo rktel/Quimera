@@ -7,11 +7,11 @@
     <table class="table">
         <thead>
             <tr>
-                <th class="w-300">FechaHoraServer</th>
-                <th class="w-300">FechaHoraGPS</th>
+                <th>FechaHoraServer</th>
+                <th>FechaHoraGPS</th>
                 <th>IMEI</th>
                 <th>Record</th>
-                <th class="w-300">Coordenadas</th>
+                <th>Coordenadas</th>
                 <th>Altitud</th>
                 <th>Velocidad</th>
                 <th>Rumbo</th>

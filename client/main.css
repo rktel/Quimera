@@ -130,6 +130,10 @@ select{
   overflow: auto;
   padding: 10px 20px;
 }
+table.table{
+  table-layout: auto;
+  width: 100%;
+}
 .table{
   border: dashed 1px var(--secondary-a);
 }
@@ -144,6 +148,3 @@ select{
   background-color: var(--dark-a);
 }
 /* EXTRAS */
-.table th .w-300{
-  width: 300px !important;
-}
