@@ -125,8 +125,8 @@ select{
 }
 /* TABLE */
 .table-container{
-  height: 100vh;
-  width: 100vw;
+  height: calc(100vh - 100px);
+  width: calc(100vw - 100px);
   overflow: auto;
   padding: 10px 20px;
 }
