@@ -2,17 +2,16 @@
     export let reports = [];
 </script>
 
-<div>
+<div class="table-container">
     {#if reports.length > 0}
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <th>FechaHoraServer</th>
                 <th>FechaHoraGPS</th>
                 <th>IMEI</th>
                 <th>Record</th>
-                <th>Latitud</th>
-                <th>Longitud</th>
+                <th>Coordenadas</th>
                 <th>Altitud</th>
                 <th>Velocidad</th>
                 <th>Rumbo</th>
@@ -21,6 +20,7 @@
                 <th>HDOP</th>
                 <th>Kilometraje</th>
                 <th>VoltajeInput_0</th>
+                <th>Raw</th>
             </tr>
         </thead>
         <tbody>
@@ -30,8 +30,7 @@
                 <td>{report.dateAndTimeFormat}</td>
                 <td>{report.imei}</td>
                 <td>{report.numberOfRecord}</td>
-                <td>{report.latitude}</td>
-                <td>{report.longitude}</td>
+                <td>{report.latitude}, {report.longitude}</td>
                 <td>{report.altitude}</td>
                 <td>{report.speed}</td>
                 <td>{report.direction}</td>
@@ -40,6 +39,7 @@
                 <td>{report.hdop}</td>
                 <td>{report.odometer}</td>
                 <td>{report.inputVoltage0}</td>
+                <td>{report.raw}</td>
             </tr>
             {/each}
         </tbody>

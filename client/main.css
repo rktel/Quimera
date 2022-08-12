@@ -123,3 +123,16 @@ select{
   align-items: center;
   justify-content: center;
 }
+/* TABLE */
+.table-container{
+  overflow: auto;
+}
+.table{
+  margin: 10px 20px;
+}
+.table td,th{
+  border: 1px solid var(--dark-a);
+}
+.table tbody tr:nth-child(odd){
+  background-color: var(--dark-a);
+}
