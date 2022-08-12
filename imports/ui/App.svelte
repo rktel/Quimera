@@ -5,6 +5,7 @@
   import TimerSandEmpty from "svelte-material-icons/TimerSandEmpty.svelte";
   import TimerSandFull from "./components/icons/TimerSandFull.svelte";
   import Navbar from "./components/Navbar.svelte";
+  import ReportsTable from "./components/ReportsTable.svelte";
 
   let dateReportSelected = 0;
   let startDay,endDay;
@@ -64,3 +65,4 @@
   <!-- <div slot="center" class="item-container">George</div>-->
   <div slot="right" class="item-container" />
 </Navbar>
+<ReportsTable reports={reports}></ReportsTable>
