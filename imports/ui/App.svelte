@@ -20,7 +20,7 @@
          Meteor.call('reports.getYesterdayReport', (e,r)=> console.log(r));
          break;
        case 2:
-         Meteor.call('reports.getRangeReport',(startDay, endDay) ,(e,r)=> console.log(r));
+         Meteor.call('reports.getRangeReport',startDay, endDay,(e,r)=> console.log(r));
          break;
        default:
          break;
