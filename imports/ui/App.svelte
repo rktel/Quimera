@@ -15,13 +15,22 @@
 
      switch (dateReportSelected) {
        case 0:
-         Meteor.call('reports.getTodayReport', imei,(e,r)=> console.log(r));
+         Meteor.call('reports.getTodayReport', imei,(e,r)=> {
+          reports = r;
+          console.log(r);
+        });
          break;
        case 1:
-         Meteor.call('reports.getYesterdayReport',imei, (e,r)=> console.log(r));
+         Meteor.call('reports.getYesterdayReport',imei, (e,r)=> {
+          reports = r;
+          console.log(r);
+        });
          break;
        case 2:
-         Meteor.call('reports.getRangeReport',imei, startDay, endDay,(e,r)=> console.log(r));
+         Meteor.call('reports.getRangeReport',imei, startDay, endDay,(e,r)=> {
+          reports = r;
+          console.log(r);
+        });
          break;
        default:
          break;
