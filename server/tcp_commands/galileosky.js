@@ -24,5 +24,11 @@ function commandFormat(imei, command, _session){
     const tagLengthImei = imei.length
     const tagLengthCommand = command.length
     const tagLengthSession = _session.length
-    return Buffer.from(head+tagLengthImei+imei+tagLengthCommand+command+tagLengthSession+_session)
+    const total = [
+        head, 
+        tagLengthImei, ...Buffer.from(imei),
+        tagLengthCommand, ...Buffer.from(command),
+        tagLengthSession, ...Buffer.from(_session)
+    ]
+    return Buffer.from(total)
 }
