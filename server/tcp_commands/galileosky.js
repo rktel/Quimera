@@ -10,7 +10,7 @@ Meteor.methods({
     'galileo.command': function (imei, command, _session) {
         client.connect(portServer, ipServer, function() {
             console.log('Connected');
-            client.write(imei+','+command+','+JSON.stringify(_session));
+            client.write(imei+';'+command+';'+JSON.stringify(_session));
             client.destroy();
         });
         client.on('close', function() {
