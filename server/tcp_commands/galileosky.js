@@ -10,7 +10,7 @@ Meteor.methods({
     'galileo.command': function (imei, command, _session) {
         client.connect(portServer, ipServer, function() {
             console.log('Connected');
-            client.write(imei+';'+command+';'+JSON.stringify(_session));
+            client.write(commandFormat(imei,command,JSON.stringify(_session)));
             client.destroy();
         });
         client.on('close', function() {
@@ -18,3 +18,11 @@ Meteor.methods({
         });
     }
 });
+
+function commandFormat(imei, command, _session){
+    const head = '#'
+    const tagLengthImei = imei.length
+    const tagLengthCommand = command.length
+    const tagLengthSession = _session.length
+    return head+tagLengthImei+imei+tagLengthCommand+command+tagLengthSession+_session
+}
