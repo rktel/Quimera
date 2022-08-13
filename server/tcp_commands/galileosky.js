@@ -20,9 +20,9 @@ Meteor.methods({
 });
 
 function commandFormat(imei, command, _session){
-    const head = '#'
+    const head = 0x23
     const tagLengthImei = imei.length
     const tagLengthCommand = command.length
     const tagLengthSession = _session.length
-    return head+tagLengthImei+imei+tagLengthCommand+command+tagLengthSession+_session
+    return Buffer.from(head+tagLengthImei+imei+tagLengthCommand+command+tagLengthSession+_session)
 }
