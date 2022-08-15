@@ -1,4 +1,4 @@
-<script>
+<script context="module">
     import { fly } from "svelte/transition";
     let drawerOpen = false;
     export const jtoggleDrawer = (_) => {
