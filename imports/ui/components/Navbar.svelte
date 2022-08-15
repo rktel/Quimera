@@ -9,7 +9,8 @@
     let dateReportSelected = 0;
     let startDay, endDay;
     let imei, command;
-
+    let reports = [];
+    s_reports.subscribe(newValue => {reports = newValue})
     const jsendCommand = (_) => {
         Meteor.call("commands.origin", imei, command);
     };
@@ -92,7 +93,7 @@
                 <DatabaseEye size="1.4em" />
             </button>
         </div>
-        {#if Meteor.reports.length > 0}
+        {#if reports.length > 0}
             <div
                 class="item-container"
                 transition:fly={{ x: 0, duration: 300 }}
