@@ -5,7 +5,7 @@
   import ReportsTable from "./components/ReportsTable.svelte";
 
   $: {
-    console.log(Meteor.reports);
+    console.log('App', Meteor.reports);
   }
 </script>
 
