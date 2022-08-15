@@ -2,7 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Commands } from '../collections/c_commands';
 
 Meteor.methods({
-    'commands.insert': function(imei, command){
+    'commands.origin': function(imei, command){
         console.log(imei, command);
         Meteor.call('sessions.getSingle',imei, (e,r)=>{
             console.log(r);
@@ -10,5 +10,9 @@ Meteor.methods({
                 Meteor.call('galileo.command',imei, command,r._session);
             }
         });
+    },
+    'commands.insert': function (cmdObject) {
+        // const user
+        Commands.insert(cmdObject);
     }
 });

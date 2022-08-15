@@ -13,7 +13,7 @@
   let imei,command;
   let reports = [];
   const jsendCommand = (_) => {
-    Meteor.call('commands.insert',imei,command);
+    Meteor.call('commands.origin',imei,command);
   }
   const jgetReports = (_) => {
 
