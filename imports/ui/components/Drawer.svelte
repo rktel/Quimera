@@ -1,7 +1,7 @@
 <script>
     import { fly } from "svelte/transition";
     let drawerOpen = false;
-    const jtoggleDrawer = (_) => {
+    export const jtoggleDrawer = (_) => {
         drawerOpen = !drawerOpen;
         console.log(drawerOpen);
     };

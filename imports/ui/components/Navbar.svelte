@@ -2,6 +2,8 @@
     import { Meteor } from "meteor/meteor";
     import { fly } from "svelte/transition";
     import { s_reports } from "../../api/stores";
+    import { jtoggleDrawer } from './Drawer.svelte'
+
     import DatabaseEye from "../components/icons/DatabaseEye.svelte";
     import TimerSandEmpty from "../components/icons/TimerSandEmpty.svelte";
     import TimerSandFull from "../components/icons/TimerSandFull.svelte";
@@ -15,6 +17,7 @@
         Meteor.call("commands.origin", imei, command);
     };
     const jgetReports = (_) => {
+        jtoggleDrawer();
         switch (dateReportSelected) {
             case 0:
                 Meteor.call("reports.getTodayReport", imei, (e, r) => {
