@@ -1,10 +1,10 @@
 <script>
   import { Meteor } from "meteor/meteor";
   import { fly } from "svelte/transition";
-  import DatabaseEye from "svelte-material-icons/DatabaseEye.svelte";
-  import TimerSandEmpty from "svelte-material-icons/TimerSandEmpty.svelte";
-  import TimerSandFull from "./components/icons/TimerSandFull.svelte";
-  import VisualStudioCode from "./components/icons/VisualStudioCode.svelte";
+  import DatabaseEye from "../components/icons/DatabaseEye.svelte";
+  import TimerSandEmpty from "../components/icons/TimerSandEmpty.svelte";
+  import TimerSandFull from "../components/icons/TimerSandFull.svelte";
+  import VisualStudioCode from "../components/icons/VisualStudioCode.svelte";
   let dateReportSelected = 0;
   let startDay,endDay;
   let imei,command;
