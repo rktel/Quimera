@@ -18,7 +18,7 @@
         Meteor.call("commands.origin", imei, command);
     };
     const jgetReports = (_) => {
-        drawer.jtoggleDrawer();
+        //drawer.jtoggleDrawer();
         switch (dateReportSelected) {
             case 0:
                 Meteor.call("reports.getTodayReport", imei, (e, r) => {
