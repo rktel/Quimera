@@ -3,7 +3,7 @@
     let drawerOpen = false;
     export const jtoggleDrawer = (_) => {
         drawerOpen = !drawerOpen;
-        console.log(drawerOpen);
+        // console.log(drawerOpen);
     };
 </script>
 
