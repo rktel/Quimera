@@ -1,5 +1,7 @@
 <script>
-    export let reports = [];
+    import { s_reports } from '../../api/stores'
+    let reports = [];
+    s_reports.subscribe(newValue => {reports = newValue})
 </script>
 
 <div class="table-container">
