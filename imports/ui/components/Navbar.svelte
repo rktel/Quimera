@@ -72,7 +72,7 @@
               <DatabaseEye size="1.4em" />
             </button>
           </div>
-        {#if reports.length > 0}
+        {#if Meteor.reports.length > 0}
           <div class="item-container" transition:fly={{ x: 0, duration: 300 }}>
               <input
               type="text"
