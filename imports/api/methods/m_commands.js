@@ -3,7 +3,7 @@ import { Commands } from '../collections/c_commands';
 
 Meteor.methods({
     'commands.origin': function(imei, command){
-        console.log(imei, command);
+        //console.log(imei, command);
         Meteor.call('sessions.getSingle',imei, (e,r)=>{
             console.log(r);
             if(r.protocolID === 7){

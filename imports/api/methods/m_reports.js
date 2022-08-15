@@ -11,7 +11,7 @@ Meteor.methods({
         imei = Number(imei);
         let startToday = new Date();
         startToday.setHours(0, 0, 0, 0);
-        console.log(startToday);
+        //console.log(startToday);
         const reports = await Reports.find({imei, dateAndTime: { $gte: startToday } }).fetch().reverse();
         return reports;
     },
@@ -23,7 +23,7 @@ Meteor.methods({
         let endYesterday = new Date();
         endYesterday.setDate(endYesterday.getDate() - 1);
         endYesterday.setHours(23, 59, 59, 999);
-        console.log(startYesterday, " & ", endYesterday);
+        //console.log(startYesterday, " & ", endYesterday);
         const reports = await Reports.find({imei, dateAndTime: { $gte: startYesterday, $lte: endYesterday } }).fetch().reverse();
         return reports;
     },
@@ -33,7 +33,7 @@ Meteor.methods({
         startDay.setHours(0, 0, 0, 0);
         endDay = new Date(endDay);
         endDay.setHours(23, 59, 59, 999);
-        console.log(startDay,"&&",endDay);
+        //console.log(startDay,"&&",endDay);
         const reports = await Reports.find({imei, dateAndTime: { $gte: startDay, $lte: endDay } }).fetch().reverse();
         return reports;
     }
