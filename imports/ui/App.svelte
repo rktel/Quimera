@@ -4,7 +4,9 @@
   import Navbar from "./components/Navbar.svelte";
   import ReportsTable from "./components/ReportsTable.svelte";
 
-  
+  $: {
+    console.log(Meteor.reports);
+  }
 </script>
 
 <Navbar>
