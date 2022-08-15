@@ -2,7 +2,7 @@
     import { Meteor } from "meteor/meteor";
     import { fly } from "svelte/transition";
     import { s_reports } from "../../api/stores";
-    import { jtoggleDrawer } from './Drawer.svelte'
+    import Drawer from './Drawer.svelte'
 
     import DatabaseEye from "../components/icons/DatabaseEye.svelte";
     import TimerSandEmpty from "../components/icons/TimerSandEmpty.svelte";
@@ -12,12 +12,13 @@
     let startDay, endDay;
     let imei, command;
     let reports = [];
+    let drawer;
     s_reports.subscribe(newValue => {reports = newValue})
     const jsendCommand = (_) => {
         Meteor.call("commands.origin", imei, command);
     };
     const jgetReports = (_) => {
-        jtoggleDrawer();
+        drawer.jtoggleDrawer();
         switch (dateReportSelected) {
             case 0:
                 Meteor.call("reports.getTodayReport", imei, (e, r) => {
@@ -119,3 +120,4 @@
     <!-- <div name="center" class="item-container">George</div>-->
     <div name="right" class="item-container" />
 </div>
+<Drawer bind:this={drawer}></Drawer>
