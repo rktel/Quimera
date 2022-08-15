@@ -19,13 +19,13 @@
             case 0:
                 Meteor.call("reports.getTodayReport", imei, (e, r) => {
                     s_reports.update((_) => r);
-                    console.log(r);
+                    //console.log(r);
                 });
                 break;
             case 1:
                 Meteor.call("reports.getYesterdayReport", imei, (e, r) => {
                     s_reports.update((_) => r);
-                    console.log(r);
+                    //console.log(r);
                 });
                 break;
             case 2:
@@ -36,7 +36,7 @@
                     endDay,
                     (e, r) => {
                         s_reports.update((_) => r);
-                        console.log(r);
+                        //console.log(r);
                     }
                 );
                 break;
@@ -44,9 +44,7 @@
                 break;
         }
     };
-    $: {
-        console.log(dateReportSelected);
-    }
+
 </script>
 
 <div class="navbar">
