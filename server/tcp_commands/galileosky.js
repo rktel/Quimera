@@ -16,7 +16,9 @@ Meteor.methods({
             });
         }
     },
-    'Galileosky': function(){}
+    'Galileosky': function(){
+        console.log('Console log')
+    }
 });
 
 function commandFormat(imei, command, _session){
