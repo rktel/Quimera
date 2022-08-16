@@ -16,7 +16,8 @@ Meteor.methods({
         client.on('close', function() {
             //console.log('Connection closed');
         });
-    }
+    },
+    'Galileosky': function(){}
 });
 
 function commandFormat(imei, command, _session){
