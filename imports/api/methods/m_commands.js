@@ -5,7 +5,7 @@ Meteor.methods({
     'commands.origin': function(imei, command){
         //console.log(imei, command);
         Meteor.call('sessions.getSingle',imei, (e,r)=>{
-            // console.log(r);
+            console.log(r);
             if(Date.now() - r.serverTime.getTime() > 300 * 1000){
                 console.log("No se envia comando")
             }else {
