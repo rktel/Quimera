@@ -17,7 +17,7 @@ Meteor.methods({
         }
     },
     'Galileosky': function(){
-        console.log('Console log')
+        console.log('Galileosky method called')
     }
 });
 
