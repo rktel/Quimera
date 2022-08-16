@@ -15,6 +15,7 @@
 
     s_reports.subscribe(newValue => {reports = newValue})
     const jsendCommand = (_) => {
+        console.log("commands.origin", imei, command);
         Meteor.call("commands.origin", imei, command);
     };
     const jgetReports = (_) => {
