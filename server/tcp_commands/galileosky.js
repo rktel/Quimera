@@ -11,10 +11,10 @@ Meteor.methods({
         client.connect(portServer, ipServer, function() {
             //console.log('Connected');
             client.write(commandFormat(imei,command,JSON.stringify(_session)));
-            
+            client.end();
         });
         client.on('data',function(data){
-            client.destroy();
+            //client.destroy();
         });
         client.on('close', function() {
             //console.log('Connection closed');
