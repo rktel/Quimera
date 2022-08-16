@@ -1,10 +1,8 @@
 <script>
     import { fly } from "svelte/transition";
+    import { s_openDrawer} from '../../api/stores'
     let drawerOpen = false;
-    export const jtoggleDrawer = (_) => {
-        drawerOpen = !drawerOpen;
-        // console.log(drawerOpen);
-    };
+    s_openDrawer.subscribe(newValue => {drawerOpen = newValue})
 </script>
 
 {#if drawerOpen}

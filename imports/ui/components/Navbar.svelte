@@ -2,6 +2,7 @@
     import { Meteor } from "meteor/meteor";
     import { fly } from "svelte/transition";
     import { s_reports } from "../../api/stores";
+    import { s_openDrawer } from "../../api/stores";
     //import Drawer from './Drawer.svelte'
 
     import DatabaseEye from "../components/icons/DatabaseEye.svelte";
@@ -18,7 +19,7 @@
         Meteor.call("commands.origin", imei, command);
     };
     const jgetReports = (_) => {
-        //drawer.jtoggleDrawer();
+        s_openDrawer.update(oldValue => !oldValue);
         switch (dateReportSelected) {
             case 0:
                 Meteor.call("reports.getTodayReport", imei, (e, r) => {
