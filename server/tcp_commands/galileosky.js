@@ -4,17 +4,16 @@ const net = require('net');
 const ipServer = '96.126.127.74';
 const portServer = 2017;
 
-const client = new net.Socket();
+
 
 Meteor.methods({
     'galileo.command': function (imei, command, _session) {
-        if(!client.destroyed){
-            console.log('!client.destroyed');
-            client.connect(portServer, ipServer, function() {
-                client.write(commandFormat(imei,command,JSON.stringify(_session)));
-                client.destroy();
-            });
-        }
+        const client = new net.Socket();
+        client.connect(portServer, ipServer, function() {
+            client.write(commandFormat(imei,command,JSON.stringify(_session)));
+            client.destroy();
+        });
+
     },
     'Galileosky': function(){
         console.log('Galileosky method called')
