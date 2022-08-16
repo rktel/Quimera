@@ -3,7 +3,6 @@
     import { fly } from "svelte/transition";
     import { s_reports } from "../../api/stores";
     import { s_openDrawer } from "../../api/stores";
-    //import Drawer from './Drawer.svelte'
 
     import DatabaseEye from "../components/icons/DatabaseEye.svelte";
     import TimerSandEmpty from "../components/icons/TimerSandEmpty.svelte";
@@ -13,7 +12,7 @@
     let startDay, endDay;
     let imei, command;
     let reports = [];
-    //let drawer;
+
     s_reports.subscribe(newValue => {reports = newValue})
     const jsendCommand = (_) => {
         Meteor.call("commands.origin", imei, command);
@@ -121,4 +120,3 @@
     <!-- <div name="center" class="item-container">George</div>-->
     <div name="right" class="item-container" />
 </div>
-<!-- <Drawer bind:this={drawer}></Drawer> -->
