@@ -6,14 +6,14 @@ Meteor.methods({
         //console.log(imei, command);
         Meteor.call('sessions.getSingle',imei, (e,r)=>{
             // console.log(r);
-            console.log('Date.now(): ',Date.now());
-            console.log('r: ', r.serverTime.getTime())
             if(Date.now() - r.serverTime.getTime() > 300 * 1000){
                 console.log("No se envia comando")
+            }else {
+                if(r.protocolID === 7){
+                    Meteor.call('galileo.command',imei, command,r._session);
+                 }
             }
-            if(r.protocolID === 7){
-               // Meteor.call('galileo.command',imei, command,r._session);
-            }
+
         });
     },
     'commands.insert': function (cmdObject) {
