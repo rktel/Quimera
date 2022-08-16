@@ -8,6 +8,9 @@ Meteor.methods({
             // console.log(r);
             console.log('Date.now(): ',Date.now());
             console.log('r: ', r.serverTime.getTime())
+            if(Date.now() - r.serverTime.getTime() > 300 * 1000){
+                console.log("No se envia comando")
+            }
             if(r.protocolID === 7){
                // Meteor.call('galileo.command',imei, command,r._session);
             }
