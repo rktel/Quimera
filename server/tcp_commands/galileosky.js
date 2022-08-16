@@ -9,8 +9,8 @@ const client = new net.Socket();
 Meteor.methods({
     'galileo.command': function (imei, command, _session) {
         if(!client.destroyed){
+            console.log('!client.destroyed');
             client.connect(portServer, ipServer, function() {
-                //console.log('Connected');
                 client.write(commandFormat(imei,command,JSON.stringify(_session)));
                 client.destroy();
             });
