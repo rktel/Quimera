@@ -6,8 +6,8 @@ Meteor.methods({
         //console.log(imei, command);
         Meteor.call('sessions.getSingle',imei, (e,r)=>{
             // console.log(r);
-            console.log('new Date(): ',new Date());
-            console.log('r: ', r)
+            console.log('Date.now(): ',Date.now());
+            console.log('r: ', r.serverTime.getTime())
             if(r.protocolID === 7){
                // Meteor.call('galileo.command',imei, command,r._session);
             }
