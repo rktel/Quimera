@@ -6,7 +6,7 @@ Meteor.methods({
         //console.log(imei, command);
         Meteor.call('sessions.getSingle',imei, (e,r)=>{
             console.log('r:',r);
-            if(Date.now() - r.createdTime.getTime() > 300 * 1000){
+            if(Date.now() - r.createdTime.getTime() > 330 * 1000){
                 console.log("No se envia comando")
             }else {
                 if(r.protocolID === 7){
