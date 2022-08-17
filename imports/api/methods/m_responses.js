@@ -3,7 +3,8 @@ import { Responses } from "../collections/c_responses";
 
 Meteor.methods({
     'responses.insert': function (responsesObject) {
-        Responses.insert(responsesObject)
+        const response = Responses.insert(responsesObject);
+        return response;
     }
 })
 
