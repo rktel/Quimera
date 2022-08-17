@@ -3,11 +3,10 @@ import { Reports } from '../collections/c_reports';
 
 Meteor.methods({
     'reports.insert': function (report_array) {
-        console.log('[]: ',report_array);
         let reportFlag = null;
         for (const key in report_array) {
             const report = Reports.insert(report_array[key]);
-            reportFlag = report
+            reportFlag = !!report
         }
         return reportFlag;
     },
