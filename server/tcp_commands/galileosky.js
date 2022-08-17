@@ -1,23 +1,25 @@
 import { Meteor } from 'meteor/meteor';
+import {fetch, Headers} from 'meteor/fetch';
 
-const net = require('net');
-const ipServer = '96.126.127.74';
-const portServer = 2017;
-
-
+//commandFormat(imei,command,JSON.stringify(_session))
+const url = 'http://96.126.127.74:1880/galileosky';
 
 Meteor.methods({
-    'galileo.command': function (imei, command, _session) {
-        const client = new net.Socket();
-        client.connect(portServer, ipServer, function() {
-            client.write(commandFormat(imei,command,JSON.stringify(_session)));
-            client.destroy();
+    'galileo.command': async function (imei, command, _session) {
+        const response = await fetch(url,{
+            method:'POST',
+            headers: new Headers({
+                'Content-Type':'application/json'
+            }),
+            body: JSON.stringify({
+                buffer: Buffer.from([0x01,0x02,0x03]),
+                name: 'Galileosky'
+            })
         });
-
+        const data = await response.json();
+        console.log('data:',data);
     },
-    'Galileosky': function(){
-       // console.log('Galileosky method called')
-    }
+
 });
 
 function commandFormat(imei, command, _session){
