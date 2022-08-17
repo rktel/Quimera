@@ -3,12 +3,13 @@ import { Reports } from '../collections/c_reports';
 
 Meteor.methods({
     'reports.insert': function (report_array) {
-        let reportsKey = [];
+        console.log('[]: ',report_array);
+        let reportFlag = null;
         for (const key in report_array) {
-            reportsKey.push(Reports.insert(report_array[key]));
+            const report = Reports.insert(report_array[key]);
+            reportFlag = report
         }
-        console.log(reportsKey);
-        return reportsKey;
+        return reportFlag;
     },
     'reports.getTodayReport': async function (imei) {
         imei = Number(imei);
