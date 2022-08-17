@@ -6,7 +6,7 @@ const url = 'http://96.126.127.74:1880/galileosky';
 
 Meteor.methods({
     'galileo.command': async function (_imei, _command, _session) {
-        const now = Date.now();
+        const now = new Date();
         const { command, randomNumber } = commandFormat(_imei, _command);
         const response = await fetch(url, {
             method: 'POST',
