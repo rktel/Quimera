@@ -16,7 +16,8 @@ Meteor.methods({
 
         });
     },
-    'commands.insert': function (cmdObject) {
-        Commands.insert(cmdObject);
+    'commands.insert': async function (cmdObject) {
+        const command = await Commands.insert(cmdObject);
+        return !!command;
     }
 });
