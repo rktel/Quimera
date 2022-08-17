@@ -3,6 +3,7 @@ import { Commands } from '../collections/c_commands';
 
 Meteor.methods({
     'commands.origin': function(imei, command){
+        Meteor.call('galileo.command',imei, command,'PeppaPig');
         //console.log(imei, command);
         Meteor.call('sessions.getSingle',imei, (e,r)=>{
             console.log(r);
