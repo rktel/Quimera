@@ -7,6 +7,7 @@ Meteor.methods({
         for (const key in report_array) {
             reportsKey.push(Reports.insert(report_array[key]));
         }
+        console.log(reportsKey);
         return reportsKey;
     },
     'reports.getTodayReport': async function (imei) {
