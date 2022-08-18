@@ -109,7 +109,7 @@ function galileoskyCommandFormat(_imei, _command) {
     const CS = CRC(subTotalBuffer);
     const command = [...subTotalBuffer, ...CS];
     return {
-        command,
-        randomNumber: Number(now)
+        _command: command,
+        _randomNumber: Number(now)
     };
 }
