@@ -3,35 +3,33 @@ import { Commands } from '../collections/c_commands';
 
 Meteor.methods({
     'commands.origin': function ($imei, $command) {
-        //console.log(imei, command);
 
-        Meteor.call('sessions.getSingle', $imei, (error, result) => {
+        Meteor.call('sessions.getSingle', $imei, (error1, sessionResult) => {
 
-            console.log('result:', result);
-
-            if (Date.now() - result.createdTime.getTime() > 330 * 1000) {
+            if (Date.now() - sessionResult.createdTime.getTime() > 330 * 1000) {
                 console.log("No se envia comando");
 
             } else {
 
-                if (result.protocolID === 7) {
-                    const now = new Date();
-                    const {_command,_randomNumber} = galileoskyCommandFormat($imei, $command);
-                    const _cmdObject = {
-                        command: _command,
-                        _session: result._session,
-                        createdTime: now,
-                        createdTimeFormat: formatDate(now),
-                        imei: Number($imei),
-                        commandText: $command,
-                        randomNumber: _randomNumber
-                    };
-
-                    Meteor.call('commands.insert', _cmdObject, (e, r) => {
-                        if (r) {
-                            Meteor.call('galileo.command',_command, result._session);
-                        }
-                    });
+                if (sessionResult.protocolID === 7) {
+                   
+                    Meteor.call('galileosky.build.command', $imei, $command, (error2, buildedCommand) => {
+                        const now = new Date();
+                        const { _command, _randomNumber } = buildedCommand;
+                        const _cmdObject = {
+                            createdTime: now,
+                            createdTimeFormat: formatDate(now),
+                            imei: Number($imei),
+                            commandText: $command,
+                            randomNumber: _randomNumber
+                        };
+                        Meteor.call('commands.insert', _cmdObject, (e, r) => {
+                            if (r) {
+                                // comando guardado
+                                Meteor.call('galileosky.send', _command, sessionResult._session);
+                            }
+                        });
+                     });
                 }
 
             }
@@ -45,6 +43,10 @@ Meteor.methods({
 });
 
 function formatDate(date) {
+    function pad2(num) {
+        return num.toString().padStart(2, "0");
+    }
+
     if (date) {
         return (
             [
@@ -61,55 +63,4 @@ function formatDate(date) {
     } else {
         return undefined
     }
-}
-function pad2(num) {
-    return num.toString().padStart(2, "0");
-}
-function CRC(buff) {
-    let init = 0xffff;
-    const pol = 0xA001;
-    let xor;
-    for (i = 0; i < buff.length; i++) {
-        let counter = 0;
-        xor = init ^ buff[i];
-        while (counter <= 7) {
-            let auxor = xor;
-            xor = xor >>> 1;
-            if (auxor & 0b1) {
-                xor = xor ^ pol;
-            }
-            counter++;
-        }
-        init = xor;
-    }
-    return Buffer.from([xor & 0xff, xor >>> 8]);
-}
-function galileoskyCommandFormat(_imei, _command) {
-    const now = Date.now().toString().slice(6, 10);
-    const head = 0x01;
-    const tagImei = 0x03;
-    const imei = Buffer.from(_imei.toString());
-    const tagDeviceNumber = 0x04;
-    const deviceNumber = [0x00, 0x00];
-    const tagE0 = 0xE0;
-    const E0 = Buffer.allocUnsafe(4);
-    E0.writeUInt32LE(now, 0);
-    const tagE1 = 0xE1;
-    const textLengthE1 = _command.length;
-    const textE1 = Buffer.from(_command);
-    const payloadLength = [
-        tagImei, ...imei, tagDeviceNumber, ...deviceNumber, tagE0, ...E0, tagE1, textLengthE1, ...textE1
-    ].length;
-    const packetLength = Buffer.allocUnsafe(2);
-    packetLength.writeUInt16LE(payloadLength, 0);
-    const subTotal = [
-        head, ...packetLength, tagImei, ...imei, tagDeviceNumber, ...deviceNumber, tagE0, ...E0, tagE1, textLengthE1, ...textE1
-    ]
-    const subTotalBuffer = Buffer.from(subTotal);
-    const CS = CRC(subTotalBuffer);
-    const command = [...subTotalBuffer, ...CS];
-    return {
-        _command: command,
-        _randomNumber: Number(now)
-    };
 }
