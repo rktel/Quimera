@@ -21,7 +21,9 @@ Meteor.methods({
                             createdTimeFormat: formatDate(now),
                             imei: Number($imei),
                             commandText: $command,
-                            randomNumber: _randomNumber
+                            randomNumber: _randomNumber,
+                            protocolID : 7,
+                            msgType: 'command'
                         };
                         Meteor.call('commands.insert', _cmdObject, (e, r) => {
                             if (r) {
