@@ -29,7 +29,7 @@ Meteor.methods({
 
                     Meteor.call('commands.insert', _cmdObject, (e, r) => {
                         if (r) {
-                            Meteor.call('galileo.command', [..._command], result._session);
+                            Meteor.call('galileo.command',_command, result._session);
                         }
                     });
                 }
@@ -107,8 +107,7 @@ function galileoskyCommandFormat(_imei, _command) {
     ]
     const subTotalBuffer = Buffer.from(subTotal);
     const CS = CRC(subTotalBuffer);
-    const total = [...subTotalBuffer, ...CS];
-    const command = Buffer.from(total);
+    const command = [...subTotalBuffer, ...CS];
     return {
         command,
         randomNumber: Number(now)
