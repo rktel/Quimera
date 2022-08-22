@@ -2,13 +2,16 @@
     import { fade } from 'svelte/transition';
     import { Meteor } from "meteor/meteor";
     
-	let visible = true;
+	let visible = false;
     let username = "";
     let password = "";
 
     const handleSubmit = () => {
         Meteor.loginWithPassword(username, password);
     };
+    const setTimer = _ => visible = true;
+    setTimeout(setTimer, 250);
+ 
 </script>
 {#if visible}
     <form class="login-form" on:submit|preventDefault={handleSubmit} transition:fade>
