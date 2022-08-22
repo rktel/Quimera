@@ -11,17 +11,14 @@
 
   $m: {
     loggedIn = !!Meteor.user();
-
     let user = Meteor.user();
     if(user){
-      userPermission = user.profile.accountType;
+      // userPermission = user.profile.accountType;
     }
   }
 </script>
 {#if !loggedIn}
-
   <Login />
-
 {/if}
 {#if loggedIn}
   <Navbar />
