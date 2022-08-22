@@ -9,6 +9,7 @@
 
   $m: {
         user = Meteor.user();
+        console.log(user);
   }
 </script>
 {#if user}
