@@ -10,6 +10,7 @@
   "dependencies": {
     "@babel/runtime": "^7.17.9",
     "meteor-node-stubs": "^1.2.1",
+    "node-fetch": "^2.6.7",
     "svelte": "^3.46.4"
   },
   "meteor": {
@@ -20,6 +21,9 @@
     "testModule": "tests/main.js"
   },
   "devDependencies": {
-    "svelte-material-icons": "^2.0.4"
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "svelte-material-icons": "^2.0.4",
+    "tailwindcss": "^3.1.8"
   }
 }
