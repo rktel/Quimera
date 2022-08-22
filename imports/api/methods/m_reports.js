@@ -1,14 +1,24 @@
 import { Meteor } from 'meteor/meteor';
 import { Reports } from '../collections/c_reports';
+const fetch = require('node-fetch');
 
 Meteor.methods({
     'reports.insert': function (report_array) {
         let reportFlag = null;
         for (const key in report_array) {
-            const report = Reports.insert(report_array[key]);
-            reportFlag = !!report
+            const id = Reports.insert(report_array[key]);
+            const element = report_array[key];
+            const lat = element.latitude;
+            const lon = element.longitude;
+            if(lat && lon){
+                getAddress(id,lat,lon);
+            }
+            reportFlag = !!id
         }
         return reportFlag;
+    },
+    'reports.setAddress':function(_id, address){
+        Reports.update(_id,{$set: {address: address}});
     },
     'reports.getTodayReport': async function (imei) {
         imei = Number(imei);
@@ -42,3 +52,14 @@ Meteor.methods({
     }
 })
 
+function getAddress(id,lat,lon){
+    const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&zoom=18&addressdetails=1`;
+    fetch(url)
+        .then(resp => resp.json())
+        .then(function(data){
+            Meteor.call('reports.setAddress',id, data.display_name);
+        })
+        .catch(function(e){
+            console.log('Error en getAddress:', e);
+        })
+}
