@@ -10,7 +10,7 @@
         Meteor.loginWithPassword(username, password);
     };
     const setTimer = _ => visible = true;
-    setTimeout(setTimer, 250);
+    setTimeout(setTimer, 2000);
  
 </script>
 {#if visible}
