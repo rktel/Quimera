@@ -1,5 +1,5 @@
 <script>
-    import { fade } from 'svelte/transition';
+    import { fly } from "svelte/transition";
     import { Meteor } from "meteor/meteor";
     
 	let visible = false;
@@ -14,7 +14,7 @@
  
 </script>
 {#if visible}
-    <form class="login-form" on:submit|preventDefault={handleSubmit} transition:fade>
+    <form class="login-form" on:submit|preventDefault={handleSubmit} transition:fly={{ x: 0, duration: 300 }}>
         <div>
             <label htmlFor="username">Username</label>
     
