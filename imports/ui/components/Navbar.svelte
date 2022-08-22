@@ -14,6 +14,7 @@
     let reports = [];
 
     s_reports.subscribe(newValue => {reports = newValue})
+    const jlogout = () => Meteor.logout();
     const jsendCommand = (_) => {
         console.log("commands.origin", imei, command);
         Meteor.call("commands.origin", imei, command);
@@ -119,5 +120,7 @@
         {/if}
     </div>
     <!-- <div name="center" class="item-container">George</div>-->
-    <div name="right" class="item-container" />
+    <div name="right" class="item-container" >
+        <button on:click={jlogout}>Logout</button>
+    </div>
 </div>
