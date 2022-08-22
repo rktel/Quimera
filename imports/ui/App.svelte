@@ -5,18 +5,26 @@
   import ReportsTable from "./components/ReportsTable.svelte";
   import Drawer from "./components/Drawer.svelte";
   import Login from "../ui/Login.svelte";
-  let user = null;
+
+  let loggedIn = false;
+  let userPermission = "";
 
   $m: {
-        user = Meteor.user();
-        console.log(user);
+    loggedIn = !!Meteor.user();
+
+    let user = Meteor.user();
+    if(user){
+      userPermission = user.profile.accountType;
+    }
   }
 </script>
-{#if user}
-<Navbar />
-<ReportsTable />
-<Drawer />
-{:else}
-<Login />
-{/if}
+{#if !loggedIn}
 
+  <Login />
+
+{/if}
+{#if loggedIn}
+  <Navbar />
+  <ReportsTable />
+  <Drawer />
+{/if}
