@@ -13,12 +13,13 @@
   $m: {
     loggedIn = !!Meteor.user();
     let user = Meteor.user();
-    if(!loggedIn){
-      navigate("/login", { replace: true });
-    }
+    console.log('App user:',user);
     if(loggedIn){
       navigate("/home", { replace: true });
+    }else{
+      navigate("/login", { replace: true });
     }
+
     if (user) {
       // userPermission = user.profile.accountType;
     }
