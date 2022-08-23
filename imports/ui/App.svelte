@@ -24,7 +24,9 @@
 <Router url={url}>
   {#if !loggedIn}
     <main>
-      <Route path="/login" component={Login} location={location}/>
+      <Route path="/login">
+        <Login></Login>
+      </Route>
     </main>
   {/if}
   {#if loggedIn}
