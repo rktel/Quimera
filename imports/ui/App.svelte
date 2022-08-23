@@ -17,8 +17,7 @@
       // userPermission = user.profile.accountType;
     }
   }
-  const setTimer = (_) => (visible = true);
-  setTimeout(setTimer, 5000);
+
 </script>
 
 <Router url={url}>

@@ -2,19 +2,18 @@
     import { fly } from "svelte/transition";
     import { Meteor } from "meteor/meteor";
     
-	let visible = false;
+
     let username = "";
     let password = "";
 
     const handleSubmit = () => {
         Meteor.loginWithPassword(username, password);
     };
-    const setTimer = _ => visible = true;
-    setTimeout(setTimer, 1200);
+
  
 </script>
-{#if visible}
-    <form class="login-form" on:submit|preventDefault={handleSubmit} transition:fly={{ x: -200, duration: 1000 }}>
+
+    <form class="login-form" on:submit|preventDefault={handleSubmit} >
         <div>
             <label htmlFor="username">Username</label>
     
@@ -42,7 +41,7 @@
             <button type="submit">Log In</button>
         </div>
     </form>
-{/if}
+
 
 
 
