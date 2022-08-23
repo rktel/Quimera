@@ -14,7 +14,7 @@
  
 </script>
 {#if visible}
-    <form class="login-form" on:submit|preventDefault={handleSubmit} transition:fly={{ x: 0, duration: 300 }}>
+    <form class="login-form" on:submit|preventDefault={handleSubmit} transition:fly={{ x: 0, duration: 500 }}>
         <div>
             <label htmlFor="username">Username</label>
     
