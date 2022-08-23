@@ -1,5 +1,6 @@
 <script>
     import { onDestroy } from "svelte";
+
     const jformatDate = (date) => {
         const jpad2 = (num) => {
             return num.toString().padStart(2, "0");
