@@ -1,7 +1,7 @@
 <script>
     import { onDestroy } from "svelte";
     const jformatDate = (date) => {
-        const monthNameShort = date.toLocaleString("en-US", { month: "short" });
+        const monthNameShort = date.toLocaleString("es-PE", { month: "short" });
         console.log(monthNameShort);
         const jpad2 = (num) => {
             return num.toString().padStart(2, "0");
