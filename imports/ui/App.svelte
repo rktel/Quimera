@@ -15,7 +15,7 @@
   let loggedIn = false;
   let userPermission = "";
   let user = undefined;
-  s_user.subscribe(newValue => {user = newValue})
+
   $m: {
     loggedIn = !!Meteor.userId();
     s_user.update(_ => Meteor.user());
@@ -43,7 +43,7 @@
   {/if}
 
   {#if loggedIn}
-  <MainStatusBar user></MainStatusBar>
+  <MainStatusBar></MainStatusBar>
   <Navbar />
     <main>
       <Route path="/home">

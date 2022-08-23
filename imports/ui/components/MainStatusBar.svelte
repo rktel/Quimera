@@ -1,6 +1,12 @@
 <script>
     import { onDestroy } from "svelte";
-    export let user = {};
+    import {  s_user } from '../../api/stores';
+
+    let user = {
+        username: ""
+    };
+    s_user.subscribe(newValue => user = newValue);
+
     const jformatDate = (date) => {
         const jpad2 = (num) => {
             return num.toString().padStart(2, "0");
