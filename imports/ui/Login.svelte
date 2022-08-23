@@ -12,7 +12,7 @@
 
  
 </script>
-    <div class="absolute right-0 h-screen  flex bg-slate-300">
+    <div class="relative h-screen  flex bg-slate-300">
         <form  on:submit|preventDefault={jlogin} >
             <div>
                 <label htmlFor="username">Username</label>
