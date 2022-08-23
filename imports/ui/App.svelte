@@ -10,14 +10,15 @@
   export let url = "";
   let loggedIn = false;
   let userPermission = "";
+  let user = undefined;
   onMount(_=>{
     console.log(new Date(),'=> ','onMount');
-    let user = Meteor.user();
+    user = Meteor.user();
     console.log(new Date(),'=> ','App user:',user);
   })
   $m: {
     loggedIn = !!Meteor.user();
-    let user = Meteor.user();
+    // let user = Meteor.user();
     // console.log(new Date(),'=> ','App user:',user);
     if(loggedIn){
       navigate("/home", { replace: true });
@@ -25,9 +26,9 @@
       navigate("/login", { replace: true });
     }
 
-    if (user) {
-      // userPermission = user.profile.accountType;
-    }
+    // if (user) {
+    //   userPermission = user.profile.accountType;
+    // }
   }
 
 </script>
