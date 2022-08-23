@@ -7,6 +7,7 @@
 
   import Login from "../ui/Login.svelte";
   export let url = "";
+  export let location = "";
   let loggedIn = false;
   let userPermission = "";
 
@@ -23,7 +24,7 @@
 <Router url={url}>
   {#if !loggedIn}
     <main>
-      <Route path="/login" component={Login} />
+      <Route path="/login" component={Login} location={location}/>
     </main>
   {/if}
   {#if loggedIn}
