@@ -1,6 +1,6 @@
 <script>
   // import { Meteor } from "meteor/meteor";
-  import { Router, Route } from 'svelte-routing';
+  import { Router, Route, navigate } from 'svelte-routing';
   import { fly } from "svelte/transition";
   import Navbar from "./components/Navbar.svelte";
   import ReportsTable from "./components/ReportsTable.svelte";
@@ -13,6 +13,12 @@
   $m: {
     loggedIn = !!Meteor.user();
     let user = Meteor.user();
+    if(!loggedIn){
+      navigate("/login", { replace: true });
+    }
+    if(loggedIn){
+      navigate("/home", { replace: true });
+    }
     if (user) {
       // userPermission = user.profile.accountType;
     }
