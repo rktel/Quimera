@@ -18,7 +18,7 @@
       const u = Meteor.user();
       console.log('u:',u);
       if(counter === 10){
-
+        clearInterval(timer);
       }
       counter = counter + 1;
     },100)
