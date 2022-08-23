@@ -11,7 +11,7 @@ Meteor.methods({
             const lat = element.latitude;
             const lon = element.longitude;
             if(lat && lon){
-                getAddress(id,lat,lon);
+                //getAddress(id,lat,lon);
             }
             reportFlag = !!id
         }
