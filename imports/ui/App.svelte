@@ -13,8 +13,9 @@
   let user = undefined;
   onMount(_=>{
     console.log(new Date(),'=> ','onMount');
+    console.log(new Date(),'=> ','App user a :',user);
     user = Meteor.user();
-    console.log(new Date(),'=> ','App user:',user);
+    console.log(new Date(),'=> ','App user b :',user);
   })
   $m: {
     loggedIn = !!Meteor.user();
