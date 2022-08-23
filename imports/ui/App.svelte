@@ -17,7 +17,7 @@
     }
   }
   const setTimer = (_) => (visible = true);
-  setTimeout(setTimer, 1200);
+  setTimeout(setTimer, 5000);
 </script>
 
 {#if !loggedIn}
