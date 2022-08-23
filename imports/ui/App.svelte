@@ -11,11 +11,17 @@
   let loggedIn = false;
   let userPermission = "";
   let user = undefined;
+  let counter = 0;
   onMount(_=>{
     console.log(new Date(),'=> ','onMount');
-    console.log(new Date(),'=> ','App user a :',user);
-    user = Meteor.user();
-    console.log(new Date(),'=> ','App user b :',user);
+    const timer = setInterval(_=> {
+      const u = Meteor.user();
+      console.log('u:',u);
+      if(counter === 10){
+
+      }
+      counter = counter + 1;
+    },100)
   })
   $m: {
     loggedIn = !!Meteor.user();
