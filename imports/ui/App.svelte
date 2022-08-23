@@ -12,11 +12,13 @@
   let userPermission = "";
   onMount(_=>{
     console.log(new Date(),'=> ','onMount');
+    let user = Meteor.user();
+    console.log(new Date(),'=> ','App user:',user);
   })
   $m: {
     loggedIn = !!Meteor.user();
     let user = Meteor.user();
-    console.log(new Date(),'=> ','App user:',user);
+    // console.log(new Date(),'=> ','App user:',user);
     if(loggedIn){
       navigate("/home", { replace: true });
     }else{
