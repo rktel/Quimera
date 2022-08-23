@@ -1,15 +1,13 @@
 <script>
     import { onDestroy } from "svelte";
     const jformatDate = (date) => {
-        const monthNameShort = date.toLocaleString("es-PE", { month: "short" });
-        console.log(monthNameShort);
         const jpad2 = (num) => {
             return num.toString().padStart(2, "0");
         };
 
         if (date) {
             return (
-                [jpad2(date.getDate()), jpad2(date.getMonth() + 1)].join("/") +
+                [jpad2(date.getDate()), date.toLocaleString("es-PE", { month: "short" })].join(" ") +
                 " " +
                 [jpad2(date.getHours()), jpad2(date.getMinutes())].join(":")
             );
