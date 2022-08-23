@@ -4,59 +4,12 @@
 
 @layer components {
     .btn {
-      @apply relative overflow-hidden text-white px-3 py-2 rounded uppercase shadow-sm hover:shadow-black active:shadow-none;
+      @apply inline-block px-6 py-2.5 font-medium text-xs leading-tight uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out;
     }
-  
     .btn-light {
-      @apply  bg-gray-300 shadow-gray-400 hover:bg-gray-500;
+      @apply bg-gray-200 text-gray-700 hover:bg-gray-300 focus:bg-gray-300 active:bg-gray-400;
     }
-    .form-input{
-      @apply block
-      w-full
-      px-3
-      py-1.5
-      text-base
-      font-normal
-      text-gray-700
-      bg-white bg-clip-padding
-      border border-solid border-gray-300
-      rounded
-      transition
-      ease-in-out
-      m-0
-      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-    }
-  }
-  
-  /* place the element with after, which will get animated */
-  button:after {
-    content: '';
-    /* make small white invisible circle, let background shine through */
-    opacity: 0;
-    background: rgba(255, 255, 255, 0.15);
-    width: 5px;
-    height: 5px;
-    border-radius: 100%;
-    /* center it horizontal & vertically*/
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  }
-  
-  /* button beeing focussed but not active right now? Trigger animation */
-  button:focus:not(:active)::after {
-    animation: ripple 0.5s ease-out;
-  }
-  
-  /* makes the element visible and scales it x30 */
-  @keyframes ripple {
-    0% {
-      transform: scale(0, 0);
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-      transform: scale(30, 30);
+    .form-input {
+      @apply block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none;
     }
   }
