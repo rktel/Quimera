@@ -10,34 +10,52 @@
     };
 </script>
 
-<div class="relative h-screen flex bg-zinc-200">
-    <div class="hidden md:flex flex-2">Peppa</div>
-    <form on:submit|preventDefault={jlogin}>
+<div class="h-screen bg-neutral-200 flex">
+    <div class="hidden sm:flex sm:justify-center sm:items-center sm:flex-1">
+        <h1>QUIMERA</h1>
+    </div>
+    <div
+        class="bg-zinc-200 grid place-content-center flex-1 sm:flex-none sm:basis-96 gap-7"
+    >
         <div>
-            <label htmlFor="username">Username</label>
-
-            <input
-                type="text"
-                placeholder="Username"
-                name="username"
-                required
-                bind:value={username}
-            />
+            <h1 class="text-xl text-gray-800">Iniciar sesión</h1>
         </div>
+        <form
+            on:submit|preventDefault={jlogin}
+            class="flex flex-col items-center gap-5 px-5"
+        >
+            <div class="flex flex-col">
+                <label for="username" class="inline-block mb-2 text-gray-700"
+                    >Nombre de usuario</label
+                >
 
-        <div class="flex-1">
-            <label htmlFor="password">Password</label>
+                <input
+                    class="form-input"
+                    type="text"
+                    name="username"
+                    required
+                    bind:value={username}
+                />
+            </div>
 
-            <input
-                type="password"
-                placeholder="Password"
-                name="password"
-                required
-                bind:value={password}
-            />
-        </div>
-        <div>
-            <button type="submit">Log In</button>
-        </div>
-    </form>
+            <div class="flex flex-col">
+                <label for="password" class="inline-block mb-2 text-gray-700"
+                    >Contraseña</label
+                >
+
+                <input
+                    class="form-input"
+                    type="password"
+                    name="password"
+                    required
+                    bind:value={password}
+                />
+            </div>
+            <div class="flex flex-col gap-3 mt-3">
+                <button class="btn btn-light" type="submit"
+                    >INICIO DE SESIÓN</button
+                >
+            </div>
+        </form>
+    </div>
 </div>
