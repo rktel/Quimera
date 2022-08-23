@@ -14,7 +14,7 @@
   export let url = "";
   let loggedIn = false;
   let userPermission = "";
-  let user = undefined;
+
 
   $m: {
     loggedIn = !!Meteor.userId();
@@ -24,7 +24,7 @@
     }else{
       navigate("/login", { replace: true });
     }
-    console.log("User:", user)
+ 
     // if (user) {
     //   userPermission = user.profile.accountType;
     // }
