@@ -7,7 +7,6 @@
 
   import Login from "../ui/Login.svelte";
   export let url = "";
-  export let location = "";
   let loggedIn = false;
   let userPermission = "";
 
@@ -32,7 +31,7 @@
   {#if loggedIn}
   <Navbar />
     <main>
-      <Route path="/secure/users-home">
+      <Route path="/home">
         <ReportsTable />
       </Route>
     </main>
