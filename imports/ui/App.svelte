@@ -11,22 +11,13 @@
   let loggedIn = false;
   let userPermission = "";
   let user = undefined;
-  let counter = 0;
-  onMount(_=>{
-    console.log(new Date(),'=> ','onMount');
-    const timer = setInterval(_=> {
-      const u = Meteor.user();
-      console.log('u:',u);
-      if(counter === 10){
-        clearInterval(timer);
-      }
-      counter = counter + 1;
-    },50)
-  })
+
   $m: {
     loggedIn = !!Meteor.user();
-    // let user = Meteor.user();
-    // console.log(new Date(),'=> ','App user:',user);
+    let user = Meteor.user();
+    let userId = Meteor.userId();
+    console.log(new Date(),'=> ','App user:',user);
+    console.log(new Date(),'=> ','userId:',userId);
     if(loggedIn){
       navigate("/home", { replace: true });
     }else{
