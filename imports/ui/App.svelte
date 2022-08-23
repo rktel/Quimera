@@ -3,10 +3,14 @@
   import { onMount } from 'svelte';
   import { Router, Route, navigate } from 'svelte-routing';
   import { fly } from "svelte/transition";
+  import MainStatusBar from './components/icons/MainStatusBar.svelte';
   import Navbar from "./components/Navbar.svelte";
   import ReportsTable from "./components/ReportsTable.svelte";
 
   import Login from "../ui/Login.svelte";
+
+   
+
   export let url = "";
   let loggedIn = false;
   let userPermission = "";
@@ -37,6 +41,7 @@
     </main>
   {/if}
   {#if loggedIn}
+  <MainStatusBar></MainStatusBar>
   <Navbar />
     <main>
       <Route path="/home">
