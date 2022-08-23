@@ -21,7 +21,7 @@
         clearInterval(timer);
       }
       counter = counter + 1;
-    },100)
+    },50)
   })
   $m: {
     loggedIn = !!Meteor.user();
