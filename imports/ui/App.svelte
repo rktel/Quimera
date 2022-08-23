@@ -1,5 +1,6 @@
 <script>
   // import { Meteor } from "meteor/meteor";
+  import { onMount } from 'svelte';
   import { Router, Route, navigate } from 'svelte-routing';
   import { fly } from "svelte/transition";
   import Navbar from "./components/Navbar.svelte";
@@ -9,7 +10,9 @@
   export let url = "";
   let loggedIn = false;
   let userPermission = "";
-
+  onMount(_=>{
+    console.log(new Date(),'=> ','onMount');
+  })
   $m: {
     loggedIn = !!Meteor.user();
     let user = Meteor.user();
