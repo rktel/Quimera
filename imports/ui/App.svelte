@@ -13,11 +13,8 @@
   let user = undefined;
 
   $m: {
-    loggedIn = !!Meteor.user();
-    let user = Meteor.user();
-    let userId = Meteor.userId();
-    console.log(new Date(),'=> ','App user:',user);
-    console.log(new Date(),'=> ','userId:',userId);
+    loggedIn = !!Meteor.userId();
+
     if(loggedIn){
       navigate("/home", { replace: true });
     }else{
