@@ -10,8 +10,8 @@
     };
 </script>
 
-<div class="relative h-screen flex bg-zinc-400">
-    <div class="hidden md:flex">Peppa</div>
+<div class="relative h-screen flex bg-zinc-200">
+    <div class="hidden md:flex flex-2">Peppa</div>
     <form on:submit|preventDefault={jlogin}>
         <div>
             <label htmlFor="username">Username</label>
@@ -25,7 +25,7 @@
             />
         </div>
 
-        <div>
+        <div class="flex-1">
             <label htmlFor="password">Password</label>
 
             <input
