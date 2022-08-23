@@ -1,6 +1,6 @@
 <script>
     import { onDestroy } from "svelte";
-
+    export let user = {};
     const jformatDate = (date) => {
         const jpad2 = (num) => {
             return num.toString().padStart(2, "0");
@@ -34,7 +34,7 @@
     </div>
     <div class="flex items-center gap-3">
         <div class="p-1">
-            <span class="text-white text-sm">rktel</span>
+            <span class="text-white text-sm">{user.username}</span>
         </div>
         <div on:click={jlogout}
             title="Cerrar sesión"

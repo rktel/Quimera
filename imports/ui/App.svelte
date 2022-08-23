@@ -43,7 +43,7 @@
   {/if}
 
   {#if loggedIn}
-  <MainStatusBar></MainStatusBar>
+  <MainStatusBar user></MainStatusBar>
   <Navbar />
     <main>
       <Route path="/home">
