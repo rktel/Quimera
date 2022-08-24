@@ -50,7 +50,7 @@
                 focusable="false"
                 data-prefix="fas"
                 data-icon="at"
-                class="text-white w-4 h-4 sm:w-3 sm:h-3"
+                class="text-white w-4 h-4"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
