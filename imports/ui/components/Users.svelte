@@ -15,7 +15,7 @@
     <div class="relative z-20 h-2/3 w-1/3 bg-white rounded border border-solid border-zinc-400">
         <div class="statusBar rounded-t">
             <div></div>
-            <button class="btn btn-light btn-small" on:click={jtoggleModal}> x Cerrar</button>
+            <button class="btn btn-light btn-small" on:click={jtoggleModal}> X &nbsp;  Cerrar</button>
         </div>
     </div>
   </div>
