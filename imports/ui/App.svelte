@@ -22,7 +22,7 @@
     s_user.update((el) => Meteor.user());
 
     if (loggedIn) {
-      navigate("/home", { replace: true });
+      navigate("/", { replace: true });
     } else {
       navigate("/login", { replace: true });
     }
