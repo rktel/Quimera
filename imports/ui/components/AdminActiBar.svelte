@@ -1,4 +1,4 @@
-<div class="bg-zinc-200 flex gap-1 items-center h-10 sm:h-8 select-none">
+<div class="bg-zinc-200 flex items-center h-10 sm:h-8 select-none">
     <button class="tab">Usuarios</button>
     <button class="tab">Reportes</button>
     <button class="tab">Mensajes</button>
