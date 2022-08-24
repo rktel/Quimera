@@ -9,8 +9,14 @@
 </script>
 
 {#if $selectedPanel === panel}
-<div class="bg-zinc-200" style="height: 100vh;">
+<div class="bg-zinc-200 tabPanel">
 	<slot></slot>
 </div>
 
 {/if}
+
+<style>
+	.tabPanel{
+		height: calc(100vh - 64px);
+	}
+</style>
