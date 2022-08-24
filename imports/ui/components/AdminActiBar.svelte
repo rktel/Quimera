@@ -4,4 +4,5 @@
     <button class="tab">Mensajes</button>
     <button class="tab">Ruta</button>
     <button class="tab">Auditoria</button>
+    <div class="tab flex-1"></div>
 </div>
