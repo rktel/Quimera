@@ -1,4 +1,4 @@
-<div class="bg-zinc-200 flex items-center h-10">
+<div class="bg-zinc-200 flex gap-1 items-center h-10">
     <div class="text-gray-700 border border-zinc-300 rounded shadow-lg h-9 px-6 grid place-content-center">
         <span>Usuarios</span>
     </div>
