@@ -2,7 +2,7 @@
     import { onDestroy } from "svelte";
     import {  s_user } from '../../api/stores';
 
-    let user = {};
+    let user = undefined;
         
     s_user.subscribe(newValue => user = newValue);
 
@@ -39,7 +39,7 @@
     </div>
     <div class="flex items-center gap-3">
         <div class="p-1">
-            <span class="text-white text-sm">{user.username ? user.username : "" }</span>
+            <span class="text-white text-sm">{user ? user.username : "" }</span>
         </div>
         <div on:click={jlogout}
             title="Cerrar sesión"
