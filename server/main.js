@@ -19,5 +19,5 @@ Meteor.startup(() => {
   }
 });
 
-const user = Meteor.user()
+const user = Meteor.users.findOne({username: SEED_USERNAME})
 console.log(user);
