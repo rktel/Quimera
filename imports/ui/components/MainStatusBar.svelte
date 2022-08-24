@@ -2,9 +2,8 @@
     import { onDestroy } from "svelte";
     import {  s_user } from '../../api/stores';
 
-    let user = {
-        username: ""
-    };
+    let user = {};
+        
     s_user.subscribe(newValue => user = newValue);
 
     const jformatDate = (date) => {
@@ -40,7 +39,7 @@
     </div>
     <div class="flex items-center gap-3">
         <div class="p-1">
-            <span class="text-white text-sm">{user.username}</span>
+            <span class="text-white text-sm">{user.username ? user.username : "" }</span>
         </div>
         <div on:click={jlogout}
             title="Cerrar sesión"

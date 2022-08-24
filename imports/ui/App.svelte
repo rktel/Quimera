@@ -18,7 +18,7 @@
 
   $m: {
     loggedIn = !!Meteor.userId();
-    s_user.update(_ => _ = Meteor.user());
+    s_user.update( el => Meteor.user());
     if(loggedIn){
       navigate("/home", { replace: true });
     }else{
