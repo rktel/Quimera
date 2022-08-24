@@ -4,5 +4,5 @@
     <button class="tab">Mensajes</button>
     <button class="tab">Ruta</button>
     <button class="tab">Auditoria</button>
-    <div class="tab hover: bg-white flex-1"></div>
+    <div class="no-tab"></div>
 </div>

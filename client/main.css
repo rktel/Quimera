@@ -13,7 +13,10 @@
       @apply block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none;
     }
     .tab{
-      @apply border border-zinc-500 hover:bg-zinc-100 border-solid px-5 h-10 sm:h-8;
+      @apply border-r border-b border-zinc-500 hover:bg-zinc-100 border-solid px-5 h-10 sm:h-8;
+    }
+    .no-tab{
+        @apply border-b flex-1 px-5 h-10 sm:h-8;
     }
     .tab-active{
         @apply border-b-0 bg-zinc-100;
