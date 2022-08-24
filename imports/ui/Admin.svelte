@@ -1,5 +1,8 @@
 <script>
     import { Tabs, TabList, TabPanel, Tab } from "./components/tabs";
+    import Messages from "./components/Messages.svelte";
+    import Reports from "./components/Reports.svelte";
+    import Users from "./components/Users.svelte";
 </script>
 
 <Tabs>
@@ -7,25 +10,18 @@
         <Tab>Usuarios</Tab>
         <Tab>Reportes</Tab>
         <Tab>Mensajes</Tab>
-        <div class="tab-tasks"></div>
+        <div class="tab-tasks" />
     </TabList>
 
     <TabPanel>
-        <div class="tabPanelContainer">
-            <div class="tabPanelSideLeft">1</div>
-            <div class="tabPanelSideRight">2</div>
-        </div>
+        <Users />
     </TabPanel>
+
     <TabPanel>
-        <div class="tabPanelContainer">
-            <div class="tabPanelSideLeft">1</div>
-            <div class="tabPanelSideRight">2</div>
-        </div>
+        <Reports />
     </TabPanel>
+
     <TabPanel>
-        <div class="tabPanelContainer">
-            <div class="tabPanelSideLeft">1</div>
-            <div class="tabPanelSideRight">2</div>
-        </div>
+        <Messages />
     </TabPanel>
 </Tabs>
