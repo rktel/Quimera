@@ -37,7 +37,7 @@
     <div>
         <span class="text-white text-sm">{now}</span>
     </div>
-    <div class="flex items-center gap-3">
+    <div class="">
         <div class="p-1 basis-10 bg-slate-500">
             <span class="text-white text-sm">{user ? user.username : " " }</span>
         </div>
