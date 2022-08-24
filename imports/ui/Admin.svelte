@@ -11,7 +11,10 @@
     </TabList>
 
     <TabPanel>
-        <h2>1 panel</h2>
+        <div class="grid grid-cols-2 gap-2 bg-white border border-solid border-zinc-400">
+            <div>1</div>
+            <div>2</div>
+        </div>
     </TabPanel>
 
     <TabPanel>
