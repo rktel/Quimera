@@ -21,5 +21,6 @@
     const jselecTab = (index) => {
         tabs = tabsBase;
         tabs[index]['class']= 'tab tab-active'
+        console.log(tabs);
     }
 </script>
