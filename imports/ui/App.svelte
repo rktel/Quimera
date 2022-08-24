@@ -2,6 +2,7 @@
   import { Meteor } from "meteor/meteor";
   import { Router, Route, navigate } from "svelte-routing";
   import MainStatusBar from "./components/MainStatusBar.svelte";
+  import AdminActiBar from "./components/AdminActiBar.svelte";
   import Navbar from "./components/Navbar.svelte";
   import ReportsTable from "./components/ReportsTable.svelte";
 
@@ -44,7 +45,8 @@
   {#if loggedIn}
     <MainStatusBar />
     {#if userPermission === "admin"}
-      <Navbar />
+      <AdminActiBar />
+      <!-- <Navbar /> -->
     {/if}
     {#if userPermission === "super"}
       <h1>Super</h1>
