@@ -9,7 +9,7 @@
 </script>
 
 {#if $selectedPanel === panel}
-	<div class="bg-zinc-200 tabPanel">
+	<div class="tabPanel">
 		<slot />
 	</div>
 {/if}

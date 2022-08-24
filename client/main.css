@@ -24,16 +24,15 @@
     .mainStatusBar{
         @apply bg-zinc-700 flex justify-between items-center px-5 h-10 sm:h-8;
     }
+    .tabPanel{
+        @apply h-[calc(100vh_-_80px)] bg-zinc-200;
+    }
 } 
 
   * {
       box-sizing: border-box;
   }
 
-
-  .tabPanel {
-      height: calc(100vh - 80px);
-  }
 
   @media (min-width: 640px) {
       .tabPanel {
