@@ -18,7 +18,7 @@
     .no-tab{
         @apply border-b flex-1 px-5 h-10 sm:h-8;
     }
-    .tab-active{
+    .tabActive{
         @apply border-b-0 bg-zinc-100;
     }
   }
