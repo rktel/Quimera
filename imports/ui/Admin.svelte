@@ -11,20 +11,16 @@
     </TabList>
 
     <TabPanel>
-        <div class="bg-zinc-200" style="height: 100vh">
-            <h2>Usuarios panel</h2>
-        </div>
+   
+            <h2>1 panel</h2>
+    
     </TabPanel>
 
     <TabPanel>
-        <div class="bg-zinc-200">
-  
-        </div>
+        <h2>2 panel</h2>
     </TabPanel>
 
     <TabPanel>
-        <div class="bg-zinc-200">
-            <h2>Mensajes panel</h2>
-        </div>
+        <h2>3 panel</h2>
     </TabPanel>
 </Tabs>

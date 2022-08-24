@@ -9,5 +9,8 @@
 </script>
 
 {#if $selectedPanel === panel}
+<div class="bg-zinc-200" style="height: 100vh;">
 	<slot></slot>
+</div>
+
 {/if}
