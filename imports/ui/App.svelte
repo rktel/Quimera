@@ -11,7 +11,7 @@
 
   export let url = "";
   let loggedIn = false;
-  let userPermission = "";
+  let userPermission = undefined;
   let user = undefined;
 
   s_user.subscribe((newValue) => (user = newValue));
@@ -30,7 +30,6 @@
       userPermission = user.profile.accountType;
     }
   }
-  
 </script>
 
 <Router {url}>
@@ -44,7 +43,12 @@
 
   {#if loggedIn}
     <MainStatusBar />
-    <Navbar />
+    {#if userPermission === "admin"}
+      <Navbar />
+    {/if}
+    {#if userPermission === "super"}
+      <h1>Super</h1>
+    {/if}
     <main>
       <Route path="/home">
         <ReportsTable />
