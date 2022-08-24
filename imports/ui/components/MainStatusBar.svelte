@@ -38,7 +38,7 @@
         <span class="text-white text-sm">{now}</span>
     </div>
     <div class="grid grid-cols-2 gap-2">
-        <div class="p-1 w-14 bg-slate-500">
+        <div class="p-1 bg-slate-500">
             <span class="text-white text-sm">{user ? user.username : " " }</span>
         </div>
         <div on:click={jlogout}
