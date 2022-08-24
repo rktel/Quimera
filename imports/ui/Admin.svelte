@@ -11,9 +11,7 @@
     </TabList>
 
     <TabPanel>
-   
-            <h2>1 panel</h2>
-    
+        <h2>1 panel</h2>
     </TabPanel>
 
     <TabPanel>
