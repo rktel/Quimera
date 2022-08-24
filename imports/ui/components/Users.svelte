@@ -17,6 +17,41 @@
             <div></div>
             <button class="btn btn-light btn-small" on:click={jtoggleModal}> X &nbsp;  Cerrar</button>
         </div>
+        <div class="p-3">
+            <form class="flex flex-col items-center gap-5">
+                <div class="flex flex-col">
+                    <label for="username" class="inline-block mb-2 text-gray-700"
+                        >Nombre de usuario</label
+                    >
+    
+                    <input
+                        class="form-input"
+                        type="text"
+                        name="username"
+                        required
+                        
+                    />
+                </div>
+                <div class="flex flex-col">
+                    <label for="username" class="inline-block mb-2 text-gray-700"
+                        >Contraseña</label
+                    >
+    
+                    <input
+                        class="form-input"
+                        type="text"
+                        name="password"
+                        required
+                        
+                    />
+                </div>
+                <div class="flex flex-col gap-3 mt-3">
+                    <button class="btn btn-light" type="submit"
+                        >CREAR USUARIO</button
+                    >
+                </div>
+            </form>
+        </div>
     </div>
   </div>
 {/if}
