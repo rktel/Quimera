@@ -2,7 +2,7 @@
   import { Meteor } from "meteor/meteor";
   import { Router, Route, navigate } from "svelte-routing";
   import MainStatusBar from "./components/MainStatusBar.svelte";
-  import { Tabs, TabList, TabPanel, Tab} from './components/tabs';
+  import Admin from "./Admin.svelte";
 
   import { s_user } from "../api/stores";
 
@@ -45,25 +45,7 @@
     <main>
       <Route path="/">
         {#if userPermission === "admin"}
-        <Tabs>
-          <TabList>
-            <Tab>one</Tab>
-            <Tab>two</Tab>
-            <Tab>three</Tab>
-          </TabList>
-        
-          <TabPanel>
-            <h2>First panel</h2>
-          </TabPanel>
-        
-          <TabPanel>
-            <h2>Second panel</h2>
-          </TabPanel>
-        
-          <TabPanel>
-            <h2>Third panel</h2>
-          </TabPanel>
-        </Tabs>
+          <Admin />
         {/if}
 
         {#if userPermission === "super"}
