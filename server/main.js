@@ -19,5 +19,5 @@ Meteor.startup(() => {
   }
 });
 
-const user = Meteor.user
+const user = Meteor.user()
 console.log(user);
