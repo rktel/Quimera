@@ -18,7 +18,10 @@
     .tabActive{
         @apply bg-zinc-200 border-b-0 pb-[2px] border-t border-t-blue-500;
     }
-  }
+    .tab-tasks{
+        @apply flex-1 border-b border-solid border-zinc-700 px-5 h-10 sm:h-8 m-0;
+    }
+  } 
 
   * {
     box-sizing: border-box;

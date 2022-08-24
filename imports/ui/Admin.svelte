@@ -7,7 +7,7 @@
         <Tab>Usuarios</Tab>
         <Tab>Reportes</Tab>
         <Tab>Mensajes</Tab>
-        <div class="flex-1 border-b border-solid border-zinc-700 px-5 h-10 sm:h-8 m-0"></div>
+        <div class="tab-tasks"></div>
     </TabList>
 
     <TabPanel>
