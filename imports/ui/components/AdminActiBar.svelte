@@ -19,7 +19,7 @@
     ];
     let tabs = [...tabsBase];
     const jselecTab = (index) => {
-        tabs = tabsBase;
+        tabs = [...tabsBase];
         console.log(tabsBase);
         tabs[index]['class']= 'tab tab-active'
         
