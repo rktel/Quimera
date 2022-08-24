@@ -11,9 +11,9 @@
     </TabList>
 
     <TabPanel>
-        <div class="grid grid-cols-2 gap-2 bg-white border border-solid border-zinc-400">
-            <div>1</div>
-            <div>2</div>
+        <div class="grid grid-cols-2 gap-2">
+            <div class="bg-white border border-solid border-zinc-400 h-[calc(100%_-_8px)]">1</div>
+            <div class="bg-white border border-solid border-zinc-400 h-[calc(100%_-_8px)]">2</div>
         </div>
     </TabPanel>
 
