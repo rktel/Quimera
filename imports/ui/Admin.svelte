@@ -4,20 +4,26 @@
 
 <Tabs>
     <TabList>
-        <Tab>one</Tab>
-        <Tab>two</Tab>
-        <Tab>three</Tab>
+        <Tab>Usuarios</Tab>
+        <Tab>Reportes</Tab>
+        <Tab>Mensajes</Tab>
     </TabList>
 
     <TabPanel>
-        <h2>First panel</h2>
+        <div class="bg-zinc-200">
+            <h2>Usuarios panel</h2>
+        </div>
     </TabPanel>
 
     <TabPanel>
-        <h2>Second panel</h2>
+        <div class="bg-zinc-200">
+            <h2>Reportes panel</h2>
+        </div>
     </TabPanel>
 
     <TabPanel>
-        <h2>Third panel</h2>
+        <div class="bg-zinc-200">
+            <h2>Mensajes panel</h2>
+        </div>
     </TabPanel>
 </Tabs>
