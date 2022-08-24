@@ -10,14 +10,16 @@
     <div class="no-tab" />
 </div>
 <script>
-    const tabs = [
+    const tabsBase = [
         {index: 0, name:'Usuarios' ,class:'tab'},
         {index: 1, name:'Reportes',class:'tab'},
         {index: 2, name:'Mensajes',class:'tab'},
         {index: 3, name:'Rutas',class:'tab'},
         {index: 4, name:'Auditoria',class:'tab'},
     ];
+    let tabs = tabsBase;
     const jselecTab = (index) => {
-        console.log(index);
+        tabs = tabsBase;
+        tabs[index]['class']= 'tab tab-active'
     }
 </script>
