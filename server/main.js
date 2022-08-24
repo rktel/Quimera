@@ -14,13 +14,6 @@ const SEBAS_USERNAME = "sebas";
 const SEBAS_PASSWORD = "gomez";
 
 Meteor.startup(() => {
-  if (!Accounts.findUserByUsername(SEED_USERNAME)) {
-    Accounts.createUser({
-      username: SEED_USERNAME,
-      password: SEED_PASSWORD,
-    });
-  }
-
   if (!Accounts.findUserByUsername(SEBAS_USERNAME)) {
     Accounts.createUser({
       username: SEBAS_USERNAME,
@@ -29,11 +22,11 @@ Meteor.startup(() => {
   }
 });
 
-const user = Meteor.users.findOne({username: SEBAS_USERNAME})
-const _id = user._id;
+// const user = Meteor.users.findOne({username: SEBAS_USERNAME})
+// const _id = user._id;
 
-Meteor.users.update(_id, {$set :{
-  profile: {
-    accountType: 'super'
-  }
-}})
+// Meteor.users.update(_id, {$set :{
+//   profile: {
+//     accountType: 'super'
+//   }
+// }})
