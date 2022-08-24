@@ -32,7 +32,7 @@
     const jlogout = () => Meteor.logout();
 </script>
 
-<div class="bg-stone-800 flex justify-between items-center px-5 h-10 sm:h-8">
+<div class="bg-zinc-700 flex justify-between items-center px-5 h-10 sm:h-8">
     <div class="flex w-[120px]"></div>
     <div class="flex w-[120px]">
         <span class="text-white text-sm">{now}</span>
