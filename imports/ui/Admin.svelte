@@ -17,7 +17,8 @@
 
     <TabPanel>
         <div class="bg-zinc-200">
-            <h2>Reportes panel</h2>
+            <button>one</button>
+            <button>two</button>
         </div>
     </TabPanel>
 
