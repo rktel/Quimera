@@ -16,6 +16,6 @@
       @apply border-r border-b hover:bg-zinc-200 px-5 h-10 sm:h-8;
     }
     .tabActive{
-        @apply border-b-0 bg-zinc-200;
+        @apply bg-zinc-200;
     }
   }
