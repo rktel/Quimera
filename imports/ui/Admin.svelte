@@ -11,7 +11,7 @@
     </TabList>
 
     <TabPanel>
-        <div class="bg-zinc-200 relative bottom-0">
+        <div class="bg-zinc-200" style="height: calc( 100% - 80px );">
             <h2>Usuarios panel</h2>
         </div>
     </TabPanel>
