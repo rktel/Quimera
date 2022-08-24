@@ -13,13 +13,13 @@
       @apply block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none;
     }
     .tab{
-      @apply text-zinc-600 border-r border-b border-solid border-zinc-500 hover:bg-zinc-200 px-5 h-10 sm:h-8 m-0 w-[120px];
+      @apply text-zinc-500 border-r border-b border-solid border-zinc-500 hover:bg-zinc-200 px-5 h-10 sm:h-8 m-0 w-[120px];
     }
     .tabActive{
-        @apply text-zinc-700 bg-zinc-200 border-b-0 pb-[2px] border-t border-t-blue-500;
+        @apply text-zinc-700 bg-zinc-200 border-b-0 pb-[2px] border-t border-t-blue-500 text-sm;
     }
     .tab-tasks{
-        @apply flex-1 border-b border-solid border-zinc-500 px-5 h-10 sm:h-8 m-0;
+        @apply flex-1 border-b border-solid border-zinc-400 px-5 h-10 sm:h-8 m-0;
     }
     .mainStatusBar{
         @apply bg-zinc-700 flex justify-between items-center px-5 h-10 sm:h-8;
