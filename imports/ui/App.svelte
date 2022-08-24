@@ -52,7 +52,7 @@
       <h1>Super</h1>
     {/if}
     <main>
-      <Route path="/home">
+      <Route path="/">
         <ReportsTable />
       </Route>
     </main>
