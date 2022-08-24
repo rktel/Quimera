@@ -21,7 +21,7 @@
     .tab-tasks{
         @apply flex-1 border-b border-solid border-zinc-400 px-5 h-10 sm:h-8 m-0;
     }
-    .mainStatusBar{
+    .statusBar{
         @apply bg-zinc-700 flex justify-between items-center px-5 h-10 sm:h-8;
     }
     .tabPanel{
