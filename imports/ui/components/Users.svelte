@@ -12,17 +12,17 @@
 
 {#if openModal}
 <div class="absolute z-10 top-0 bottom-0 right-0 left-0 flex justify-center items-center bg-slate-500 bg-opacity-25" >
-    <div class="relative z-20 h-2/3 w-1/3 bg-white rounded border border-solid border-zinc-400">
-        <div class="statusBar rounded-t">
+    <div class="relative z-20 h-2/3 w-1/3 bg-white shadow-md">
+        
+        <div class="defaultBar">
             <div></div>
             <button class="btn btn-light btn-small" on:click={jtoggleModal}> X &nbsp;  Cerrar</button>
         </div>
-        <div class="p-3 h-full bg-indigo-400">
+
             <form class="flex flex-col items-center gap-5 bg-slate-500 h-full">
                 <div class="flex flex-col">
                     <label for="username" class="inline-block mb-2 text-gray-700"
-                        >Nombre de usuario</label
-                    >
+                        >Nombre de usuario</label>
     
                     <input
                         class="form-input"
@@ -34,8 +34,7 @@
                 </div>
                 <div class="flex flex-col">
                     <label for="username" class="inline-block mb-2 text-gray-700"
-                        >Contraseña</label
-                    >
+                        >Contraseña</label>
     
                     <input
                         class="form-input"
@@ -51,7 +50,7 @@
                     >
                 </div>
             </form>
-        </div>
+
     </div>
   </div>
 {/if}
