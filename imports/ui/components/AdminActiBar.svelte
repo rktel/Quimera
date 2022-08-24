@@ -1,5 +1,5 @@
-<div class="bg-zinc-300 flex h-10">
-    <div>Usuarios</div>
-    <div>Reportes</div>
-    <div>Comandos</div>
+<div class="bg-zinc-200 flex items-center h-10">
+    <div class="text-gray-700 bg-slate-500">Usuarios</div>
+    <div class="text-gray-700">Reportes</div>
+    <div class="text-gray-700">Comandos</div>
 </div>
