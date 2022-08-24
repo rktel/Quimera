@@ -32,13 +32,13 @@
     const jlogout = () => Meteor.logout();
 </script>
 
-<div class="bg-zinc-900 flex justify-between items-center px-5 h-7">
+<div class="bg-zinc-900 flex justify-between items-center px-5 h-10 sm:h-8">
     <div class="flex w-[120px]"></div>
     <div class="flex w-[120px]">
         <span class="text-white text-sm">{now}</span>
     </div>
     <div class="flex w-[120px] justify-center items-center">
-        <div class="p-1 bg-slate-500 flex w-[50px]">
+        <div class="p-1 flex w-[60px]">
             <span class="text-white text-sm">{user ? user.username : " " }</span>
         </div>
         <div on:click={jlogout}
@@ -50,7 +50,7 @@
                 focusable="false"
                 data-prefix="fas"
                 data-icon="at"
-                class="text-white w-3 h-3"
+                class="text-white w-4 h-4 sm:w-3 sm:h-3"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
