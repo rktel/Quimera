@@ -39,7 +39,7 @@
     </div>
     <div class="flex items-center gap-3">
         <div class="p-1">
-            <span class="text-white text-sm">{user ? user.username : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span>
+            <span class="text-white text-sm">{user ? user.username : " " }</span>
         </div>
         <div on:click={jlogout}
             title="Cerrar sesión"
