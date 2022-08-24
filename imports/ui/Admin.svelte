@@ -11,15 +11,14 @@
     </TabList>
 
     <TabPanel>
-        <div class="bg-zinc-200">
+        <div class="bg-zinc-200 relative bottom-0">
             <h2>Usuarios panel</h2>
         </div>
     </TabPanel>
 
     <TabPanel>
         <div class="bg-zinc-200">
-            <button class="bg-slate-600">one</button>
-            <button class="bg-slate-600">two</button>
+  
         </div>
     </TabPanel>
 
