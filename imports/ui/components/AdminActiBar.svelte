@@ -17,7 +17,7 @@
         {index: 3, name:'Rutas',class:'tab'},
         {index: 4, name:'Auditoria',class:'tab'},
     ];
-    let tabs = tabsBase;
+    let tabs = [...tabsBase];
     const jselecTab = (index) => {
         tabs = tabsBase;
         console.log(tabsBase);
