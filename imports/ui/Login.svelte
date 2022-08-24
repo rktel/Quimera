@@ -1,5 +1,4 @@
 <script>
-    import { fly } from "svelte/transition";
     import { Meteor } from "meteor/meteor";
 
     let username = "";
