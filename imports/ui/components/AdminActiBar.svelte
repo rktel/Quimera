@@ -5,7 +5,7 @@
     <button class="tab">Ruta</button>
     <button class="tab">Auditoria</button> -->
     {#each tabs as tab }
-        <button class={tab.class} on:click={jselecTab(tab.index)}> {tab.name}</button>
+        <button class={tab.class} on:click={_=>jselecTab(tab.index)}> {tab.name}</button>
     {/each}
     <div class="no-tab" />
 </div>
