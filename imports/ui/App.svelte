@@ -1,58 +1,54 @@
 <script>
   import { Meteor } from "meteor/meteor";
-  import { Router, Route, navigate } from 'svelte-routing';
-  import MainStatusBar from './components/MainStatusBar.svelte';
+  import { Router, Route, navigate } from "svelte-routing";
+  import MainStatusBar from "./components/MainStatusBar.svelte";
   import Navbar from "./components/Navbar.svelte";
   import ReportsTable from "./components/ReportsTable.svelte";
-  
-  import { s_user } from "../api/stores"
+
+  import { s_user } from "../api/stores";
 
   import Login from "../ui/Login.svelte";
-
-   
 
   export let url = "";
   let loggedIn = false;
   let userPermission = "";
+  let user = undefined;
 
+  s_user.subscribe((newValue) => (user = newValue));
 
   $m: {
     loggedIn = !!Meteor.userId();
-    s_user.update( el => Meteor.user());
-    if(loggedIn){
+    s_user.update((el) => Meteor.user());
+
+    if (loggedIn) {
       navigate("/home", { replace: true });
-    }else{
+    } else {
       navigate("/login", { replace: true });
     }
- 
-    // if (user) {
-    //   userPermission = user.profile.accountType;
-    // }
-  }
 
+    if (user) {
+      userPermission = user.profile.accountType;
+    }
+  }
+  
 </script>
 
-<Router url={url}>
-
+<Router {url}>
   {#if !loggedIn}
     <main>
       <Route path="/login">
-        <Login></Login>
+        <Login />
       </Route>
     </main>
   {/if}
 
   {#if loggedIn}
-  <MainStatusBar></MainStatusBar>
-  <Navbar />
+    <MainStatusBar />
+    <Navbar />
     <main>
       <Route path="/home">
         <ReportsTable />
       </Route>
     </main>
   {/if}
-
 </Router>
-
-
-
