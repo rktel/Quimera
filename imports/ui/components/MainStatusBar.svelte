@@ -38,7 +38,7 @@
         <span class="text-white text-sm">{now}</span>
     </div>
     <div class="flex w-[120px] justify-center items-center">
-        <div class="p-1 bg-slate-500">
+        <div class="p-1 bg-slate-500 flex w-[50px]">
             <span class="text-white text-sm">{user ? user.username : " " }</span>
         </div>
         <div on:click={jlogout}
