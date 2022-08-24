@@ -37,7 +37,7 @@
     <div>
         <span class="text-white text-sm">{now}</span>
     </div>
-    <div class="flex bg-zinc-400">
+    <div class="flex bg-zinc-400 w-[300px]">
         <div class="p-1 bg-slate-500">
             <span class="text-white text-sm">{user ? user.username : " " }</span>
         </div>
