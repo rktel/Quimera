@@ -2,9 +2,7 @@
   import { Meteor } from "meteor/meteor";
   import { Router, Route, navigate } from "svelte-routing";
   import MainStatusBar from "./components/MainStatusBar.svelte";
-  import AdminActiBar from "./components/AdminActiBar.svelte";
-  import Navbar from "./components/Navbar.svelte";
-  import ReportsTable from "./components/ReportsTable.svelte";
+  import { Tabs, TabList, TabPanel, Tab} from './components/tabs';
 
   import { s_user } from "../api/stores";
 
@@ -44,16 +42,33 @@
 
   {#if loggedIn}
     <MainStatusBar />
-    {#if userPermission === "admin"}
-      <AdminActiBar />
-      <!-- <Navbar /> -->
-    {/if}
-    {#if userPermission === "super"}
-      <h1>Super</h1>
-    {/if}
     <main>
       <Route path="/">
-        <ReportsTable />
+        {#if userPermission === "admin"}
+        <Tabs>
+          <TabList>
+            <Tab>one</Tab>
+            <Tab>two</Tab>
+            <Tab>three</Tab>
+          </TabList>
+        
+          <TabPanel>
+            <h2>First panel</h2>
+          </TabPanel>
+        
+          <TabPanel>
+            <h2>Second panel</h2>
+          </TabPanel>
+        
+          <TabPanel>
+            <h2>Third panel</h2>
+          </TabPanel>
+        </Tabs>
+        {/if}
+
+        {#if userPermission === "super"}
+          <h1>Super</h1>
+        {/if}
       </Route>
     </main>
   {/if}
