@@ -17,6 +17,12 @@
 
 <style>
 	.tabPanel{
-		height: calc(100vh - 64px);
+		height: calc(100vh - 80px);
 	}
+
+	@media (min-width: 640px) {
+    .tabPanel{
+        height: calc(100vh - 64px);
+    }
+}
 </style>
