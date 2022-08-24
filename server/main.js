@@ -10,6 +10,9 @@ import './tcp_commands/galileosky';
 const SEED_USERNAME = 'rktel';
 const SEED_PASSWORD = 'mazziel';
 
+const SEBAS_USERNAME = "sebas";
+const SEBAS_PASSWORD = "gomez";
+
 Meteor.startup(() => {
   if (!Accounts.findUserByUsername(SEED_USERNAME)) {
     Accounts.createUser({
@@ -17,13 +20,20 @@ Meteor.startup(() => {
       password: SEED_PASSWORD,
     });
   }
+
+  if (!Accounts.findUserByUsername(SEBAS_USERNAME)) {
+    Accounts.createUser({
+      username: SEBAS_USERNAME,
+      password: SEBAS_PASSWORD,
+    });
+  }
 });
 
-const user = Meteor.users.findOne({username: SEED_USERNAME})
+const user = Meteor.users.findOne({username: SEBAS_USERNAME})
 const _id = user._id;
 
 Meteor.users.update(_id, {$set :{
   profile: {
-    accountType: 'admin'
+    accountType: 'super'
   }
 }})
