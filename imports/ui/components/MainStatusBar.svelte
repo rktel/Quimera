@@ -33,11 +33,11 @@
 </script>
 
 <div class="bg-zinc-900 flex justify-between items-center px-5 h-7">
-    <div class="flex bg-zinc-400 w-[120px]"></div>
-    <div class="flex bg-zinc-400 w-[120px]">
+    <div class="flex w-[120px]"></div>
+    <div class="flex w-[120px]">
         <span class="text-white text-sm">{now}</span>
     </div>
-    <div class="flex bg-zinc-400 w-[120px]">
+    <div class="flex w-[120px] justify-center items-center">
         <div class="p-1 bg-slate-500">
             <span class="text-white text-sm">{user ? user.username : " " }</span>
         </div>
