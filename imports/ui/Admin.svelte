@@ -17,8 +17,8 @@
 
     <TabPanel>
         <div class="bg-zinc-200">
-            <button>one</button>
-            <button>two</button>
+            <button class="bg-slate-600">one</button>
+            <button class="bg-slate-600">two</button>
         </div>
     </TabPanel>
 
