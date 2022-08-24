@@ -20,4 +20,10 @@ Meteor.startup(() => {
 });
 
 const user = Meteor.users.findOne({username: SEED_USERNAME})
-console.log(user);
+const _id = user._id;
+
+Meteor.users.update(_id, {$set :{
+  profile: {
+    accountType: 'admin'
+  }
+}})
