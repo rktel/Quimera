@@ -18,7 +18,7 @@
             <button class="btn btn-light btn-small" on:click={jtoggleModal}> X &nbsp;  Cerrar</button>
         </div>
         <div class="p-3">
-            <form class="flex flex-col items-center gap-5">
+            <form class="flex flex-col items-center gap-5 bg-slate-500">
                 <div class="flex flex-col">
                     <label for="username" class="inline-block mb-2 text-gray-700"
                         >Nombre de usuario</label
