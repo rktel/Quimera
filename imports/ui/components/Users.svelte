@@ -11,7 +11,7 @@
 </div>
 
 {#if openModal}
-<div class="absolute z-10 top-0 bottom-0 right-0 left-0 flex justify-center items-center" >
+<div class="absolute z-10 top-0 bottom-0 right-0 left-0 flex justify-center items-center bg-slate-500 opacity-30" >
     <h1>Peppa Pig</h1>
   </div>
 {/if}
