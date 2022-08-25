@@ -27,7 +27,7 @@
                             </th>                             
                         </tr>
                     </thead>
-                    <body>
+                    <tbody>
                         {#each users as user,i}
                         <tr class="bg-white border-b">
                             <td class="tableBodyItem">
@@ -41,7 +41,7 @@
                             </td>
                         </tr>
                         {/each}
-                    </body>
+                    </tbody>
 
                 </table>
             </div>
