@@ -110,7 +110,7 @@
                                 VoltajeIn_0 
                             </th>
                             {#if brawData}
-                            <th class="tableHeadItem">
+                            <th class="tableHeadItem text-left">
                                 Raw data 
                             </th>
                             {/if}
@@ -153,7 +153,7 @@
                                     {report.inputVoltage0}
                                 </td>
                                 {#if brawData}
-                                <th class="tableBodyItem">
+                                <th class="tableBodyItem text-left">
                                     {report.raw}
                                 </th>
                                 {/if}
