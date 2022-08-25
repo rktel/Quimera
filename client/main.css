@@ -55,7 +55,7 @@
         @apply bg-white m-[2px] rounded-sm border border-solid border-zinc-400  h-[calc(100%_-_8px)] flex-1 overflow-scroll;
     }
     .tableHeadItem{
-        @apply text-sm font-medium text-gray-100 px-6 py-2 sticky top-0 z-20;
+        @apply text-sm font-medium text-gray-100 px-6 py-2 sticky top-0 z-20 bg-zinc-400;
     }
     .tableBodyItem{
         @apply text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap;
