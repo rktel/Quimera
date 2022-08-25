@@ -12,7 +12,7 @@
         <div class="p-3 flex flex-col gap-3">
             {#if users[0]}
                 {#each users as user}
-                    <div class="flex items-center">
+                    <div class="flex items-center justify-center h-7">
                         <div class="flex-1 overflow-hidden border-l border-y border-solid border-zinc-400">
                             <span>{user.username}</span>
                         </div>
