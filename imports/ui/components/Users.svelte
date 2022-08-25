@@ -20,6 +20,11 @@
         </div>
 
             <form class="flex flex-col justify-center items-center gap-5 h-[calc(100%_-_32px)]">
+
+                <div>
+                    <h1 class="text-xl text-gray-800">Complete los siguientes campos</h1>
+                </div>
+
                 <div class="flex flex-col">
                     <label for="username" class="inline-block mb-2 text-gray-700"
                         >Nombre de usuario</label>
