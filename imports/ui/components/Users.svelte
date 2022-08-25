@@ -9,7 +9,7 @@
     </div>
     <div class="tabPanelSideRight">
 
-        <div class="p-3 flex flex-col gap-3">
+        <div class="p-3 flex flex-col gap-2">
             {#if users[0]}
                 {#each users as user}
                     <div class="flex">
