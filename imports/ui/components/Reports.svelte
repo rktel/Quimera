@@ -63,9 +63,7 @@
         <div class="p-3 flex flex-col gap-3">
             {#if reports[0]}
             <div class="flex flex-col">
-                <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-                    <div class="overflow-hidden">
+
                     <table class="min-w-full text-center">
                         <thead class="border-b bg-white">
                         <tr>
@@ -142,9 +140,6 @@
                             {/each}
                        </tbody>
                     </table>
-                    </div>
-                </div>
-                </div>
             </div>
         {/if}
         </div>
