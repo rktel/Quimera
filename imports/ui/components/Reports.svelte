@@ -65,39 +65,39 @@
             <div class="flex flex-col">
 
                     <table class="min-w-full text-center">
-                        <thead class="border-b bg-white">
+                        <thead class="border-b bg-zinc-400">
                         <tr>
-                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                            <th class="tableHeadItem">
                             #
                             </th>
-                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                            <th class="tableHeadItem">
                             Record
                             </th>
-                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                            <th class="tableHeadItem">
                             ServerTime
                             </th>
-                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                            <th class="tableHeadItem">
                             GPSTime
                             </th>
-                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                            <th class="tableHeadItem">
                             Coordenadas
                             </th>
-                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                            <th class="tableHeadItem">
                             Satelites
                             </th>
-                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                            <th class="tableHeadItem">
                                 FixGPS
                             </th>
-                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                            <th class="tableHeadItem">
                                 HDOP
                             </th>
-                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                            <th class="tableHeadItem">
                                 Velocidad
                             </th>
-                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                            <th class="tableHeadItem">
                                 Kilometraje     
                             </th>
-                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                            <th class="tableHeadItem">
                                 VoltajeIn_0 
                             </th>
                         </tr>
@@ -105,35 +105,37 @@
                         <tbody>
                             {#each reports as report, i }
                             <tr class="bg-white border-b">
-                                <td class="px-6 py-2 whitespace-nowrap text-sm font-medium text-gray-900">{i+1}</td>
-                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                <td class="tableBodyItem">
+                                    {i+1}
+                                </td>
+                                <td class="tableBodyItem">
                                 {report.numberOfRecord}
                                 </td>
-                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                <td class="tableBodyItem">
                                     {report.serverTimeFormat}
                                 </td>
-                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                <td class="tableBodyItem">
                                     {report.dateAndTimeFormat}
                                 </td>
-                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                <td class="tableBodyItem">
                                     {report.latitude}, {report.longitude}
                                 </td>
-                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                <td class="tableBodyItem">
                                     {report.satellites}
                                 </td>
-                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                <td class="tableBodyItem">
                                     {report.coordinatesCorrectness}
                                 </td>
-                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                <td class="tableBodyItem">
                                     {report.hdop}
                                 </td>
-                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                <td class="tableBodyItem">
                                     {report.speed}
                                 </td>
-                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                <td class="tableBodyItem">
                                     {report.odometer}
                                 </td>
-                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                <td class="tableBodyItem">
                                     {report.inputVoltage0}
                                 </td>
                             </tr>                                

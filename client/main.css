@@ -54,6 +54,12 @@
     .tabPanelSideRight{
         @apply bg-white m-[2px] rounded-sm border border-solid border-zinc-400  h-[calc(100%_-_8px)] flex-1 overflow-scroll;
     }
+    .tableHeadItem{
+        @apply text-sm font-medium text-gray-900 px-6 py-2;
+    }
+    .tableBodyItem{
+        @apply text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap;
+    }
 } 
 
   * {
