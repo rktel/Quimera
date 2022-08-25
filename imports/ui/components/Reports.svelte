@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="flex flex-col pt-2">
-                <button class="btn btn-light">
+                <button class="btn btn-light" title="Se incluiran todos los campos + raw data">
                     DESCARGAR
                 </button>
             </div>
