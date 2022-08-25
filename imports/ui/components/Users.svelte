@@ -98,5 +98,6 @@
     }
     const jremoveUser = (_id) =>{
         Meteor.call('users.remove',_id)
+        jgetAllUsers()
     }
   </script>
