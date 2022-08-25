@@ -12,7 +12,8 @@
     let brawData;
 
     const jgetReports = (_) => {
-        Meteor.call('users.reports.set.imei', imei);
+        if(Number(imei)){
+            Meteor.call('users.reports.set.imei', imei);
         switch (dateReportSelected) {
             case 0:
                 Meteor.call("reports.getTodayReport", imei, (e, r) => {
@@ -37,6 +38,7 @@
                 break;
             default:
                 break;
+        }
         }
     };
     
