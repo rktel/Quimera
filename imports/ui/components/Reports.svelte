@@ -1,3 +1,43 @@
+<style>
+    .label {
+            display: flex;
+
+            /* Rounded border */
+            border-radius: 9999px;
+
+            /* Size */
+            height: 32px;
+            width: 64px;
+
+            /* OFF status */
+            background-color: rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.3);
+
+            /* ON status */
+            background-color: #357edd;
+            border: 1px solid #357edd;
+            /* Push the circle to the right */
+            justify-content: flex-end;
+        }
+
+        .label__input {
+            /* Hide the input */
+            display: none;
+        }
+
+        .label__circle {
+            /* Rounded border */
+            border-radius: 9999px;
+
+            /* Size */
+            width: 32px;
+
+            background-color: #fff;
+
+            /* OFF status */
+            border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+</style>
 <div class="tabPanelContainer">
     <div class="tabPanelSideLeft">
 
@@ -57,14 +97,17 @@
             </div>
             <div class="flex flex-col">
                 <label for="raw-data" class="inline-block mb-2 text-gray-700"
-                >Raw data</label>
-                <input
-                class=""
-                type="checkbox"
-                name="raw-data"
-                id="raw-data"
-                bind:value={imei}
-            />
+                >Agregar raw-data</label>
+                <label class="label">
+                    <input type="checkbox" class="label__input"
+                    name="raw-data"
+                    id="raw-data"
+                    bind:value={rawData}/>
+                
+                    <!-- Circle -->
+                    <div class="label__circle"></div>
+                </label>
+
             </div>
 
 
@@ -165,7 +208,7 @@
     let dateReportSelected = 0;
     let startDay, endDay, imei;
     let reports = [];
-
+    let rawData = false;
     const jgetReports = (_) => {
         console.log("accion de consulta");
         switch (dateReportSelected) {
