@@ -12,7 +12,7 @@
 
 {#if openModal}
 <div class="absolute z-10 top-0 bottom-0 right-0 left-0 flex justify-center items-center bg-slate-500 bg-opacity-25" >
-    <div class="relative z-20 h-2/3 w-1/3 bg-white shadow-md">
+    <div class="h-2/3 w-1/3 bg-white shadow-lg p-3">
         
         <div class="defaultBar">
             <div></div>
