@@ -41,7 +41,7 @@
     };
     $:{
         if(user){
-            console.log(user.profile.reports);
+            console.log(user);
         }
     }
 </script>
