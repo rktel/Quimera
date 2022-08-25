@@ -39,11 +39,11 @@
                 break;
         }
     };
-    $:{
+    
         if(user && user.profile && user.profile.reports){
             imei = user.profile.reports.imei
         }
-    }
+    
 </script>
 
 <div class="tabPanelContainer">
