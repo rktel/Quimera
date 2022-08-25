@@ -97,15 +97,15 @@
             </div>
             <div class="flex flex-col">
                 {rawData}
-                <label class="label">
-                    <input  class="label__input"
+                <label class="checkboxLabel" class:checkboxOn={rawData}>
+                    <input  class="checkboxInput"
                     name="raw-data"
                     id="raw-data"
                     type=checkbox bind:checked={rawData}
                     />
                 
                     <!-- Circle -->
-                    <div class="label__circle"></div>
+                    <div class="checkboxCircle" class:checkboxCircleOff={!rawData}></div>
                 </label>
 
             </div>
