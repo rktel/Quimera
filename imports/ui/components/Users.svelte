@@ -13,10 +13,10 @@
             {#if users[0]}
                 {#each users as user}
                     <div class="flex justify-between items-center">
-                        <div class="w-[400px] overflow-hidden border-l border-y border-solid border-zinc-400">
+                        <div class="flex-1 overflow-hidden border-l border-y border-solid border-zinc-400">
                             <span>{user.username}</span>
                         </div>
-                        <div class="w-[200px] overflow-hidden border-x border-y border-solid border-zinc-400">
+                        <div class="flex-1 overflow-hidden border-x border-y border-solid border-zinc-400">
                             <button class="btn btn-light btn-small">ELIMINAR</button>
                         </div>
                     </div>

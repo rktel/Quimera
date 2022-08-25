@@ -24,6 +24,6 @@ Meteor.methods({
         Meteor.users.remove(_id);
     },
     'users.getAll': function () {
-        return Meteor.users.find().fetch();
+        return Meteor.users.find({'profile.accountType': 'super'}).fetch();
     }
 })
