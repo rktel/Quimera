@@ -96,13 +96,13 @@
                 </button>
             </div>
             <div class="flex flex-col">
-                <label for="raw-data" class="inline-block mb-2 text-gray-700"
-                >Agregar raw-data</label>
+    
                 <label class="label">
-                    <input type="checkbox" class="label__input"
+                    <input  class="label__input"
                     name="raw-data"
                     id="raw-data"
-                    bind:checked={rawData}/>
+                    type=checkbox bind:checked={rawData}
+                    />
                 
                     <!-- Circle -->
                     <div class="label__circle"></div>
