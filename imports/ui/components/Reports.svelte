@@ -40,8 +40,8 @@
         }
     };
     $:{
-        if(user){
-            console.log(user);
+        if(user && user.profile && user.profile.reports){
+            imei = user.profile.reports.imei
         }
     }
 </script>
