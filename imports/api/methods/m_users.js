@@ -29,7 +29,7 @@ Meteor.methods({
     'users.reports.set.imei': function (imei) {
         if(this.userId){
             imei = Number(imei);
-            Meteor.users.update(this.userId,{
+            Meteor.users.update({_id: this.userId},{
                 $set:{
                     reports:{
                        imei: imei
