@@ -90,6 +90,7 @@
     width: 54px;
     /* OFF status */
 
+    border: 1px solid rgba(0, 0, 0, 0.3);
   }
 
   .checkboxCircleOff{
