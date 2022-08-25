@@ -3,7 +3,7 @@
 
         <div class="p-3 flex flex-col gap-3">
             <button class="btn btn-light" on:click={jtoggleModal}> CREAR USUARIO </button>
-            <button class="btn btn-light"> VER USUARIOS </button>
+            <button class="btn btn-light" on:click={jgetAllUsers}> VER USUARIOS </button>
         </div>
 
     </div>
@@ -19,7 +19,7 @@
             <button class="btn btn-light btn-small" on:click={jtoggleModal}> X &nbsp;  Cerrar</button>
         </div>
 
-            <form class="flex flex-col justify-center  gap-10 h-[calc(100%_-_32px)]">
+            <form class="flex flex-col justify-center  gap-10 h-[calc(100%_-_32px)]" on:submit|preventDefault={jcreateUser}>
 
                 <div>
                     <h1 class="text-xl text-gray-800 px-5">Complete los siguientes campos</h1>
@@ -35,7 +35,7 @@
                             type="text"
                             name="username"
                             required
-                            
+                            bind:value={username}
                         />
                     </div>
                     <div class="flex flex-col">
@@ -47,7 +47,7 @@
                             type="text"
                             name="password"
                             required
-                            
+                            bind:value={password}
                         />
                     </div>
                     <div class="flex flex-col gap-3 mt-3">
@@ -66,5 +66,15 @@
     let openModal = false;
     const jtoggleModal = () => {
         openModal = !openModal;
+    }
+    let username;
+    let password;
+    const jcreateUser = () =>{
+        Meteor.call('users.create',{username,password});
+    }
+    const jgetAllUsers = () =>{
+        Meteor.call('users.getAll', (e,r)=>{
+            console.log(r);
+        });
     }
   </script>
