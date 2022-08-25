@@ -1,43 +1,3 @@
-<style>
-    .label {
-            display: flex;
-
-            /* Rounded border */
-            border-radius: 9999px;
-
-            /* Size */
-            height: 22px;
-            width: 54px;
-
-            /* OFF status */
-            background-color: rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(0, 0, 0, 0.3);
-
-            /* ON status */
-            background-color: #357edd;
-            border: 1px solid #357edd;
-            /* Push the circle to the right */
-            justify-content: flex-end;
-        }
-
-        .label__input {
-            /* Hide the input */
-            display: none;
-        }
-
-        .label__circle {
-            /* Rounded border */
-            border-radius: 9999px;
-
-            /* Size */
-            width: 32px;
-
-            background-color: #fff;
-
-            /* OFF status */
-            border: 1px solid rgba(0, 0, 0, 0.3);
-    }
-</style>
 <div class="tabPanelContainer">
     <div class="tabPanelSideLeft">
 
@@ -96,18 +56,8 @@
                 </button>
             </div>
             <div class="flex flex-col">
-                {rawData}
-                <label class="checkboxLabel" class:checkboxOn={rawData}>
-                    <input  class="checkboxInput"
-                    name="raw-data"
-                    id="raw-data"
-                    type=checkbox bind:checked={rawData}
-                    />
-                
-                    <!-- Circle -->
-                    <div class="checkboxCircle" class:checkboxCircleOff={!rawData}></div>
-                </label>
-
+                {brawData}
+                <Checkbox bcheckedState={brawData}></Checkbox>
             </div>
 
 
@@ -204,11 +154,12 @@
 </div>
 <script>
     import { Meteor } from "meteor/meteor";
+    import Checkbox from "../elements/Checkbox.svelte";
 
     let dateReportSelected = 0;
     let startDay, endDay, imei;
     let reports = [];
-    let rawData = false;
+    let brawData = false;
     const jgetReports = (_) => {
         console.log("accion de consulta");
         switch (dateReportSelected) {
