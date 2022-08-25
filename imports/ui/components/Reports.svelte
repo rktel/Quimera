@@ -65,7 +65,7 @@
             <div class="flex flex-col">
 
                     <table class="min-w-full text-center">
-                        <thead class="border-b bg-zinc-400">
+                        <thead>
                         <tr>
                             <th class="tableHeadItem">
                             #
