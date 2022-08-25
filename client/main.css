@@ -67,7 +67,7 @@
         @apply hidden;
     }
     .checkboxCircle{
-        @apply rounded-full w-8 bg-white
+        @apply rounded-full w-8 bg-zinc-400;
     }
 
 } 
