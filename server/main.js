@@ -9,8 +9,8 @@ import '../imports/api/methods/m_users';
 import './tcp_commands/galileosky';
 
 
-const SEBAS_USERNAME = "sebas";
-const SEBAS_PASSWORD = "gomez";
+const SEBAS_USERNAME = "mazda";
+const SEBAS_PASSWORD = "mazda";
 
 Meteor.startup(() => {
   if (!Accounts.findUserByUsername(SEBAS_USERNAME)) {
@@ -21,11 +21,11 @@ Meteor.startup(() => {
   }
 });
 
-// const user = Meteor.users.findOne({username: SEBAS_USERNAME})
-// const _id = user._id;
+const user = Meteor.users.findOne({username: SEBAS_USERNAME})
+const _id = user._id;
 
-// Meteor.users.update(_id, {$set :{
-//   profile: {
-//     accountType: 'super'
-//   }
-// }})
+Meteor.users.update(_id, {$set :{
+   profile: {
+    accountType: 'admin'
+  }
+ }})
