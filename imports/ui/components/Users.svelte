@@ -7,7 +7,24 @@
         </div>
 
     </div>
-    <div class="tabPanelSideRight">2</div>
+    <div class="tabPanelSideRight">
+
+        <div class="p-3 flex flex-col gap-3">
+            {#if users[0]}
+                {#each users as user}
+                    <div class="flex justify-between items-center">
+                        <div class="w-[400px] overflow-hidden border-l border-y border-solid border-zinc-400">
+                            <span>{user.username}</span>
+                        </div>
+                        <div class="w-[200px] overflow-hidden border-x border-y border-solid border-zinc-400">
+                            <button class="btn btn-light btn-small">ELIMINAR</button>
+                        </div>
+                    </div>
+                {/each}
+            {/if}
+        </div>
+
+    </div>
 </div>
 
 {#if openModal}
@@ -71,10 +88,12 @@
     let password;
     const jcreateUser = () =>{
         Meteor.call('users.create',{username,password});
+        jtoggleModal();
     }
+    let users = [];
     const jgetAllUsers = () =>{
         Meteor.call('users.getAll', (e,r)=>{
-            console.log(r);
+            users = r;
         });
     }
   </script>
