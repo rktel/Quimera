@@ -25,34 +25,36 @@
                     <h1 class="text-xl text-gray-800">Complete los siguientes campos</h1>
                 </div>
 
-                <div class="flex flex-col">
-                    <label for="username" class="inline-block mb-2 text-gray-700"
-                        >Nombre de usuario</label>
-    
-                    <input
-                        class="form-input"
-                        type="text"
-                        name="username"
-                        required
-                        
-                    />
-                </div>
-                <div class="flex flex-col">
-                    <label for="username" class="inline-block mb-2 text-gray-700"
-                        >Contraseña</label>
-    
-                    <input
-                        class="form-input"
-                        type="text"
-                        name="password"
-                        required
-                        
-                    />
-                </div>
-                <div class="flex flex-col gap-3 mt-3">
-                    <button class="btn btn-light" type="submit"
-                        >CREAR USUARIO</button
-                    >
+                <div class="flex justify-center">
+                    <div class="flex flex-col">
+                        <label for="username" class="inline-block mb-2 text-gray-700"
+                            >Nombre de usuario</label>
+        
+                        <input
+                            class="form-input"
+                            type="text"
+                            name="username"
+                            required
+                            
+                        />
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="username" class="inline-block mb-2 text-gray-700"
+                            >Contraseña</label>
+        
+                        <input
+                            class="form-input"
+                            type="text"
+                            name="password"
+                            required
+                            
+                        />
+                    </div>
+                    <div class="flex flex-col gap-3 mt-3">
+                        <button class="btn btn-light" type="submit"
+                            >CREAR USUARIO</button
+                        >
+                    </div>
                 </div>
             </form>
 
