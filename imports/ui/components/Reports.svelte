@@ -56,8 +56,8 @@
                 </button>
             </div>
             <div class="flex flex-col">
-                {brawData}
-                <Checkbox bcheckedState={brawData}></Checkbox>
+           
+                <Checkbox bind:this={brawData} ></Checkbox>
             </div>
 
 
@@ -159,7 +159,8 @@
     let dateReportSelected = 0;
     let startDay, endDay, imei;
     let reports = [];
-    let brawData = false;
+    let brawData;
+    setInterval(_=> console.log('brawData:',brawData), 4000)
     const jgetReports = (_) => {
         console.log("accion de consulta");
         switch (dateReportSelected) {

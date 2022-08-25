@@ -61,10 +61,10 @@ input:checked + .slider:before {
 </style>
 
 <label class="switch">
-    <input type="checkbox" bind:checked={bcheckedState}>
+    <input type="checkbox" bind:this={input}>
     <span class="slider round"></span>
 </label>
 
 <script>
-    export let bcheckedState = false;
+    let input;
 </script>
