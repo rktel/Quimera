@@ -46,7 +46,7 @@
         @apply h-[calc(100vh_-_80px)] bg-zinc-200;
     }
     .tabPanelContainer{
-        @apply flex h-full;
+        @apply flex h-full overflow-hidden;
     }
     .tabPanelSideLeft{
         @apply bg-white m-[2px] rounded-sm border border-solid border-zinc-400 h-[calc(100%_-_8px)] basis-[460px] overflow-scroll;
