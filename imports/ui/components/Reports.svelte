@@ -65,9 +65,10 @@
                 </div>
             </div>
             <div class="flex flex-col pt-2">
-                <button class="btn btn-light" title="Se incluiran todos los campos + raw data">
+                <button class="btn btn-light">
                     DESCARGAR
                 </button>
+                <p class="text-gray-600 text-xs">Se incluiran todos los campos + raw data</p>
             </div>
             {/if}
         </div>
