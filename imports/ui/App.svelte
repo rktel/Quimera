@@ -29,6 +29,7 @@
       userPermission = user.profile.accountType;
     }
   }
+  
 </script>
 
 <Router {url}>

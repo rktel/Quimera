@@ -1,3 +1,51 @@
+<script>
+    import { Meteor } from "meteor/meteor";
+    import Checkbox from "../elements/Checkbox.svelte";
+    
+    import {  s_user } from '../../api/stores';
+    let user = undefined;
+    s_user.subscribe(newValue => user = newValue);
+
+    let dateReportSelected = 0;
+    let startDay, endDay, imei;
+    let reports = [];
+    let brawData;
+
+    const jgetReports = (_) => {
+
+        switch (dateReportSelected) {
+            case 0:
+                Meteor.call("reports.getTodayReport", imei, (e, r) => {
+                    reports = r;
+                });
+                break;
+            case 1:
+                Meteor.call("reports.getYesterdayReport", imei, (e, r) => {
+                    reports = r;
+                });
+                break;
+            case 2:
+                Meteor.call(
+                    "reports.getRangeReport",
+                    imei,
+                    startDay,
+                    endDay,
+                    (e, r) => {
+                        reports = r;
+                    }
+                );
+                break;
+            default:
+                break;
+        }
+    };
+    $:{
+        if(user){
+            console.log(user.reports);
+        }
+    }
+</script>
+
 <div class="tabPanelContainer">
     <div class="tabPanelSideLeft">
 
@@ -75,7 +123,7 @@
 
     </div>
     <div class="tabPanelSideRight">
-        
+
         <div class="p-3 flex flex-col gap-3">
             {#if reports[0]}
             <div class="flex flex-col">
@@ -173,42 +221,5 @@
         </div>
     </div>
 </div>
-<script>
-    import { Meteor } from "meteor/meteor";
-    import Checkbox from "../elements/Checkbox.svelte";
 
-    let dateReportSelected = 0;
-    let startDay, endDay, imei;
-    let reports = [];
-    let brawData;
-
-    const jgetReports = (_) => {
-
-        switch (dateReportSelected) {
-            case 0:
-                Meteor.call("reports.getTodayReport", imei, (e, r) => {
-                    reports = r;
-                });
-                break;
-            case 1:
-                Meteor.call("reports.getYesterdayReport", imei, (e, r) => {
-                    reports = r;
-                });
-                break;
-            case 2:
-                Meteor.call(
-                    "reports.getRangeReport",
-                    imei,
-                    startDay,
-                    endDay,
-                    (e, r) => {
-                        reports = r;
-                    }
-                );
-                break;
-            default:
-                break;
-        }
-    };
-</script>
 

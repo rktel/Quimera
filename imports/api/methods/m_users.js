@@ -25,5 +25,16 @@ Meteor.methods({
     },
     'users.getAll': function () {
         return Meteor.users.find({'profile.accountType': 'super'}).fetch();
-    }
+    },
+    'users.reports.set.imei': function (_id, imei) {
+        imei = Number(imei);
+        Meteor.users.update(_id,{
+            $set:{
+                reports:{
+                    imei: imei
+                }
+            }
+        })
+    },
+   
 })
