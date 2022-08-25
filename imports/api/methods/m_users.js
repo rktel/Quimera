@@ -31,8 +31,10 @@ Meteor.methods({
             imei = Number(imei);
             Meteor.users.update({_id: this.userId},{
                 $set:{
-                    reports:{
-                       imei: imei
+                    profile:{
+                       reports:{
+                        imei: imei
+                       }
                    }
                 }
             })
