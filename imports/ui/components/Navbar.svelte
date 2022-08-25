@@ -20,7 +20,7 @@
         Meteor.call("commands.origin", imei, command);
     };
     const jgetReports = (_) => {
-        s_openDrawer.update(oldValue => !oldValue);
+        // s_openDrawer.update(oldValue => !oldValue);
         switch (dateReportSelected) {
             case 0:
                 Meteor.call("reports.getTodayReport", imei, (e, r) => {
