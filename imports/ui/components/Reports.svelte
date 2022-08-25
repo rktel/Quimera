@@ -55,17 +55,16 @@
                     CONSULTAR
                 </button>
             </div>
+            {#if reports[0]}
             <div class="flex flex-col">
                 <label class="inline-block mb-2 text-gray-700" for="brawData"> 
                     Visualizar raw data
                 </label>
                 <div class="flex justify-center">
-                    <Checkbox bind:value={brawData} name="brawData"></Checkbox>
+                    <Checkbox bind:value={brawData}></Checkbox>
                 </div>
-                
             </div>
-
-
+            {/if}
         </div>
 
     </div>
@@ -110,6 +109,11 @@
                             <th class="tableHeadItem">
                                 VoltajeIn_0 
                             </th>
+                            {#if brawData}
+                            <th class="tableHeadItem">
+                                Raw data 
+                            </th>
+                            {/if}
                         </tr>
                         </thead>
                         <tbody>
@@ -148,6 +152,11 @@
                                 <td class="tableBodyItem">
                                     {report.inputVoltage0}
                                 </td>
+                                {#if brawData}
+                                <th class="tableBodyItem">
+                                    {report.raw}
+                                </th>
+                                {/if}
                             </tr>                                
                             {/each}
                        </tbody>
