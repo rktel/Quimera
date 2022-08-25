@@ -12,11 +12,11 @@
         <div class="p-3 flex flex-col gap-3">
             {#if users[0]}
                 {#each users as user}
-                    <div class="flex items-center">
+                    <div class="flex">
                         <div class="flex-1 overflow-hidden border-l border-y border-solid border-zinc-400">
                             <span>{user.username}</span>
                         </div>
-                        <div class="flex-auto overflow-hidden border-x border-y border-solid border-zinc-400">
+                        <div class="flex-none overflow-hidden border-x border-y border-solid border-zinc-400">
                             <button class="btn btn-light btn-small">ELIMINAR</button>
                         </div>
                     </div>
