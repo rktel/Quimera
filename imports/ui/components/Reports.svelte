@@ -57,7 +57,7 @@
             </div>
             <div class="flex flex-col">
            
-                <Checkbox bind:this={brawData} ></Checkbox>
+                <Checkbox bind:value={brawData} ></Checkbox>
             </div>
 
 
