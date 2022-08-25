@@ -9,18 +9,42 @@
     </div>
     <div class="tabPanelSideRight">
 
-        <div class="p-3 flex flex-col gap-2">
+        <div class="p-3 flex flex-col gap-3">
             {#if users[0]}
-                {#each users as user}
-                    <div class="flex">
-                        <div class="flex items-center justify-center flex-1 h-7 overflow-hidden border-l border-y border-solid border-zinc-400">
-                            <span>{user.username}</span>
-                        </div>
-                        <div class="flex items-center justify-center flex-2 h-7 overflow-hidden border-x border-y border-solid border-zinc-400">
-                            <button class="btn btn-light btn-small" on:click={_=> jremoveUser(user._id)}>ELIMINAR</button>
-                        </div>
-                    </div>
-                {/each}
+
+            <div class="flex flex-col">
+                <table class="min-w-full text-center">
+                    <thead>
+                        <tr>
+                            <th class="tableHeadItem">
+                                #
+                            </th>
+                            <th class="tableHeadItem">
+                                Nombre de usuario
+                            </th>
+                            <th class="tableHeadItem">
+                                Accion
+                            </th>                             
+                        </tr>
+                    </thead>
+                    <body>
+                        {#each users as user,i}
+                        <tr class="bg-white border-b">
+                            <td class="tableBodyItem">
+                                {i+1}
+                            </td>
+                            <td class="tableBodyItem">
+                                {user.username}
+                            </td>
+                            <td class="tableBodyItem">
+                                <button class="btn btn-light btn-small" on:click={_=> jremoveUser(user._id)}>ELIMINAR</button>
+                            </td>
+                        </tr>
+                        {/each}
+                    </body>
+
+                </table>
+            </div>
             {/if}
         </div>
 

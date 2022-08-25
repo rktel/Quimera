@@ -75,6 +75,7 @@
 
     </div>
     <div class="tabPanelSideRight">
+        
         <div class="p-3 flex flex-col gap-3">
             {#if reports[0]}
             <div class="flex flex-col">
