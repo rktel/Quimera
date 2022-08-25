@@ -16,7 +16,7 @@
       @apply bg-gray-200 text-gray-700 hover:bg-gray-300 focus:bg-gray-300 active:bg-gray-400;
     }
     .btn-small{
-      @apply px-4 py-1 rounded-none;
+      @apply px-4 py-1 rounded-none shadow-none;
     }
     .form-input {
       @apply block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none;
