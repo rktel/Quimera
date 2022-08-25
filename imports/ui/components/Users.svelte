@@ -89,7 +89,9 @@
     const jcreateUser = () =>{
         Meteor.call('users.create',{username,password});
         jtoggleModal();
-        jgetAllUsers()
+        jgetAllUsers();
+        username = '';
+        password = '';
     }
     let users = [];
     const jgetAllUsers = () =>{
