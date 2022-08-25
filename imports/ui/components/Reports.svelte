@@ -68,7 +68,7 @@
                 <button class="btn btn-light">
                     DESCARGAR
                 </button>
-                <p class="text-gray-600 text-xs">Se incluiran todos los campos + raw data</p>
+                <p class="text-gray-600 text-xs text-center mt-1">Se incluiran todos los campos + raw data</p>
             </div>
             {/if}
         </div>
