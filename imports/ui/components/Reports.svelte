@@ -158,6 +158,7 @@
     let reports = [];
 
     const jgetReports = (_) => {
+        console.log("accion de consulta");
         switch (dateReportSelected) {
             case 0:
                 Meteor.call("reports.getTodayReport", imei, (e, r) => {
