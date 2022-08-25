@@ -13,11 +13,6 @@
             background-color: rgba(0, 0, 0, 0.1);
             border: 1px solid rgba(0, 0, 0, 0.3);
 
-            /* ON status */
-            background-color: #357edd;
-            border: 1px solid #357edd;
-            /* Push the circle to the right */
-            justify-content: flex-end;
         }
 
         .label__input {
