@@ -41,7 +41,7 @@
             {/if}
             <div class="flex flex-col">
                 <label for="imei" class="inline-block mb-2 text-gray-700"
-                    >Imei a consultar</label>
+                    >IMEI</label>
                     <input
                     class="form-input"
                     type="text"
@@ -50,7 +50,7 @@
                     bind:value={imei}
                 />
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col pt-2">
                 <button class="btn btn-light" disabled={!imei} on:click={jgetReports}>
                     CONSULTAR
                 </button>
