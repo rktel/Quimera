@@ -102,7 +102,7 @@
                     <input type="checkbox" class="label__input"
                     name="raw-data"
                     id="raw-data"
-                    bind:value={rawData}/>
+                    bind:checked={rawData}/>
                 
                     <!-- Circle -->
                     <div class="label__circle"></div>
