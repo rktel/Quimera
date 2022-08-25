@@ -4,11 +4,10 @@ import '../imports/api/methods/m_reports';
 import '../imports/api/methods/m_sessions';
 import '../imports/api/methods/m_commands';
 import '../imports/api/methods/m_responses';
+import '../imports/api/methods/m_users';
 
 import './tcp_commands/galileosky';
 
-const SEED_USERNAME = 'rktel';
-const SEED_PASSWORD = 'mazziel';
 
 const SEBAS_USERNAME = "sebas";
 const SEBAS_PASSWORD = "gomez";
