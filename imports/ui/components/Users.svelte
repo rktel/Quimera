@@ -16,7 +16,7 @@
                         <div class="flex-1 overflow-hidden border-l border-y border-solid border-zinc-400">
                             <span>{user.username}</span>
                         </div>
-                        <div class="flex-1 overflow-hidden border-x border-y border-solid border-zinc-400">
+                        <div class="flex-auto overflow-hidden border-x border-y border-solid border-zinc-400">
                             <button class="btn btn-light btn-small">ELIMINAR</button>
                         </div>
                     </div>
