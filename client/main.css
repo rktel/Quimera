@@ -52,7 +52,7 @@
         @apply bg-white m-px mt-1 ml-1 rounded-sm border border-solid border-zinc-400 h-[calc(100%_-_8px)] basis-[460px];
     }
     .tabPanelSideRight{
-        @apply bg-white m-px mt-1 ml-[2px] mr-1 rounded-sm border border-solid border-zinc-400 h-[calc(100%_-_8px)] flex-1;
+        @apply bg-white m-px mt-1 ml-[2px] mr-1 rounded-sm border border-solid border-zinc-400 h-[calc(100%_-_8px)] basis-[calc(100vw_-_464px)];
     }
 } 
 
