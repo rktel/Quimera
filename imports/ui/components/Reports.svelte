@@ -64,6 +64,11 @@
                     <Checkbox bind:value={brawData}></Checkbox>
                 </div>
             </div>
+            <div class="flex flex-col pt-2">
+                <button class="btn btn-light">
+                    DESCARGAR
+                </button>
+            </div>
             {/if}
         </div>
 
@@ -176,7 +181,7 @@
     let brawData;
 
     const jgetReports = (_) => {
-        console.log("accion de consulta");
+
         switch (dateReportSelected) {
             case 0:
                 Meteor.call("reports.getTodayReport", imei, (e, r) => {
