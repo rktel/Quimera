@@ -60,8 +60,8 @@
 
     </div>
     <div class="tabPanelSideRight">
-
-        {#if reports[0]}
+        <div class="p-3 flex flex-col gap-3">
+            {#if reports[0]}
             <div class="flex flex-col">
                 <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
@@ -147,7 +147,7 @@
                 </div>
             </div>
         {/if}
-
+        </div>
     </div>
 </div>
 <script>
