@@ -67,7 +67,7 @@
         @apply hidden;
     }
     .checkboxCircle{
-        @apply rounded-full w-8 bg-zinc-400;
+        @apply rounded-full w-8 bg-white;
     }
 
 } 
@@ -89,7 +89,7 @@
     height: 22px;
     width: 54px;
     /* OFF status */
-
+    background-color: peru;
     border: 1px solid rgba(0, 0, 0, 0.3);
   }
 
