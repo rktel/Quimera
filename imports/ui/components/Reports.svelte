@@ -97,7 +97,7 @@
             </div>
             <div class="flex flex-col">
                 {rawData}
-                <div class="label">
+                <label class="label">
                     <input  class="label__input"
                     name="raw-data"
                     id="raw-data"
@@ -106,7 +106,7 @@
                 
                     <!-- Circle -->
                     <div class="label__circle"></div>
-                </div>
+                </label>
 
             </div>
 
