@@ -17,7 +17,7 @@
                             <span>{user.username}</span>
                         </div>
                         <div class="flex items-center justify-center flex-2 h-7 overflow-hidden border-x border-y border-solid border-zinc-400">
-                            <button class="btn btn-light btn-small">ELIMINAR</button>
+                            <button class="btn btn-light btn-small" on:click={_=> jremoveUser(user._id)}>ELIMINAR</button>
                         </div>
                     </div>
                 {/each}
@@ -95,5 +95,8 @@
         Meteor.call('users.getAll', (e,r)=>{
             users = r;
         });
+    }
+    const jremoveUser = (_id) =>{
+        Meteor.call('users.remove',_id)
     }
   </script>
