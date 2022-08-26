@@ -68,7 +68,9 @@
         if(reports[0]){
             setTimeout(()=>{
                 const table =document.querySelector("#table");
-            const dataTable = new DataTable(table);
+            const dataTable = new DataTable(table,{
+                searchable: false
+            });
             },1000)
         }
     }
