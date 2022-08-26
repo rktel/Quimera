@@ -66,7 +66,7 @@
                     <h1 class="text-lg text-gray-800 px-5">Complete los siguientes campos</h1>
                 </div>
 
-                <div class="flex flex-col justify-center gap-5">
+                <div class="flex flex-col justify-center px-5 gap-5">
                     <div class="flex flex-col">
                         <label for="username" class="inputLabel"
                             >Nombre de usuario</label>
