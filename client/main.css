@@ -85,7 +85,7 @@
     display: flex !important;
     gap: 24px;
     position: sticky;
-    top: 12px;
+    top: 0px;
 }
   
  
