@@ -1,11 +1,11 @@
 <script>
-    import {onMount} from 'svelte';
+
     import {DataTable} from "simple-datatables";
 
     var XLSX = require("xlsx");
     import { Meteor } from "meteor/meteor";
-    import { fly } from 'svelte/transition';
-    import Checkbox from "../elements/Checkbox.svelte";
+
+    // import Checkbox from "../elements/Checkbox.svelte";
     
     import {  s_user } from '../../api/stores';
     let user = undefined;
@@ -69,14 +69,17 @@
             setTimeout(()=>{
                 const table =document.querySelector("#table");
                 const dataTable = new DataTable(table,{
-                searchable: false
+                searchable: false,
+                labels: {
+                    perPage: "{select} items por pagina",
+                    noRows: "No existen datos!",
+                    info: "Mostrando de {start} a {end} de {rows} items",
+                }
             });
             },250)
         }
     }
-    onMount((_)=>{
-        // const dataTable = new DataTable("#table");
-    })
+
     
 </script>
 
