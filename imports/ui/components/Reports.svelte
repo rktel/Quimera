@@ -66,8 +66,10 @@
     }
     $:{
         if(reports[0]){
-            const table =document.querySelector("#table");
+            setTimeout(()=>{
+                const table =document.querySelector("#table");
             const dataTable = new DataTable(table);
+            },1000)
         }
     }
     onMount((_)=>{
