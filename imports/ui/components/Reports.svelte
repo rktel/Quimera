@@ -1,5 +1,7 @@
 <script>
     import {onMount} from 'svelte';
+    import {DataTable} from "simple-datatables";
+    
     var XLSX = require("xlsx");
     import { Meteor } from "meteor/meteor";
     import { fly } from 'svelte/transition';
