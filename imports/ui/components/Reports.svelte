@@ -70,7 +70,12 @@
                 const table =document.querySelector("#table");
                 const dataTable = new DataTable(table,{
                 searchable: false,
-                perPageSelect: [100, 200, 500, 1000, 2000],
+                perPageSelect: [50, 100, 200, 500],
+                perPage: 100,
+                layout: {
+                    top: "{select}{pager}",
+                   // bottom: "{info}{pager}"
+                },
                 labels: {
                     perPage: "{select} items por pagina",
                     noRows: "No existen datos!",
