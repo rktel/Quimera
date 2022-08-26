@@ -70,10 +70,11 @@
                 const table =document.querySelector("#table");
                 const dataTable = new DataTable(table,{
                 searchable: false,
+                perPageSelect: [100, 200, 500, 1000, 2000],
                 labels: {
                     perPage: "{select} items por pagina",
                     noRows: "No existen datos!",
-                    info: "Mostrando de {start} a {end} de {rows} items",
+                    info: "Mostrando del {start} al {end} de {rows} items en total",
                 }
             });
             },250)
