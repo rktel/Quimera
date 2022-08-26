@@ -1,7 +1,7 @@
 <script>
     import {onMount} from 'svelte';
     import {DataTable} from "simple-datatables";
-    
+
     var XLSX = require("xlsx");
     import { Meteor } from "meteor/meteor";
     import { fly } from 'svelte/transition';
@@ -31,6 +31,7 @@
     }
     const jgetReports = (_) => {
         if(Number(imei)){
+            const dataTable = new DataTable("#table");
             Meteor.call('users.reports.set.imei', imei);
         switch (dateReportSelected) {
             case 0:
@@ -65,7 +66,7 @@
     }
 
     onMount((_)=>{
-        const dataTable = new DataTable("#table");
+        // const dataTable = new DataTable("#table");
     })
     
 </script>
