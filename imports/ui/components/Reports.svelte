@@ -10,6 +10,9 @@
     let startDay, endDay, imei;
     let reports = [];
     let brawData;
+    
+    let excelHeader = [];
+    
 
     const jgetReports = (_) => {
         if(Number(imei)){
@@ -42,9 +45,17 @@
         }
     };
     
-        if(user && user.profile && user.profile.reports){
-            imei = user.profile.reports.imei
+    if(user && user.profile && user.profile.reports){
+        imei = user.profile.reports.imei
+    }
+
+    $:{
+        if(reports[0]){
+            if(reports[0].protocolID === 7){
+                console.log("Data order:", reports[0]);
+            }
         }
+    }
     
 </script>
 
