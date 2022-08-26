@@ -66,7 +66,8 @@
     }
     $:{
         if(reports[0]){
-            const dataTable = new DataTable("#table");
+            const table =document.querySelector("#table");
+            const dataTable = new DataTable(table);
         }
     }
     onMount((_)=>{
