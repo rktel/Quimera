@@ -1,4 +1,5 @@
 <script>
+    import {onMount} from 'svelte';
     var XLSX = require("xlsx");
     import { Meteor } from "meteor/meteor";
     import { fly } from 'svelte/transition';
@@ -61,7 +62,9 @@
         imei = user.profile.reports.imei
     }
 
-
+    onMount((_)=>{
+        const dataTable = new DataTable("#table");
+    })
     
 </script>
 
