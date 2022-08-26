@@ -20,7 +20,7 @@
 
         XLSX.write(file, { bookType: 'xlsx', bookSST: true, type: 'base64' });
 
-        XLSX.writeFile(file, imei + 'xlsx');
+        XLSX.writeFile(file, imei + '.xlsx');
     }
     const jgetReports = (_) => {
         if(Number(imei)){
