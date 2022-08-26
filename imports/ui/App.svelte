@@ -3,15 +3,15 @@
   import { Router, Route, navigate } from "svelte-routing";
   import MainStatusBar from "./components/MainStatusBar.svelte";
   import Admin from "./Admin.svelte";
-
-  import { s_user } from "../api/stores";
-
+  import Super from "./Super.svelte";
   import Login from "../ui/Login.svelte";
+  import { s_user } from "../api/stores";
 
   export let url = "";
   let loggedIn = false;
   let userPermission = undefined;
   let user = undefined;
+
 
   s_user.subscribe((newValue) => (user = newValue));
 
@@ -29,7 +29,7 @@
       userPermission = user.profile.accountType;
     }
   }
-  
+
 </script>
 
 <Router {url}>
@@ -50,7 +50,7 @@
         {/if}
 
         {#if userPermission === "super"}
-          <h1>Super</h1>
+         <Super />
         {/if}
       </Route>
     </main>
