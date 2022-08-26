@@ -31,7 +31,7 @@
     }
     const jgetReports = (_) => {
         if(Number(imei)){
-            const dataTable = new DataTable("#table");
+            
             Meteor.call('users.reports.set.imei', imei);
         switch (dateReportSelected) {
             case 0:
@@ -64,7 +64,11 @@
     if(user && user.profile && user.profile.reports){
         imei = user.profile.reports.imei
     }
-
+    $:{
+        if(reports[0]){
+            const dataTable = new DataTable("#table");
+        }
+    }
     onMount((_)=>{
         // const dataTable = new DataTable("#table");
     })
