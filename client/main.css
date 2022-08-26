@@ -57,8 +57,10 @@
     .tableBodyItem{
         @apply text-sm text-gray-800 font-light px-6 py-2 whitespace-nowrap;
     }
-
-
+    .inputLabel{
+        @apply inline-block mb-2 text-gray-700;
+    }
+ 
 } 
 
   * {

@@ -67,7 +67,7 @@
         <div class="p-3 flex flex-col gap-3">
 
             <div class="flex flex-col">
-                <label for="dateReportSelect" class="inline-block mb-2 text-gray-700"
+                <label for="dateReportSelect" class="inputLabel"
                     >Intervalo</label>
 
                     <select name="dateReportSelect" id="dateReportSelect" bind:value={dateReportSelected} class="form-select">
@@ -78,7 +78,7 @@
             </div>
             {#if dateReportSelected === 2}
                 <div class="flex flex-col">
-                    <label for="date-start" class="inline-block mb-2 text-gray-700"
+                    <label for="date-start" class="inputLabel"
                         >Fecha inicio</label>
 
                         <input
@@ -90,7 +90,7 @@
                     />
                 </div>    
                 <div class="flex flex-col">
-                    <label for="date-end" class="inline-block mb-2 text-gray-700"
+                    <label for="date-end" class="inputLabel"
                         >Fecha fin</label>
 
                         <input
@@ -103,7 +103,7 @@
                 </div>               
             {/if}
             <div class="flex flex-col">
-                <label for="imei" class="inline-block mb-2 text-gray-700"
+                <label for="imei" class="inputLabel"
                     >IMEI</label>
                     <input
                     class="form-input"
@@ -120,7 +120,7 @@
             </div>
             {#if reports[0]}
             <div class="flex flex-col">
-                <label class="inline-block mb-2 text-gray-700" for="brawData"> 
+                <label class="inputLabel" for="brawData"> 
                     Visualizar raw data
                 </label>
                 <div class="flex justify-center">
