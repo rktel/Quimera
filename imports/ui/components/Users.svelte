@@ -52,7 +52,7 @@
 </div>
 
 {#if openModal}
-<div class="absolute z-10 top-0 bottom-0 right-0 left-0 flex justify-center items-center bg-slate-500 bg-opacity-25" >
+<div class="modalCover" >
     <div class="h-[600px] w-[400px] bg-white shadow-lg">
         
         <div class="defaultBar">
