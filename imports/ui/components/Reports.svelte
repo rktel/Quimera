@@ -1,6 +1,7 @@
 <script>
     var XLSX = require("xlsx");
     import { Meteor } from "meteor/meteor";
+    import { fly } from 'svelte/transition';
     import Checkbox from "../elements/Checkbox.svelte";
     
     import {  s_user } from '../../api/stores';
@@ -65,7 +66,7 @@
 </script>
 
 <div class="tabPanelContainer">
-    <div class="tabPanelSideLeft" id="panelLeftReports">
+    <div class="tabPanelSideLeft" id="panelLeftReports" fly="{{ x: 300, duration: 500 }}">
 
         <div class="p-3 flex flex-col gap-3">
 
