@@ -62,7 +62,7 @@
 </script>
 
 <div class="tabPanelContainer">
-    <div class="tabPanelSideLeft">
+    <div class="tabPanelSideLeft hidden">
 
         <div class="p-3 flex flex-col gap-3">
 
