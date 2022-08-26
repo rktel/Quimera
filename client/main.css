@@ -96,6 +96,9 @@
 }
 .active{
     font-weight: bold;
-    background-color: peru;
+    background-color: gray;
+    color: white;
+    padding-left: 4px;
+    padding-right: 4px;
 }
  
