@@ -15,7 +15,7 @@
     
     const jtogglePanelLeft = (_)=>{
         const panelLeft = document.querySelector("#panelLeftReports");
-        panelLeft.classList.toggle("hidden");
+        panelLeft.classList.toggle("basis-0");
     }
     const jcreateExcel = (_) => {
         const data = document.querySelector("#table");
@@ -66,7 +66,7 @@
 </script>
 
 <div class="tabPanelContainer">
-    <div class="tabPanelSideLeft transition-all" id="panelLeftReports">
+    <div class="tabPanelSideLeft transition-transform" id="panelLeftReports">
 
         <div class="p-3 flex flex-col gap-3">
 
