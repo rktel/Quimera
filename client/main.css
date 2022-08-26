@@ -77,13 +77,14 @@
   }
 
 
-  .dataTable-pagination-list{
+.dataTable-pagination-list{
    display: flex !important;
    gap: 12px;
 }
 .dataTable-top{
     display: flex !important;
-    gap: 12px;
+    gap: 24px;
+    position: sticky;
 }
   
  
