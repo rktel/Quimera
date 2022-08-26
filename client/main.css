@@ -88,6 +88,7 @@
     position: sticky;
     z-index: 100;
     background-color: peru;
+    width: 100vw;
     top: 0px;
 }
   
