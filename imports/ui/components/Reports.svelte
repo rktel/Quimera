@@ -1,4 +1,5 @@
 <script>
+    var XLSX = require("xlsx");
     import { Meteor } from "meteor/meteor";
     import Checkbox from "../elements/Checkbox.svelte";
     
@@ -11,9 +12,16 @@
     let reports = [];
     let brawData;
     
-    let excelHeader = [];
-    
+   
+    const jcreateExcel = (_) => {
+        const data = document.querySelector("#table");
 
+        var file = XLSX.utils.table_to_book(data, {sheet: "sheet1"});
+
+        XLSX.write(file, { bookType: 'xlsx', bookSST: true, type: 'base64' });
+
+        XLSX.writeFile(file, imei + 'xlsx');
+    }
     const jgetReports = (_) => {
         if(Number(imei)){
             Meteor.call('users.reports.set.imei', imei);
@@ -49,13 +57,7 @@
         imei = user.profile.reports.imei
     }
 
-    $:{
-        if(reports[0]){
-            if(reports[0].protocolID === 7){
-                console.log("Data order:", reports[0]);
-            }
-        }
-    }
+
     
 </script>
 
@@ -126,10 +128,10 @@
                 </div>
             </div>
             <div class="flex flex-col pt-2">
-                <button class="btn btn-light">
+                <button class="btn btn-light" on:click={jcreateExcel}>
                     DESCARGAR
                 </button>
-                <p class="text-gray-600 text-xs text-center mt-1">Se incluiran todos los campos + raw data</p>
+                <p class="text-gray-600 text-xs text-center mt-1">Se incluiran todos los campos {brawData?"+ raw data":""}</p>
             </div>
             {/if}
         </div>
@@ -141,7 +143,7 @@
             {#if reports[0]}
             <div class="flex flex-col">
 
-                    <table class="min-w-full text-center">
+                    <table class="min-w-full text-center" id="table">
                         <thead>
                         <tr>
                             <th class="tableHeadItem">
