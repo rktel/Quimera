@@ -69,12 +69,7 @@
     .modalCover{
         @apply absolute z-10 top-0 bottom-0 right-0 left-0 flex justify-center items-center bg-slate-500 bg-opacity-25;
     }
-    .dataTable-pagination-list{
-        @apply flex gap-3;
-    }
-    .dataTable-top{
-        @apply flex gap-4;
-    }
+
 } 
 
   * {
@@ -82,6 +77,13 @@
   }
 
 
-
+  .dataTable-pagination-list{
+   display: flex !important;
+   gap: 12px;
+}
+.dataTable-top{
+    display: flex !important;
+    gap: 12px;
+}
   
  
