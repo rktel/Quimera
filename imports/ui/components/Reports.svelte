@@ -12,7 +12,10 @@
     let reports = [];
     let brawData;
     
-   
+    const jtogglePanelLeft = (_)=>{
+        const panelLeft = document.querySelector("#panelLeftReports");
+        panelLeft.classList.toggle("hidden");
+    }
     const jcreateExcel = (_) => {
         const data = document.querySelector("#table");
 
@@ -62,7 +65,7 @@
 </script>
 
 <div class="tabPanelContainer">
-    <div class="tabPanelSideLeft">
+    <div class="tabPanelSideLeft" id="panelLeftReports">
 
         <div class="p-3 flex flex-col gap-3">
 
@@ -147,11 +150,11 @@
                         <thead>
                         <tr>
                             <th class="tableHeadItem">
-                                <button class="btn btn-icon btn-light"> 
+                                <button class="btn btn-icon btn-light" on:click={jtogglePanelLeft}> 
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="text-gray-700 h-4 w-4">
                                         <path 
                                         fill="currentColor"
-                                        d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"/>
+                                        d="M32 64C49.67 64 64 78.33 64 96V416C64 433.7 49.67 448 32 448C14.33 448 0 433.7 0 416V96C0 78.33 14.33 64 32 64zM246.6 137.4C259.1 149.9 259.1 170.1 246.6 182.6L205.3 224H434.7L393.4 182.6C380.9 170.1 380.9 149.9 393.4 137.4C405.9 124.9 426.1 124.9 438.6 137.4L534.6 233.4C547.1 245.9 547.1 266.1 534.6 278.6L438.6 374.6C426.1 387.1 405.9 387.1 393.4 374.6C380.9 362.1 380.9 341.9 393.4 329.4L434.7 288H205.3L246.6 329.4C259.1 341.9 259.1 362.1 246.6 374.6C234.1 387.1 213.9 387.1 201.4 374.6L105.4 278.6C92.88 266.1 92.88 245.9 105.4 233.4L201.4 137.4C213.9 124.9 234.1 124.9 246.6 137.4V137.4zM640 416C640 433.7 625.7 448 608 448C590.3 448 576 433.7 576 416V96C576 78.33 590.3 64 608 64C625.7 64 640 78.33 640 96V416z"/>
                                     </svg>
                                 </button>
                             </th>
