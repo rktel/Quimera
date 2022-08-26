@@ -46,16 +46,16 @@
         @apply flex h-full overflow-hidden;
     }
     .tabPanelSideLeft{
-        @apply bg-white m-[2px] rounded-sm border border-solid border-zinc-400 h-[calc(100%_-_8px)] basis-[460px] overflow-scroll;
+        @apply bg-white m-[2px_1px_2px_2px] rounded-sm border border-solid border-zinc-400 h-[calc(100%_-_10px)] basis-[460px] overflow-scroll;
     }
     .tabPanelSideRight{
-        @apply bg-white m-[2px] rounded-sm border border-solid border-zinc-400  h-[calc(100%_-_8px)] flex-1 overflow-scroll;
+        @apply bg-white m-[2px_2px_2px_1px] rounded-sm border border-solid border-zinc-400  h-[calc(100%_-_10px)] flex-1 overflow-scroll;
     }
     .tableHeadItem{
-        @apply text-sm font-medium text-gray-100 px-6 py-2 sticky top-3 z-20 bg-zinc-400;
+        @apply text-sm font-medium text-white px-6 py-2 sticky top-3 z-20 bg-zinc-400;
     }
     .tableBodyItem{
-        @apply text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap;
+        @apply text-sm text-gray-800 font-light px-6 py-2 whitespace-nowrap;
     }
 
 
