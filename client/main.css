@@ -85,6 +85,8 @@
     display: flex !important;
     gap: 24px;
     position: sticky;
+    z-index: 100;
+    background-color: white;
     top: 12px;
 }
   
