@@ -74,7 +74,7 @@
                 perPage: 100,
                 layout: {
                     top: "{select}{pager}",
-                   // bottom: "{info}{pager}"
+                    bottom: ""
                 },
                 labels: {
                     perPage: "{select} items por pagina",
