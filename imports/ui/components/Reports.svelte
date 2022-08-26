@@ -77,7 +77,7 @@
                     bottom: ""
                 },
                 labels: {
-                    perPage: "{select} items por pagina",
+                    perPage: "{select} filas por pagina",
                     noRows: "No existen datos!",
                     info: "Mostrando del {start} al {end} de {rows} items en total",
                 }
