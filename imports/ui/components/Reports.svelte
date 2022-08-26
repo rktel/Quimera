@@ -68,10 +68,10 @@
         if(reports[0]){
             setTimeout(()=>{
                 const table =document.querySelector("#table");
-            const dataTable = new DataTable(table,{
+                const dataTable = new DataTable(table,{
                 searchable: false
             });
-            },1000)
+            },250)
         }
     }
     onMount((_)=>{
@@ -138,19 +138,19 @@
                 </button>
             </div>
             {#if reports[0]}
-            <div class="flex flex-col">
+            <!-- <div class="flex flex-col">
                 <label class="inputLabel" for="brawData"> 
                     Visualizar raw data
                 </label>
                 <div class="flex justify-center">
                     <Checkbox bind:value={brawData}></Checkbox>
                 </div>
-            </div>
+            </div> -->
             <div class="flex flex-col pt-2">
                 <button class="btn btn-light" on:click={jcreateExcel}>
                     DESCARGAR
                 </button>
-                <p class="text-gray-600 text-xs text-center mt-1">Se incluiran todos los campos {brawData?"+ raw data":""}</p>
+                <!-- <p class="text-gray-600 text-xs text-center mt-1">Se incluiran todos los campos {brawData?"+ raw data":""}</p> -->
             </div>
             {/if}
         </div>
@@ -204,11 +204,11 @@
                             <th class="tableHeadItem">
                                 VoltajeIn_0 
                             </th>
-                            {#if brawData}
+                            <!-- {#if brawData} -->
                             <th class="tableHeadItem text-left">
                                 Raw data 
                             </th>
-                            {/if}
+                            <!-- {/if} -->
                         </tr>
                         </thead>
                         <tbody>
@@ -247,11 +247,11 @@
                                 <td class="tableBodyItem">
                                     {report.inputVoltage0}
                                 </td>
-                                {#if brawData}
+                                <!-- {#if brawData} -->
                                 <th class="tableBodyItem text-left">
                                     {report.raw}
                                 </th>
-                                {/if}
+                                <!-- {/if} -->
                             </tr>                                
                             {/each}
                        </tbody>
