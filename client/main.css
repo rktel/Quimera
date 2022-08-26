@@ -96,7 +96,7 @@
 }
 .active{
     font-weight: bold;
-    background-color: gray;
+    background-color: #777;
     color: white;
     padding-left: 4px;
     padding-right: 4px;
