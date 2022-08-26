@@ -82,6 +82,7 @@
    gap: 12px;
 }
 .dataTable-top{
+    padding: 10px;
     display: flex !important;
     gap: 24px;
     position: sticky;
