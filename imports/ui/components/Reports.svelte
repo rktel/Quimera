@@ -64,7 +64,7 @@
 <div class="tabPanelContainer">
     <div class="tabPanelSideLeft">
 
-        <div class="p-3 flex flex-col gap-3">
+        <div class="p-3 flex flex-col gap-3 bg-indigo-300">
             <div class="sticky bottom-3 left-3">
                 <button class="btn-dark rounded-full"> 
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="text-white w-4 h-4">
