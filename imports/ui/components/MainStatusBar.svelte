@@ -32,7 +32,7 @@
     const jlogout = () => Meteor.logout();
 </script>
 
-<div class="statusBar">
+<div class="defaultBar">
     <div class="flex w-[120px]"></div>
     <div class="flex w-[120px]">
         <span class="text-white text-sm">{now}</span>
