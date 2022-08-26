@@ -24,7 +24,7 @@
             class="flex flex-col items-center gap-5 px-5"
         >
             <div class="flex flex-col">
-                <label for="username" class="inline-block mb-2 text-gray-700"
+                <label for="username" class="inputLabel"
                     >Nombre de usuario</label
                 >
 
@@ -38,7 +38,7 @@
             </div>
 
             <div class="flex flex-col">
-                <label for="password" class="inline-block mb-2 text-gray-700"
+                <label for="password" class="inputLabel"
                     >Contraseña</label
                 >
 
