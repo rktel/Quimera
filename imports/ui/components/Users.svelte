@@ -55,12 +55,12 @@
 <div class="modalCover" >
     <div class="h-[500px] w-[350px] bg-white shadow-lg rounded">
         
-        <div class="defaultBar rounded">
+        <div class="defaultBar rounded-t">
             <div></div>
             <button class="btn btn-light btn-small" on:click={jtoggleModal}> X &nbsp;  Cerrar</button>
         </div>
 
-            <form class="flex flex-col justify-center  gap-10 h-[calc(100%_-_32px)]" on:submit|preventDefault={jcreateUser}>
+            <form class="flex flex-col gap-10 h-[calc(100%_-_32px)]" on:submit|preventDefault={jcreateUser}>
 
                 <div>
                     <h1 class="text-lg text-gray-800 px-5">Complete los siguientes campos</h1>
