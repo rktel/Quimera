@@ -66,7 +66,7 @@
 
         <div class="p-3 flex flex-col gap-3">
 
-            <div class="relative right-2 top-2">
+            <div class="absolute left-[450px] top-[76px]">
                 <button class="btn btn-icon btn-light"> 
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="text-gray-700 h-4 w-4">
                         <path 
