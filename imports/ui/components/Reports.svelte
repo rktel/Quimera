@@ -66,7 +66,7 @@
 </script>
 
 <div class="tabPanelContainer">
-    <div class="tabPanelSideLeft transition-transform" id="panelLeftReports">
+    <div class="tabPanelSideLeft transition-[flex-basis] delay-300" id="panelLeftReports">
 
         <div class="p-3 flex flex-col gap-3">
 
