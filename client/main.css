@@ -90,9 +90,12 @@
     gap: 24px;
     position: sticky;
     z-index: 100;
-    background-color: peru;
+    background-color: white;
     width: 200vw;
     top: 0px;
 }
-  
+.active{
+    font-weight: bold;
+    background-color: peru;
+}
  
