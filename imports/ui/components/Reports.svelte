@@ -66,7 +66,7 @@
 </script>
 
 <div class="tabPanelContainer">
-    <div class="tabPanelSideLeft" id="panelLeftReports" fly="{{ x: 300, duration: 500 }}">
+    <div class="tabPanelSideLeft" id="panelLeftReports" transition:fly="{{ x: 200, duration: 2000 }}">
 
         <div class="p-3 flex flex-col gap-3">
 
