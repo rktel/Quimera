@@ -167,7 +167,7 @@
     </div>
     <div class="tabPanelSideRight">
 
-        <div class="p-3 flex flex-col gap-3">
+        <div class="px-3 pb-3 flex flex-col">
             {#if reports[0]}
             <div class="flex flex-col">
 
