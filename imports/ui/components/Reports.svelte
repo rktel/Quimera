@@ -65,7 +65,8 @@
     <div class="tabPanelSideLeft">
 
         <div class="p-3 flex flex-col gap-3">
-            <div class="flex justify-end">
+
+            <div class="absolute left-[334px] top-3">
                 <button class="btn btn-icon btn-light"> 
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="text-gray-700 h-4 w-4">
                         <path 
@@ -74,6 +75,7 @@
                     </svg>
                 </button>
             </div>
+
             <div class="flex flex-col">
                 <label for="dateReportSelect" class="inputLabel"
                     >Intervalo</label>
