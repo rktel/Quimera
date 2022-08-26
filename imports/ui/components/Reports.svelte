@@ -66,7 +66,7 @@
 
         <div class="p-3 flex flex-col gap-3">
             <div class="flex justify-end">
-                <button class="btn btn-small btn-dark"> 
+                <button class="btn btn-icon btn-dark"> 
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="text-white h-5 w-5">
                         <path 
                         fill="currentColor"
