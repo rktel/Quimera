@@ -53,11 +53,11 @@
 
 {#if openModal}
 <div class="modalCover" >
-    <div class="h-[500px] w-[350px] bg-white shadow-lg rounded">
+    <div class="h-[450px] w-[350px] bg-white shadow-lg rounded">
         
         <div class="defaultBar rounded-t">
             <div></div>
-            <button class="btn btn-light btn-small" on:click={jtoggleModal}> X &nbsp;  Cerrar</button>
+            <button class="btn btn-dark btn-small" on:click={jtoggleModal}> X &nbsp;  Cerrar</button>
         </div>
 
             <form class="flex flex-col justify-center gap-10 h-[calc(100%_-_32px)]" on:submit|preventDefault={jcreateUser}>

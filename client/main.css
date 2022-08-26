@@ -18,6 +18,9 @@
     .btn-light {
       @apply bg-gray-200 text-gray-700 hover:bg-gray-300 focus:bg-gray-300 active:bg-gray-400;
     }
+    .btn-dark {
+        @apply bg-zinc-700 text-white hover:bg-zinc-500  focus:bg-zinc-500  active:bg-gray-400;
+      }
     .btn-small{
       @apply px-4 py-1 rounded-none shadow-none;
     }
