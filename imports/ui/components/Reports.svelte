@@ -1,7 +1,6 @@
 <script>
 
-    import {DataTable} from "simple-datatables";
-
+ 
     var XLSX = require("xlsx");
     import { Meteor } from "meteor/meteor";
 
@@ -66,23 +65,7 @@
     }
     $:{
         if(reports[0]){
-            setTimeout(()=>{
-                const table =document.querySelector("#table");
-                const dataTable = new DataTable(table,{
-                searchable: false,
-                perPageSelect: [50, 100, 200, 500],
-                perPage: 100,
-                layout: {
-                    top: "{select}{pager}",
-                    bottom: ""
-                },
-                labels: {
-                    perPage: "{select} filas por pagina",
-                    noRows: "No existen datos!",
-                    info: "Mostrando del {start} al {end} de {rows} items en total",
-                }
-            });
-            },250)
+
         }
     }
 
@@ -167,7 +150,7 @@
     </div>
     <div class="tabPanelSideRight">
 
-        <div class="px-3 pb-3 flex flex-col">
+        <div class="p-3 flex flex-col gap-3">
             {#if reports[0]}
             <div class="flex flex-col">
 

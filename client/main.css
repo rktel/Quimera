@@ -58,7 +58,7 @@
         @apply bg-white m-[2px_2px_2px_1px] rounded-sm border border-solid border-zinc-400  h-[calc(100%_-_8px)] flex-1 overflow-scroll;
     }
     .tableHeadItem{
-        @apply text-sm font-medium text-white px-6 py-2 sticky top-[44px] z-20 bg-zinc-400;
+        @apply text-sm font-medium text-white px-6 py-2 sticky top-2 z-20 bg-zinc-400;
     }
     .tableBodyItem{
         @apply text-sm text-gray-800 font-light px-6 py-2 whitespace-nowrap;
@@ -80,25 +80,3 @@
   }
 
 
-.dataTable-pagination-list{
-   display: flex !important;
-   gap: 12px;
-}
-.dataTable-top{
-    padding: 10px;
-    display: flex !important;
-    gap: 24px;
-    position: sticky;
-    z-index: 100;
-    background-color: white;
-    width: 170vw;
-    top: 0px;
-}
-.active{
-    font-weight: bold;
-    background-color: rgb(161 161 170);
-    color: white;
-    padding-left: 4px;
-    padding-right: 4px;
-}
- 
