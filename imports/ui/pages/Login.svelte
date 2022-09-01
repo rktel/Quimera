@@ -11,7 +11,7 @@
         container: "h-screen text-gray-800 grid grid-cols-1 sm:grid-cols-[1fr,400px]",
         left:"bg-violet-500 hidden sm:grid",
         right:"grid place-items-center",
-        form:"grid grid-rows-[106px,60px,60px,66px] w-4/5 gap-6",
+        form:"grid grid-rows-[106px,60px,60px,66px] w-4/5 gap-8",
         title:"text-xl",
         form_control:"grid grid-rows-2",
         label:"text-gray-700",
