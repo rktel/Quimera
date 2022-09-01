@@ -11,12 +11,12 @@
 
 <div class="h-screen bg-gray-300 text-800 grid grid-cols-1 sm:grid-cols-[1fr,300px]">
     <!-- LEFT -->
-    <div class="bg-violet-500 hidden sm:flex">
+    <div class="bg-violet-500 hidden sm:grid">
 
     </div>
     <!-- LEFT_END -->
     <!-- RIGHT -->
-    <div class="bg-violet-700 flex">
+    <div class="bg-violet-700 grid">
 
     </div>
     <!-- RIGHT_END -->
