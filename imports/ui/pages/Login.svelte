@@ -18,7 +18,7 @@
     <!-- RIGHT -->
     <div class="bg-violet-700 grid place-items-center">
 
-        <form class="grid grid-rows-4 bg-slate-700">
+        <form class="grid grid-rows-4 bg-slate-700 w-11/12">
             <h1>Iniciar sesión</h1>
             <div for="username" class="grid grid-rows-2">
                 <label for="username">Nombre de usuario</label>
