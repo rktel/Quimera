@@ -19,17 +19,17 @@
     <div class="grid place-items-center">
 
         <form class="grid grid-rows-[1fr,1fr,1fr,60px] w-4/5 gap-5">
-            <h1 class="text-xl bg-cyan-500">Iniciar sesión</h1>
-            <div for="username" class="grid grid-rows-2 bg-cyan-500">
+            <h1 class="text-xl">Iniciar sesión</h1>
+            <div for="username" class="grid grid-rows-2">
                 <label for="username" class="text-gray-700">Nombre de usuario</label>
                 <input class="h-9 ring-1 ring-gray-300 rounded" type="text" name="username" required>
             </div>
-            <div for="password" class="grid grid-rows-2 bg-cyan-500">
+            <div for="password" class="grid grid-rows-2">
                 <label for="password" class="text-gray-700">Contraseña</label>
                 <input class="h-9 ring-1 ring-gray-300 rounded" type="password" name="password" required>
             </div>
-            <div class="bg-cyan-500 align-bottom">
-                <button type="submit" class="uppercase bg-gray-300 shadow-lg rounded w-full h-10">inicio de sesión</button>
+            <div>
+                <button type="submit" class="uppercase bg-gray-300 shadow-lg rounded w-full h-10 mt-3">inicio de sesión</button>
             </div>
         </form>
 
