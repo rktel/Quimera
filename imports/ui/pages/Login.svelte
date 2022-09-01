@@ -20,15 +20,15 @@
 
         <form class="grid grid-rows-4 w-4/5 gap-5">
             <h1 class="text-lg">Iniciar sesión</h1>
-            <div for="username" class="grid grid-rows-2">
+            <div for="username" class="grid grid-rows-2 gap-2">
                 <label for="username" class="text-gray-700">Nombre de usuario</label>
                 <input type="text" name="username" required>
             </div>
-            <div for="password" class="grid grid-rows-2">
+            <div for="password" class="grid grid-rows-2 gap-2">
                 <label for="password" class="text-gray-700">Contraseña</label>
                 <input type="password" name="password" required>
             </div>
-            <button type="submit">inicio de sesión</button>
+            <button type="submit" class="uppercase bg-gray-400 shadow-xl rounded">inicio de sesión</button>
         </form>
 
     </div>
