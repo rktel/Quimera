@@ -18,8 +18,8 @@
     <!-- RIGHT -->
     <div class="grid place-items-center">
 
-        <form class="grid grid-rows-[1fr,1fr,1fr,48px] w-4/5 gap-5">
-            <h1 class="text-lg">Iniciar sesión</h1>
+        <form class="grid grid-rows-[1fr,1fr,1fr,60px] w-4/5 gap-5">
+            <h1 class="text-lg bg-cyan-500">Iniciar sesión</h1>
             <div for="username" class="grid grid-rows-2">
                 <label for="username" class="text-gray-700">Nombre de usuario</label>
                 <input class="h-9 ring-1 ring-gray-300 rounded" type="text" name="username" required>
