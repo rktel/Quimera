@@ -20,12 +20,14 @@
 
         <form>
             <h1>Iniciar sesión</h1>
-            <label for="username" class="block">
+            <div for="username" class="block">
+                <label for="username">Nombre de usuario</label>
                 <input type="text" name="username" required>
-            </label>
-            <label for="password" class="block">
+            </div>
+            <div for="password" class="block">
+                <label for="password">Contraseña</label>
                 <input type="password" name="password" required>
-            </label>
+            </div>
             <button type="submit">inicio de sesión</button>
         </form>
 
