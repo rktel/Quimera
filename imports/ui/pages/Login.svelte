@@ -28,7 +28,7 @@
                 <label for="password" class="text-gray-700">Contraseña</label>
                 <input class="h-9 ring-1 ring-gray-300 rounded" type="password" name="password" required>
             </div>
-            <button type="submit" class="uppercase bg-gray-300 shadow-lg rounded">inicio de sesión</button>
+            <button type="submit" class="uppercase bg-gray-300 shadow-lg rounded mt-3">inicio de sesión</button>
         </form>
 
     </div>
