@@ -22,10 +22,10 @@
         </div>
         <div>
             <form>
-                <label for="username">
+                <label for="username" class="block">
                     <input type="text" name="username" required>
                 </label>
-                <label for="password">
+                <label for="password" class="block">
                     <input type="password" name="password" required>
                 </label>
                 <button type="submit">inicio de sesión</button>
