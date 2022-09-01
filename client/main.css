@@ -7,7 +7,10 @@
         font-family: 'Inter', sans-serif;
         /* font-family: Chakra Petch, sans-serif; */
     }
-  }
+}
+html, body {
+    overflow: hidden;
+}
 /* 
 @layer components {
     .btn {
