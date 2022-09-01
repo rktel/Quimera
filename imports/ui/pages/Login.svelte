@@ -9,9 +9,9 @@
     };
 </script>
 
-<div class="h-screen bg-gray-300 text-800 grid grid-cols-[1fr,300px]">
+<div class="h-screen bg-gray-300 text-800 grid grid-cols-1 sm:grid-cols-[1fr,300px]">
     <!-- LEFT -->
-    <div class="bg-violet-500 flex hidden">
+    <div class="bg-violet-500 flex">
 
     </div>
     <!-- LEFT_END -->
