@@ -29,7 +29,7 @@
                 <input class="h-9 ring-1 ring-gray-300 rounded" type="password" name="password" required>
             </div>
             <div class="bg-cyan-500">
-                <button type="submit" class="uppercase bg-gray-300 shadow-lg rounded w-full">inicio de sesión</button>
+                <button type="submit" class="uppercase bg-gray-300 shadow-lg rounded w-full h-9">inicio de sesión</button>
             </div>
         </form>
 
