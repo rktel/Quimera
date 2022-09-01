@@ -17,7 +17,20 @@
     <!-- LEFT_END -->
     <!-- RIGHT -->
     <div class="bg-violet-700 grid">
-
+        <div>
+            <h1>Iniciar sesión</h1>
+        </div>
+        <div>
+            <form>
+                <label for="username">
+                    <input type="text" name="username" required>
+                </label>
+                <label for="password">
+                    <input type="password" name="password" required>
+                </label>
+                <button type="submit">inicio de sesión</button>
+            </form>
+        </div>
     </div>
     <!-- RIGHT_END -->
 </div>
