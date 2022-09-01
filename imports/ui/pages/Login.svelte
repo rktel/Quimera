@@ -4,7 +4,7 @@
     let username = "";
     let password = "";
 
-    const flogin = () => {
+    const fLogin = () => {
         Meteor.loginWithPassword(username, password);
     };
     const styles = {
@@ -29,7 +29,7 @@
     <!-- RIGHT -->
     <div class="{styles.right}">
 
-        <form class="{styles.form}">
+        <form class="{styles.form}" on:submit|preventDefault={fLogin}>
             <h1 class="{styles.title}">Iniciar sesión</h1>
             <div for="username" class="{styles.form_control}">
                 <label for="username" class="{styles.label}">Nombre de usuario</label>
