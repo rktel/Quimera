@@ -33,11 +33,11 @@
             <h1 class="{styles.title}">Iniciar sesión</h1>
             <div for="username" class="{styles.form_control}">
                 <label for="username" class="{styles.label}">Nombre de usuario</label>
-                <input class="{styles.input}" type="text" name="username" required>
+                <input class="{styles.input}" type="text" name="username" required bind:value={username}>
             </div>
             <div for="password" class="{styles.form_control}">
                 <label for="password" class="{styles.label}">Contraseña</label>
-                <input class="{styles.input}" type="password" name="password" required>
+                <input class="{styles.input}" type="password" name="password" required bind:value={password}>
             </div>
             <div>
                 <button type="submit" class="{styles.submit}">inicio de sesión</button>
