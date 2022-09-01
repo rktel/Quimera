@@ -9,7 +9,7 @@
     };
 </script>
 
-<div class="h-screen bg-gray-300 text-xs text-600 grid grid-cols-1 sm:grid-cols-[1fr,380px]">
+<div class="h-screen text-gray-800 grid grid-cols-1 sm:grid-cols-[1fr,380px]">
     <!-- LEFT -->
     <div class="bg-violet-500 hidden sm:grid">
 
