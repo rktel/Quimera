@@ -9,7 +9,7 @@
     };
 </script>
 
-<div class="h-screen text-gray-800 grid grid-cols-1 sm:grid-cols-[1fr,380px]">
+<div class="h-screen text-gray-800 grid grid-cols-1 sm:grid-cols-[1fr,400px]">
     <!-- LEFT -->
     <div class="bg-violet-500 hidden sm:grid">
 
@@ -18,7 +18,7 @@
     <!-- RIGHT -->
     <div class="bg-violet-700 grid place-items-center">
 
-        <form class="grid grid-rows-4 bg-slate-700 w-11/12">
+        <form class="grid grid-rows-4 bg-slate-700 w-4/5">
             <h1>Iniciar sesión</h1>
             <div for="username" class="grid grid-rows-2">
                 <label for="username">Nombre de usuario</label>
