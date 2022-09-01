@@ -8,15 +8,15 @@
         Meteor.loginWithPassword(username, password);
     };
     const styles = {
-        container: "h-screen text-gray-800 grid grid-cols-1 sm:grid-cols-[1fr,400px]",
-        left:"bg-violet-500 hidden sm:grid",
-        right:"grid place-items-center",
-        form:"grid grid-rows-[106px,60px,60px,66px] w-4/5 gap-8",
-        title:"text-xl",
-        form_control:"grid grid-rows-2",
-        label:"text-gray-700",
-        input:"h-10 ring-1 ring-gray-300 rounded px-3",
-        submit:"uppercase bg-blue-700 shadow text-white rounded w-full h-12 mt-3"
+        container: "h-screen text-gray-800 dark:bg-gray-800 dark:text-white grid grid-cols-1 sm:grid-cols-[1fr,400px]",
+        left: "hidden sm:grid",
+        right: "grid place-items-center",
+        form: "grid grid-rows-[106px,60px,60px,66px] w-4/5 gap-8",
+        title: "text-xl",
+        form_control: "grid grid-rows-2",
+        label: "text-gray-700",
+        input: "h-10 ring-1 ring-gray-300 rounded px-3",
+        submit: "uppercase bg-blue-700 shadow text-white rounded w-full h-12 mt-3"
     }
 </script>
 
