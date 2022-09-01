@@ -18,7 +18,7 @@
     <!-- RIGHT -->
     <div class="grid place-items-center">
 
-        <form class="grid grid-rows-[1fr,1fr,1fr,60px] w-4/5 gap-5">
+        <form class="grid grid-rows-[1fr,70px,70px,60px] w-4/5 gap-6">
             <h1 class="text-xl">Iniciar sesión</h1>
             <div for="username" class="grid grid-rows-2">
                 <label for="username" class="text-gray-700">Nombre de usuario</label>
