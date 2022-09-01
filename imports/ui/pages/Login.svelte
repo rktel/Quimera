@@ -14,7 +14,7 @@
         form: "grid grid-rows-[106px,60px,60px,66px] w-4/5 gap-8",
         title: "text-xl",
         form_control: "grid grid-rows-2",
-        label: "text-gray-700",
+        label: "text-gray-700 dark:text-gray-400",
         input: "h-10 ring-1 ring-gray-300 rounded px-3",
         submit: "uppercase bg-blue-700 shadow text-white rounded w-full h-12 mt-3"
     }
