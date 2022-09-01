@@ -17,10 +17,10 @@
     <!-- LEFT_END -->
     <!-- RIGHT -->
     <div class="bg-violet-700 grid">
-        <div class="bg-fuchsia-500">
-            <h1>Iniciar sesión</h1>
-        </div>
         <div class="bg-fuchsia-700">
+            <div class="bg-fuchsia-500">
+                <h1>Iniciar sesión</h1>
+            </div>
             <form>
                 <label for="username" class="block">
                     <input type="text" name="username" required>
