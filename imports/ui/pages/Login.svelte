@@ -4,12 +4,26 @@
     let username = "";
     let password = "";
 
-    const jlogin = () => {
+    const flogin = () => {
         Meteor.loginWithPassword(username, password);
     };
 </script>
 
-<div class="h-screen bg-neutral-200 flex">
+<div class="h-screen bg-gray-300 text-800 grid">
+    <!-- LEFT -->
+    <div class="bg-violet-500 flex">
+
+    </div>
+    <!-- LEFT_END -->
+    <!-- RIGHT -->
+    <div class="bg-violet-700 flex">
+
+    </div>
+    <!-- RIGHT_END -->
+</div>
+
+
+<!-- <div class="h-screen bg-neutral-200 flex">
     <div class="hidden sm:flex sm:justify-center sm:items-center sm:flex-1">
         <h1>QUIMERA</h1>
     </div>
@@ -57,4 +71,4 @@
             </div>
         </form>
     </div>
-</div>
+</div> -->
