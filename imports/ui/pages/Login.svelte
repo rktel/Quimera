@@ -20,11 +20,11 @@
 
         <form class="grid grid-rows-4 bg-slate-700">
             <h1>Iniciar sesión</h1>
-            <div for="username" class="block">
+            <div for="username" class="grid grid-rows-2">
                 <label for="username">Nombre de usuario</label>
                 <input type="text" name="username" required>
             </div>
-            <div for="password" class="block">
+            <div for="password" class="grid grid-rows-2">
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" required>
             </div>
