@@ -16,21 +16,19 @@
     </div>
     <!-- LEFT_END -->
     <!-- RIGHT -->
-    <div class="bg-violet-700 grid">
-        <div class="bg-fuchsia-700">
-            <div class="bg-fuchsia-500">
-                <h1>Iniciar sesión</h1>
-            </div>
-            <form>
-                <label for="username" class="block">
-                    <input type="text" name="username" required>
-                </label>
-                <label for="password" class="block">
-                    <input type="password" name="password" required>
-                </label>
-                <button type="submit">inicio de sesión</button>
-            </form>
-        </div>
+    <div class="bg-violet-700 grid place-items-center">
+
+        <form>
+            <h1>Iniciar sesión</h1>
+            <label for="username" class="block">
+                <input type="text" name="username" required>
+            </label>
+            <label for="password" class="block">
+                <input type="password" name="password" required>
+            </label>
+            <button type="submit">inicio de sesión</button>
+        </form>
+
     </div>
     <!-- RIGHT_END -->
 </div>
