@@ -19,13 +19,13 @@
     <div class="grid place-items-center">
 
         <form class="grid grid-rows-4 w-4/5 gap-5">
-            <h1>Iniciar sesión</h1>
+            <h1 class="text-lg">Iniciar sesión</h1>
             <div for="username" class="grid grid-rows-2">
-                <label for="username">Nombre de usuario</label>
+                <label for="username" class="text-gray-700">Nombre de usuario</label>
                 <input type="text" name="username" required>
             </div>
             <div for="password" class="grid grid-rows-2">
-                <label for="password">Contraseña</label>
+                <label for="password" class="text-gray-700">Contraseña</label>
                 <input type="password" name="password" required>
             </div>
             <button type="submit">inicio de sesión</button>
