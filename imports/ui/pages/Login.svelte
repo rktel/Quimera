@@ -19,7 +19,7 @@
     <div class="grid place-items-center">
 
         <form class="grid grid-rows-[1fr,1fr,1fr,60px] w-4/5 gap-5">
-            <h1 class="text-lg bg-cyan-500">Iniciar sesión</h1>
+            <h1 class="text-xl bg-cyan-500">Iniciar sesión</h1>
             <div for="username" class="grid grid-rows-2 bg-cyan-500">
                 <label for="username" class="text-gray-700">Nombre de usuario</label>
                 <input class="h-9 ring-1 ring-gray-300 rounded" type="text" name="username" required>
@@ -29,7 +29,7 @@
                 <input class="h-9 ring-1 ring-gray-300 rounded" type="password" name="password" required>
             </div>
             <div class="bg-cyan-500">
-                <button type="submit" class="uppercase bg-gray-300 shadow-lg rounded">inicio de sesión</button>
+                <button type="submit" class="uppercase bg-gray-300 shadow-lg rounded w-full">inicio de sesión</button>
             </div>
         </form>
 
