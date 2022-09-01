@@ -14,7 +14,7 @@ Meteor.methods({
             Meteor.users.update(_id, {
                 $set: {
                     profile: {
-                        accountType: 'super'
+                        accountType: 'supervisor'
                     }
                 }
             })
@@ -24,7 +24,7 @@ Meteor.methods({
         Meteor.users.remove(_id);
     },
     'users.getAll': function () {
-        return Meteor.users.find({'profile.accountType': 'super'}).fetch();
+        return Meteor.users.find({'profile.accountType': 'supervisor'}).fetch();
     },
     'users.reports.set.imei': function (imei) {
         if(this.userId){

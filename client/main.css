@@ -4,7 +4,8 @@
 
 @layer base {
     html {
-        font-family: Chakra Petch, sans-serif;
+        font-family: 'Inter', sans-serif;
+        /* font-family: Chakra Petch, sans-serif; */
     }
   }
 
