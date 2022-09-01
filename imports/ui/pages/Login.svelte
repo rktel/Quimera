@@ -16,7 +16,7 @@
         form_control:"grid grid-rows-2",
         label:"text-gray-700",
         input:"h-10 ring-1 ring-gray-300 rounded px-3",
-        submit:"uppercase bg-blue-700 shadow shadow-sky-700 text-white rounded w-full h-12 mt-3"
+        submit:"uppercase bg-blue-700 shadow text-white rounded w-full h-12 mt-3"
     }
 </script>
 
