@@ -17,6 +17,27 @@
     }
     let bUserOptions = false
     const fLogout = () => Meteor.logout();
+
+    const fFormatDate = (date) => {
+        const fPad2 = (num) => {
+            return num.toString().padStart(2, "0");
+        };
+
+        if (date) {
+            return (
+                [fPad2(date.getDate()), jPad2(date.getMonth() + 1)].join("/") +
+                " " +
+                [jPad2(date.getHours()), jPad2(date.getMinutes())].join(":")
+            );
+        } else {
+            return undefined;
+        }
+    };
+    let now = fFormatDate(new Date());
+    const fSetNow = () => now = fFormatDate(new Date());
+    let timer = setInterval(fSetNow, 1 * 1000);
+    onDestroy((_) => clearInterval(timer));
+  
 </script>
 
 <div class="h-8 text-sm font-normal bg-white text-dark-500 grid grid-cols-[120px,120px,120px,1fr,auto]">
@@ -25,7 +46,9 @@
         <button class="{$subpage.index===subpageOn.index?styles.active:''} " on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
     {/each}
 
-    <div class="rounded-2xl bg-dark-200 ml-4 my-1"></div>
+    <div class="rounded-2xl bg-dark-200 ml-4 my-1 flex justify-end px-4 gap-2 items-center">
+        <span class="text-dark-600 text-xs"> {now} </span>
+    </div>
 
     <div class="bg-white flex justify-end items-center gap-4 px-4">
            <button class="h-[22px] w-[22px] shadow rounded-full bg-alfa-800 text-white text-xs hover:ring" title="rktel" on:click="{_=> bUserOptions = !bUserOptions}">R</button>
