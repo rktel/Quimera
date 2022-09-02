@@ -49,7 +49,7 @@
 <!-- CONTAINER_END -->
 
 <!-- DRAWER -->
-<div class="dark:bg-dark-800 h-[calc(100vh_-_32px)] shadow-lg absolute top-8 z-30">
-
+<div class="dark:bg-dark-800 h-[calc(100vh_-_32px)] shadow-lg absolute top-8 z-30 w-[400px]">
+  BBBBBBBBBBBBBBBBBB
 </div>
 <!-- DRAWER_END -->
