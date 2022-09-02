@@ -54,11 +54,11 @@
                 </thead>
                 <tbody>
                     {#each users as user }
-                    <tr class="text-dark-600">
+                    <tr class="text-dark-600 text-center">
                         <td>{user.profile.fullname}</td>
                         <td>{user.username}</td>
                         <td>
-                            <button class="bg-beta-700 shadow text-white text-xs rounded h-8 min-w-[160px]">Eliminar</button>
+                            <button class="bg-beta-700 shadow text-white text-xs rounded h-8 min-w-[100px]">Eliminar</button>
                         </td>
                     </tr>
                     {/each}
