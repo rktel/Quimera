@@ -49,7 +49,15 @@
 <!-- CONTAINER_END -->
 
 <!-- DRAWER -->
-<div class="dark:bg-dark-800 h-[calc(100vh_-_32px)] shadow-lg absolute top-8 z-30 w-[200px]">
-  BBBBBBBBBBBBBBBBBB
-</div>
+{#if bDrawer}
+    <div class="dark:bg-dark-800 bg-white h-[calc(100vh_-_32px)] shadow-lg absolute top-8 z-30 w-[400px] grid grid-rows-[40px,1fr]">
+        <div class="bg-beta-400"> 
+            <button>Cerrar</button>
+        </div>
+        <div class="bg-beta-500">
+            Hola
+        </div>
+    </div>
+{/if}
+
 <!-- DRAWER_END -->
