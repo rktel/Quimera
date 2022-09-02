@@ -1,5 +1,6 @@
 <script>
     import { Meteor } from 'meteor/meteor';
+    import { onDestroy } from "svelte";
     import { clickOutside } from '../tools/clickOutside';
     import Users from "./subpages/Users.svelte";
     import Reports from "./subpages/Reports.svelte";
