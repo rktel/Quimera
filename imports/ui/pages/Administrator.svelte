@@ -18,7 +18,7 @@
  
 </script>
 
-<div>
+<div class="h-9 bg-dark-200 text-dark-800 grid grid-cols-12">
     {#each subpages as $subpage }
         <button class="{$subpage.index===subpageOn.index?styles.active:''}" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
     {/each}
