@@ -43,7 +43,7 @@
   {#if bLogged}
     <main>
       <Route path="/">
-        {#if userPermission === "admin"}
+        {#if userPermission === "administrator"}
           <Administrator />
         {/if}
         {#if userPermission === "supervisor"}
