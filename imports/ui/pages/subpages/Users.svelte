@@ -41,10 +41,10 @@
     </div>
     <!-- LEFT_END -->
     <!-- RIGHT -->
-    <div class="bg-alfa-900">
+    <div class="p-5 overflow-hidden">
 
         {#if users[0]}
-            <table class="bg-alfa-400 min-w-full text-sm">
+            <table class="min-w-full text-sm">
                 <thead>
                     <tr class="font-medium text-dark-700">
                         <th>Nombre completo</th>
