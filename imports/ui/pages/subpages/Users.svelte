@@ -56,7 +56,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-5 w-5 fill-dark-600 dark:fill-dark-300"><path d="M175 175C184.4 165.7 199.6 165.7 208.1 175L255.1 222.1L303 175C312.4 165.7 327.6 165.7 336.1 175C346.3 184.4 346.3 199.6 336.1 208.1L289.9 255.1L336.1 303C346.3 312.4 346.3 327.6 336.1 336.1C327.6 346.3 312.4 346.3 303 336.1L255.1 289.9L208.1 336.1C199.6 346.3 184.4 346.3 175 336.1C165.7 327.6 165.7 312.4 175 303L222.1 255.1L175 208.1C165.7 199.6 165.7 184.4 175 175V175zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
             </button>
         </div>
-        <div class="grid grid-rows-[60px,60px,60px,60px,32px] gap-4 p-5">
+        <div class="grid grid-rows-[60px,60px,60px,60px,40px] gap-4 p-5">
             <div class="grid grid-rows-[20px,30px] gap-2">
                 <label for="firstname" class="text-dark-700 dark:text-dark-200 text-xs">Nombre</label>
                 <input type="text" name="firstname" class="ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500">
@@ -73,8 +73,8 @@
                 <label for="password" class="text-dark-700 dark:text-dark-200 text-xs">Contraseña</label>
                 <input type="password" name="password" class="ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500">
             </div>
-            <div class="bg-alfa-500">
-                <button class="bg-alfa-700 shadow text-white text-xs rounded w-full h-8">
+            <div class="">
+                <button class="bg-alfa-700 shadow text-white text-xs rounded w-full h-8 mt-2">
                     Crear usuario
                 </button>
             </div>
