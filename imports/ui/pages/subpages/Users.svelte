@@ -57,7 +57,7 @@
             </button>
         </div>
         <div class="bg-beta-500 grid grid-rows-[60px,60px,60px,60px,32px] gap-4 p-5">
-            <div class="grid grid-rows-[20px,30px] bg-alfa-500">
+            <div class="grid grid-rows-[20px,30px] bg-alfa-500 gap-2">
                 <label for="firstname" class="bg-alfa-700">Nombre</label>
                 <input type="text" name="firstname" class="bg-alfa-800">
             </div>
