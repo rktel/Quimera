@@ -14,7 +14,7 @@
     let subpageOn = subpages[0];
     const fLoadSubpage = subpage => subpageOn = subpage;
     const styles = {
-        active: "text-dark-800 font-bold"
+        active: "text-dark-800 font-bold dark:text-white"
     }
     let bUserOptions = false
     const fLogout = () => Meteor.logout();
@@ -51,7 +51,7 @@
         <span class="text-dark-600 text-xs"> {now} </span>
     </div>
 
-    <div class="bg-white flex justify-end items-center gap-4 px-4 overflow-hidden">
+    <div class="bg-white flex justify-end items-center gap-4 px-4 overflow-hidden dark:bg-dark-800">
            <button class="h-[22px] w-[22px] shadow rounded-full bg-alfa-800 text-white text-xs hover:ring" title="rktel" on:click="{_=> bUserOptions = !bUserOptions}">R</button>
            {#if bUserOptions}
              <div class="absolute rounded-sm top-8 right-4 shadow grid gap-3 p-3 z-20 text-xs font-medium">
