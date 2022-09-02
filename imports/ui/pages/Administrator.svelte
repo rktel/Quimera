@@ -18,9 +18,11 @@
  
 </script>
 
-<div class="h-9 text-sm font-light bg-dark-200 text-dark-800 grid grid-cols-12">
+<div class="h-9 text-sm font-normal bg-dark-200 text-dark-800 grid grid-cols-[120px,120px,120px,1fr,200px]">
     {#each subpages as $subpage }
-        <button class="{$subpage.index===subpageOn.index?styles.active:''}" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
+        <button class="{$subpage.index===subpageOn.index?styles.active:''} hover:bg-dark-300" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
     {/each}
+    <div class="bg-beta-300"></div>
+    <div class="bg-beta-400"></div>
 </div>
 <svelte:component this="{subpageOn.component}"></svelte:component>
