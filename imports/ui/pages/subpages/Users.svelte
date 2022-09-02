@@ -44,9 +44,9 @@
     <div class="bg-alfa-900">
 
         {#if users[0]}
-            <table class="bg-alfa-400 min-w-full">
+            <table class="bg-alfa-400 min-w-full text-sm">
                 <thead>
-                    <tr>
+                    <tr class="font-medium text-dark-700">
                         <th>Nombre completo</th>
                         <th>Usuario</th>
                         <th>Acciones</th>
@@ -54,11 +54,11 @@
                 </thead>
                 <tbody>
                     {#each users as user }
-                    <tr>
+                    <tr class="text-dark-600">
                         <td>{user.profile.fullname}</td>
                         <td>{user.username}</td>
                         <td>
-                            <button class="bg-beta-700 shadow text-white text-xs rounded w-full h-8 min-w-[160px]">Eliminar</button>
+                            <button class="bg-beta-700 shadow text-white text-xs rounded h-8 min-w-[160px]">Eliminar</button>
                         </td>
                     </tr>
                     {/each}
