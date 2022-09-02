@@ -47,7 +47,7 @@
 <div class="{styles.container}">
 
     {#each subpages as $subpage }
-        <button class="{$subpage.index===subpageOn.index?styles.active:''} overflow-hidden text-dark-600 dark:text-dark-300" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
+        <button class="{$subpage.index===subpageOn.index?styles.active:''} overflow-hidden text-dark-600 dark:text-dark-400" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
     {/each}
 
     <div class="{styles.tool} overflow-hidden">
