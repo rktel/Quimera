@@ -24,10 +24,10 @@
     {/each}
     <div></div>
     <div class="bg-white flex justify-end items-center gap-4 px-4">
-        <div class="relative inline-block">
+
            <button class="h-[22px] w-[22px] shadow rounded-full bg-alfa-800 text-white text-xs hover:ring" title="rktel" on:click="{_=> bUserOptions = !bUserOptions}">R</button>
            {#if bUserOptions}
-             <div class="absolute w-[260px] h-[230px] shadow-xl rounded">
+             <div class="absolute top-8 right-8 w-[260px] h-[230px] shadow-xl rounded">
                 <div class="bg-dark-200">
                     Ricardo Hernández (rktel)
                 </div>
@@ -36,7 +36,7 @@
                 </div>
              </div>
            {/if}
-        </div>
+
         <button>A</button>
     </div>
 </div>
