@@ -12,7 +12,7 @@
     let subpageOn = subpages[0];
     const fLoadSubpage = subpage => subpageOn = subpage;
     const styles = {
-        active: "bg-dark-100 text-alfa-500 shadow"
+        active: "bg-dark-200 text-alfa-500 shadow-md"
     }
 
  
