@@ -44,7 +44,7 @@
     <div class="bg-alfa-900">
 
         {#if users[0]}
-            <table class="bg-alfa-400 table-auto">
+            <table class="bg-alfa-400 table-auto min-w-full">
                 <thead>
                     <tr>
                         <th>Nombre completo</th>
@@ -57,7 +57,9 @@
                     <tr>
                         <td>{user.profile.fullname}</td>
                         <td>{user.username}</td>
-                        <td> _ </td>
+                        <td>
+                            <button class="bg-beta-700 shadow text-white text-xs rounded w-full h-8 min-w-[160px]">Eliminar</button>
+                        </td>
                     </tr>
                     {/each}
                 </tbody>
