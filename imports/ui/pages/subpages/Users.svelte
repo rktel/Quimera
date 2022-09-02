@@ -44,9 +44,9 @@
     <div class="p-5 overflow-hidden">
 
         {#if users[0]}
-            <table class="min-w-full text-sm">
+            <table class="table-fixed text-sm">
                 <thead>
-                    <tr class="font-medium text-dark-700">
+                    <tr class="font-medium text-dark-700 dark:text-white h-6">
                         <th>Nombre completo</th>
                         <th>Usuario</th>
                         <th>Acciones</th>
@@ -54,7 +54,7 @@
                 </thead>
                 <tbody>
                     {#each users as user }
-                    <tr class="text-dark-600 text-center">
+                    <tr class="text-dark-600 dark:text-dark-400 text-center h-5">
                         <td>{user.profile.fullname}</td>
                         <td>{user.username}</td>
                         <td>
