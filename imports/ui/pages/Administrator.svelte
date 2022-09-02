@@ -11,12 +11,16 @@
     ]
     let subpageOn = subpages[0];
     const fLoadSubpage = subpage => subpageOn = subpage;
-    const active ="";
+    const styles = {
+        active: "text-alfa-500"
+    }
+
+ 
 </script>
 
 <div>
     {#each subpages as $subpage }
-        <button on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
+        <button class="{$subpage===subpageOn?styles.active:''}" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
     {/each}
 </div>
 <svelte:component this="{subpageOn.component}"></svelte:component>
