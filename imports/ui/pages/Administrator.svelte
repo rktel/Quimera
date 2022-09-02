@@ -41,17 +41,17 @@
   
 </script>
 
-<div class="h-8 text-sm font-normal bg-white text-dark-500 grid grid-cols-[120px,120px,120px,1fr,auto] border-dark-300 border-b shadow">
+<div class="h-8 text-sm font-normal bg-white text-dark-500 grid grid-cols-[120px,120px,120px,1fr,auto] border-dark-300 border-b shadow overflow-hidden">
 
     {#each subpages as $subpage }
-        <button class="{$subpage.index===subpageOn.index?styles.active:''} " on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
+        <button class="{$subpage.index===subpageOn.index?styles.active:''} overflow-hidden" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
     {/each}
 
-    <div class="rounded-2xl bg-dark-200 ml-4 my-1 flex justify-end px-4 gap-2 items-center">
+    <div class="rounded-2xl bg-dark-200 ml-4 my-1 flex justify-end px-4 gap-2 items-center overflow-hidden">
         <span class="text-dark-600 text-xs"> {now} </span>
     </div>
 
-    <div class="bg-white flex justify-end items-center gap-4 px-4">
+    <div class="bg-white flex justify-end items-center gap-4 px-4 overflow-hidden">
            <button class="h-[22px] w-[22px] shadow rounded-full bg-alfa-800 text-white text-xs hover:ring" title="rktel" on:click="{_=> bUserOptions = !bUserOptions}">R</button>
            {#if bUserOptions}
              <div class="absolute rounded-sm top-8 right-4 shadow grid gap-3 p-3 z-20 text-xs font-medium">
