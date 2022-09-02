@@ -31,13 +31,13 @@
 
         <form class="{styles.form}" on:submit|preventDefault={fLogin}>
             <h1 class="{styles.title}">Iniciar sesión</h1>
-            <div for="username" class="{styles.form_control}">
-                <label for="username" class="{styles.label}">Nombre de usuario</label>
-                <input class="{styles.input}" type="text" name="username" required bind:value={username}>
+            <div class="{styles.form_control}">
+                <label for="_username" class="{styles.label}">Nombre de usuario</label>
+                <input class="{styles.input}" type="text" name="_username" required bind:value={username}>
             </div>
-            <div for="password" class="{styles.form_control}">
-                <label for="password" class="{styles.label}">Contraseña</label>
-                <input class="{styles.input}" type="password" name="password" required bind:value={password}>
+            <div class="{styles.form_control}">
+                <label for="_password" class="{styles.label}">Contraseña</label>
+                <input class="{styles.input}" type="password" name="_password" required bind:value={password}>
             </div>
             <div>
                 <button type="submit" class="{styles.submit}">inicio de sesión</button>
