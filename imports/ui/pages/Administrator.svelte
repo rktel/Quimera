@@ -41,7 +41,7 @@
   
 </script>
 
-<div class="h-8 text-sm font-normal bg-white text-dark-500 grid grid-cols-[120px,120px,120px,1fr,auto] border-dark-500 border-b">
+<div class="h-8 text-sm font-normal bg-white text-dark-500 grid grid-cols-[120px,120px,120px,1fr,auto] border-dark-300 border-b">
 
     {#each subpages as $subpage }
         <button class="{$subpage.index===subpageOn.index?styles.active:''} " on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
