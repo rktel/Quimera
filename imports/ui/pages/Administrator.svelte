@@ -27,11 +27,10 @@
 
            <button class="h-[22px] w-[22px] shadow rounded-full bg-alfa-800 text-white text-xs hover:ring" title="rktel" on:click="{_=> bUserOptions = !bUserOptions}">R</button>
            {#if bUserOptions}
-             <div class="absolute top-8 right-8 shadow flex gap-3">
+             <div class="absolute top-8 right-8 shadow grid gap-3 p-3">
                 <div class="rounded-t">
-                    <p class="text-dark-700">Ricardo Hernández (rktel)</p> 
+                    <p class="text-dark-700 text-xs font-medium">Ricardo Hernández (rktel)</p> 
                 </div>
-                
                 <button class="text-dark-600">Cerrar sesión</button>
              </div>
            {/if}
