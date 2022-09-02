@@ -1,10 +1,10 @@
-<div class="bg-alfa-500 h-[calc(100vh_-_32px)] grid grid-cols-[360px,1fr] gap-1">
-    <div class="grid grid-rows-[80px,80px] gap-4 p-3">
+<div class="bg-alfa-500 h-[calc(100vh_-_32px)] grid grid-cols-[340px,1fr] gap-1">
+    <div class="grid grid-rows-[80px,80px] gap-3 p-5">
         <div>
-            <button class="uppercase bg-alfa-700 shadow text-white text-sm rounded w-full h-10"> Ver Usuarios</button>
+            <button class="uppercase bg-alfa-700 shadow text-white text-xs rounded w-full h-8"> Ver Usuarios</button>
         </div>
         <div>
-            <button class="uppercase bg-alfa-700 shadow text-white text-sm rounded w-full h-10"> Crear Usuario</button>
+            <button class="uppercase bg-alfa-700 shadow text-white text-xs rounded w-full h-8"> Crear Usuario</button>
         </div>
     </div>
     <div class="bg-alfa-900">
