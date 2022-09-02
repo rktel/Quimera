@@ -22,7 +22,7 @@
 <div class="h-8 text-sm font-normal bg-white text-dark-500 grid grid-cols-[120px,120px,120px,1fr,auto]">
 
     {#each subpages as $subpage }
-        <button class="bg-dark-200 {$subpage.index===subpageOn.index?styles.active:''} " on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
+        <button class="{$subpage.index===subpageOn.index?styles.active:''} " on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
     {/each}
 
     <div class="rounded-2xl bg-dark-200 ml-4"></div>
