@@ -12,7 +12,7 @@
     let subpageOn = subpages[0];
     const fLoadSubpage = subpage => subpageOn = subpage;
     const styles = {
-        active: "text-alfa-500"
+        active: "text-alfa-500 border-2 border-b-0 border-alfa-500"
     }
 
  
@@ -20,7 +20,7 @@
 
 <div class="h-9 text-sm font-normal bg-dark-200 text-dark-800 grid grid-cols-[120px,120px,120px,1fr,200px]">
     {#each subpages as $subpage }
-        <button class="{$subpage.index===subpageOn.index?styles.active:''} hover:bg-dark-300" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
+        <button class="{$subpage.index===subpageOn.index?styles.active:''} hover:bg-dark-300 " on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
     {/each}
     <div class="bg-beta-300"></div>
     <div class="bg-beta-400"></div>
