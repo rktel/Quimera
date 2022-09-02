@@ -36,7 +36,7 @@
             <button class="bg-alfa-700 shadow text-white text-xs rounded w-full h-8"> Ver usuarios</button>
         </div>
         <div>
-            <button class="bg-alfa-700 shadow text-white text-xs rounded w-full h-8" on:click={fToggleDrawer}> Crear usuario</button>
+            <button class="bg-alfa-700 shadow text-white text-xs rounded w-full h-8" on:click={fToggleDrawer}> Nuevo usuario</button>
         </div>
     </div>
     <!-- LEFT_END -->
