@@ -63,7 +63,7 @@
     <div class="{styles.user_container}">
            <button class="{styles.user_avatar}" title="rktel" on:click="{_=> bUserOptions = !bUserOptions}">R</button>
            {#if bUserOptions}
-             <div class="{styles.user_dropdown}">
+             <div class="{styles.user_dropdown} min-w-[140px]">
                 <div class="rounded-t-sm">
                     <p class="text-dark-800 dark:text-dark-100">{user && user.profile.fullname ? user.profile.fullname :""} ({user ? user.username : "" })</p> 
                 </div>
