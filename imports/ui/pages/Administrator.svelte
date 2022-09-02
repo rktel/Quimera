@@ -24,7 +24,7 @@
     {/each}
     <div></div>
     <div class="bg-white flex justify-end items-center gap-4 px-4">
-        <button class="h-[22px] w-[22px] shadow rounded-full bg-alfa-800 text-white text-xs">R</button>
+        <button class="h-[22px] w-[22px] shadow rounded-full bg-alfa-800 text-white text-xs" title="rktel">R</button>
         <button>A</button>
     </div>
 </div>
