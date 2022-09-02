@@ -7,9 +7,9 @@
     import Messages from "./subpages/Messages.svelte";
     
     const subpages = [
-        {index:1, name:"Users", component: Users},
-        {index:2, name:"Reports", component: Reports},
-        {index:3, name:"Messages", component: Messages},
+        {index:1, name:"Usuarios", component: Users},
+        {index:2, name:"Reportes", component: Reports},
+        {index:3, name:"Mensajes", component: Messages},
     ]
     let subpageOn = subpages[0];
     const fLoadSubpage = subpage => subpageOn = subpage;
@@ -41,7 +41,7 @@
   
 </script>
 
-<div class="h-8 text-sm font-normal bg-white text-dark-500 grid grid-cols-[120px,120px,120px,1fr,auto] border-dark-300 border-b shadow overflow-hidden">
+<div class="h-8 text-sm font-normal bg-white dark:bg-dark-800 text-dark-500 grid grid-cols-[120px,120px,120px,1fr,auto] border-dark-300 border-b shadow overflow-hidden">
 
     {#each subpages as $subpage }
         <button class="{$subpage.index===subpageOn.index?styles.active:''} overflow-hidden" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
