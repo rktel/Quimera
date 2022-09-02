@@ -59,19 +59,19 @@
         <div class="grid grid-rows-[60px,60px,60px,60px,40px] gap-4 p-5">
             <div class="grid grid-rows-[20px,30px] gap-2">
                 <label for="firstname" class="text-dark-700 dark:text-dark-200 text-xs">Nombre</label>
-                <input type="text" name="firstname" class="ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500">
+                <input type="text" name="firstname" class="ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500" required>
             </div>
             <div class="grid grid-rows-[20px,30px] gap-2">
                 <label for="lastname" class="text-dark-700 dark:text-dark-200 text-xs">Apellido</label>
-                <input type="text" name="lastname" class="ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500">
+                <input type="text" name="lastname" class="ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500" required>
             </div>
             <div class="grid grid-rows-[20px,30px] gap-2">
                 <label for="username" class="text-dark-700 dark:text-dark-200 text-xs">Nombre de usuario</label>
-                <input type="text" name="username" class="ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500">
+                <input type="text" name="username" class="ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500" required>
             </div>
             <div class="grid grid-rows-[20px,30px] gap-2">
                 <label for="password" class="text-dark-700 dark:text-dark-200 text-xs">Contraseña</label>
-                <input type="password" name="password" class="ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500">
+                <input type="password" name="password" class="ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500" required>
             </div>
             <div class="">
                 <button class="bg-alfa-700 shadow text-white text-xs rounded w-full h-8 mt-2">
