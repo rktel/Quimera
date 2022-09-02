@@ -25,9 +25,9 @@
 
         if (date) {
             return (
-                [fPad2(date.getDate()), jPad2(date.getMonth() + 1)].join("/") +
+                [fPad2(date.getDate()), date.toLocaleString("es-PE", { month: "short" })].join(" ")  +
                 " " +
-                [jPad2(date.getHours()), jPad2(date.getMinutes())].join(":")
+                [fPad2(date.getHours()), fPad2(date.getMinutes())].join(":")
             );
         } else {
             return undefined;
