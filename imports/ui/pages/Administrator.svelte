@@ -65,7 +65,7 @@
            {#if bUserOptions}
              <div class="{styles.user_dropdown}">
                 <div class="rounded-t-sm">
-                    <p class="text-dark-800 dark:text-dark-100">Ricardo Hernández ({user ? user.username : "" })</p> 
+                    <p class="text-dark-800 dark:text-dark-100">{user && user.profile.fullname ? user.profile.fullname :""} ({user ? user.username : "" })</p> 
                 </div>
                 <button class="text-dark-600 dark:text-dark-300 flex justify-between" use:clickOutside on:click_outside={_ => bUserOptions = false} on:click={fLogout}>
                     <span>Cerrar sesión</span> 
