@@ -23,7 +23,7 @@
         <button class="{$subpage.index===subpageOn.index?styles.active:''}" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
     {/each}
     <div></div>
-    <div class="bg-white flex justify-end items-center gap-2">
+    <div class="bg-white flex justify-end items-center gap-3 px-3">
         <button class="h-5 w-5 shadow rounded-full bg-alfa-800 text-white text-xs">R</button>
         <button>A</button>
     </div>
