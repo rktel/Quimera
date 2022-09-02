@@ -15,7 +15,7 @@
         title: "text-xl",
         form_control: "grid grid-rows-2",
         label: "text-dark-700 dark:text-dark-400",
-        input: "h-10 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:ring-alfa-500",
+        input: "h-10 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500",
         submit: "uppercase bg-alfa-700 shadow text-white rounded w-full h-12 mt-3"
     }
 </script>
