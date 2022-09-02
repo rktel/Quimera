@@ -13,7 +13,7 @@
     let subpageOn = subpages[0];
     const fLoadSubpage = subpage => subpageOn = subpage;
     const styles = {
-        active: "bg-white text-alfa-500 shadow"
+        active: "text-dark-800 font-bold"
     }
     let bUserOptions = false
     const fLogout = () => Meteor.logout();
