@@ -8,7 +8,7 @@
         Meteor.loginWithPassword(username, password);
     };
     const styles = {
-        container: "h-screen text-dark-800 dark:bg-dark-800 dark:text-white grid grid-cols-1 sm:grid-cols-[1fr,450px]",
+        container: "h-screen text-dark-800 dark:bg-alfa-900 dark:text-white grid grid-cols-1 sm:grid-cols-[1fr,450px]",
         left: "hidden sm:grid",
         right: "grid place-items-center",
         form: "grid grid-rows-[106px,60px,60px,66px] w-3/4 gap-10",
