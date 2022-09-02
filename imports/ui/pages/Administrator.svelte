@@ -14,7 +14,10 @@
     let subpageOn = subpages[0];
     const fLoadSubpage = subpage => subpageOn = subpage;
     const styles = {
-        active: "text-dark-800 font-bold dark:text-white"
+        active: "text-dark-800 font-bold dark:text-white",
+        container: "h-8 text-sm font-normal bg-white dark:bg-dark-800 text-dark-500 grid grid-cols-[120px,120px,120px,1fr,auto] border-dark-300 border-b shadow overflow-hidden",
+        tool:"rounded-2xl bg-dark-200 ml-4 my-1 flex justify-end px-4 gap-2 items-center",
+
     }
     let bUserOptions = false
     const fLogout = () => Meteor.logout();
@@ -41,13 +44,13 @@
   
 </script>
 
-<div class="h-8 text-sm font-normal bg-white dark:bg-dark-800 text-dark-500 grid grid-cols-[120px,120px,120px,1fr,auto] border-dark-300 border-b shadow overflow-hidden">
+<div class="{styles.container}">
 
     {#each subpages as $subpage }
-        <button class="{$subpage.index===subpageOn.index?styles.active:''} overflow-hidden" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
+        <button class="{$subpage.index===subpageOn.index?styles.active:''} overflow-hidden text-dark-600 dark:text-dark-300" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
     {/each}
 
-    <div class="rounded-2xl bg-dark-200 ml-4 my-1 flex justify-end px-4 gap-2 items-center overflow-hidden">
+    <div class="{styles.tool} overflow-hidden">
         <span class="text-dark-600 text-xs"> {now} </span>
     </div>
 
