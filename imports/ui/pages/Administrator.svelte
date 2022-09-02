@@ -19,7 +19,7 @@
     const fLogout = () => Meteor.logout();
 </script>
 
-<div class="h-8 text-sm font-normal bg-dark-200 text-dark-500 grid grid-cols-[120px,120px,120px,1fr,auto]">
+<div class="h-8 text-sm font-normal  text-dark-500 grid grid-cols-[120px,120px,120px,1fr,auto]">
     {#each subpages as $subpage }
         <button class="{$subpage.index===subpageOn.index?styles.active:''}" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
     {/each}
