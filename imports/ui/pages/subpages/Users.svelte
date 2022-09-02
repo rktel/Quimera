@@ -58,7 +58,7 @@
                         <td>{user.profile.fullname}</td>
                         <td>{user.username}</td>
                         <td>
-                            <button class="bg-beta-700 shadow text-white text-xs rounded h-8 min-w-[100px]">Eliminar</button>
+                            <button class="bg-beta-700 shadow text-white text-xs rounded h-7 min-w-[100px]" on:click="{_=>fRemoveUser(user._id)}">Eliminar</button>
                         </td>
                     </tr>
                     {/each}
