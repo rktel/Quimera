@@ -1,10 +1,21 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   content: [
-    "./imports/ui/**/*.{svelte,js,jsx,ts,tsx}",
+    "./imports/ui/**/*.{svelte,js}",
     "./client/*.html",
   ],
   theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: colors.black,
+      white: colors.white,
+      dark: colors.gray,
+      alfa: colors.blue,
+      beta: colors.rose,
+    },
     extend: {},
   },
   plugins: [],
