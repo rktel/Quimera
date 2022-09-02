@@ -3,7 +3,7 @@
     let password;
     let firstname;
     let lastname;
-    let bDrawer = true;
+    let bDrawer = false;
     let users = [];
     const fToggleDrawer = () => bDrawer = !bDrawer;
     const fCreateUser = () =>{
@@ -33,16 +33,37 @@
     <!-- LEFT -->
     <div class="grid grid-rows-[40px,40px] gap-3 p-5">
         <div>
-            <button class="bg-alfa-700 shadow text-white text-xs rounded w-full h-8"> Ver usuarios</button>
+            <button class="bg-alfa-700 shadow text-white text-xs rounded w-full h-8" on:click="{fGetAllUsers}"> Ver usuarios</button>
         </div>
         <div>
-            <button class="bg-alfa-700 shadow text-white text-xs rounded w-full h-8" on:click={fToggleDrawer}> Nuevo usuario</button>
+            <button class="bg-alfa-700 shadow text-white text-xs rounded w-full h-8" on:click="{fToggleDrawer}"> Nuevo usuario</button>
         </div>
     </div>
     <!-- LEFT_END -->
     <!-- RIGHT -->
     <div class="bg-alfa-900">
-        B
+
+        {#if users[0]}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre completo</th>
+                        <th>Usuario</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {#each users as user }
+                    <tr>
+                        <td>{user.profile.fullname}</td>
+                        <td>{user.username}</td>
+                        <td> _ </td>
+                    </tr>
+                    {/each}
+                </tbody>
+            </table>
+        {/if}
+
     </div>
     <!-- RIGHT_END -->
 </div>
