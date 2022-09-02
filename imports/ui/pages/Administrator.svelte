@@ -19,11 +19,14 @@
     const fLogout = () => Meteor.logout();
 </script>
 
-<div class="h-8 text-sm font-normal  text-dark-500 grid grid-cols-[120px,120px,120px,1fr,auto]">
+<div class="h-8 text-sm font-normal text-dark-500 grid grid-cols-[120px,120px,120px,1fr,auto]">
+
     {#each subpages as $subpage }
         <button class="bg-dark-200 {$subpage.index===subpageOn.index?styles.active:''} " on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
     {/each}
-    <div class="rounded-2xl bg-dark-200"></div>
+
+    <div class="rounded-2xl bg-dark-200 pl-4"></div>
+
     <div class="bg-white flex justify-end items-center gap-4 px-4">
            <button class="h-[22px] w-[22px] shadow rounded-full bg-alfa-800 text-white text-xs hover:ring" title="rktel" on:click="{_=> bUserOptions = !bUserOptions}">R</button>
            {#if bUserOptions}
