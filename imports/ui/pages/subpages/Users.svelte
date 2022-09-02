@@ -31,7 +31,7 @@
 <!-- CONTAINER -->
 <div class="dark:bg-dark-800 h-[calc(100vh_-_32px)] grid grid-cols-[340px,1fr] gap-1">
     <!-- LEFT -->
-    <div class="grid grid-rows-[40px,40px] gap-3 p-5">
+    <div class="grid grid-rows-[40px,40px] gap-3 p-5 border-dark-300 border-r">
         <div>
             <button class="bg-alfa-700 shadow text-white text-xs rounded w-full h-8" on:click="{fGetAllUsers}"> Ver usuarios</button>
         </div>
@@ -44,9 +44,9 @@
     <div class="p-5 overflow-hidden">
 
         {#if users[0]}
-            <table class="table-fixed text-sm">
+            <table class="min-w-full text-sm">
                 <thead>
-                    <tr class="font-medium text-dark-700 dark:text-white h-6">
+                    <tr class="font-medium text-dark-700 dark:text-white h-10">
                         <th>Nombre completo</th>
                         <th>Usuario</th>
                         <th>Acciones</th>
@@ -54,7 +54,7 @@
                 </thead>
                 <tbody>
                     {#each users as user }
-                    <tr class="text-dark-600 dark:text-dark-400 text-center h-5">
+                    <tr class="text-dark-600 dark:text-dark-400 text-center h-9">
                         <td>{user.profile.fullname}</td>
                         <td>{user.username}</td>
                         <td>
