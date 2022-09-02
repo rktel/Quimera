@@ -5,7 +5,7 @@ Meteor.users.deny({ update: () => true });
 
 Meteor.methods({
     'users.create': function (userObj) {
-        const { username, password } = userObj;
+        const { username, password, firstname, lastname } = userObj;
         if (!Accounts.findUserByUsername(username)) {
             const _id = Accounts.createUser({
                 username: username,
@@ -14,7 +14,10 @@ Meteor.methods({
             Meteor.users.update(_id, {
                 $set: {
                     profile: {
-                        accountType: 'supervisor'
+                        accountType: 'supervisor',
+                        firstname: capitalize(firstname),
+                        lastname: capitalize(lastname),
+                        fullname: capitalize(firstname) + " " + capitalize(lastname)
                     }
                 }
             })
@@ -40,3 +43,7 @@ Meteor.methods({
     },
    
 })
+
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
