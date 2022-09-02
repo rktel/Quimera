@@ -18,13 +18,13 @@
  
 </script>
 
-<div class="h-8 text-sm font-normal bg-dark-200 text-dark-500 grid grid-cols-[120px,120px,120px,1fr,200px]">
+<div class="h-8 text-sm font-normal bg-dark-200 text-dark-500 grid grid-cols-[120px,120px,120px,1fr,auto]">
     {#each subpages as $subpage }
         <button class="{$subpage.index===subpageOn.index?styles.active:''}" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
     {/each}
     <div></div>
     <div class="bg-white flex justify-end items-center gap-2">
-        <button class="h-4 w-4 rounded-full bg-alfa-500 text-white">R</button>
+        <button class="h-5 w-5 shadow rounded-full bg-alfa-800 text-white text-xs">R</button>
         <button>A</button>
     </div>
 </div>
