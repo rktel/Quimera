@@ -22,7 +22,7 @@
     {#each subpages as $subpage }
         <button class="{$subpage.index===subpageOn.index?styles.active:''} sha" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
     {/each}
-    <div class="bg-beta-300"></div>
-    <div class="bg-beta-400"></div>
+    <div></div>
+    <div class="bg-alfa-800"></div>
 </div>
 <svelte:component this="{subpageOn.component}"></svelte:component>
