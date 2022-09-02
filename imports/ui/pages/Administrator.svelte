@@ -18,7 +18,7 @@
         active: "text-dark-800 font-bold dark:text-white",
         container: "h-8 text-sm font-normal bg-white dark:bg-dark-800 text-dark-500 grid grid-cols-[120px,120px,120px,1fr,auto] border-dark-300 border-b shadow overflow-hidden",
         tool:"rounded-2xl bg-dark-200 ml-4 my-1 flex justify-end px-4 gap-2 items-center",
-        user_container: "bg-white flex justify-end items-center gap-4 px-4 overflow-hidden dark:bg-dark-800",
+        user_container: "bg-white sm:flex justify-end items-center gap-4 px-4 overflow-hidden dark:bg-dark-800",
         user_avatar: "h-[22px] w-[22px] shadow rounded-full bg-alfa-800 text-white text-xs hover:ring",
         user_dropdown : "absolute rounded-sm top-8 right-4 shadow grid gap-3 p-3 z-20 text-xs font-medium dark:bg-dark-800",
     }
@@ -56,7 +56,7 @@
         <button class="{$subpage.index===subpageOn.index?styles.active:''} overflow-hidden" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
     {/each}
 
-    <div class="{styles.tool} overflow-hidden">
+    <div class="{styles.tool} overflow-hidden hidden ">
         <span class="text-dark-600 text-xs"> {now} </span>
     </div>
 
