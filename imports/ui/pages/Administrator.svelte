@@ -20,7 +20,7 @@
         tool:"rounded-2xl bg-dark-200 ml-4 my-1 sm:flex justify-end px-4 gap-2 items-center",
         user_container: "bg-white flex justify-end items-center gap-4 px-4 overflow-hidden dark:bg-dark-800",
         user_avatar: "h-[22px] w-[22px] shadow rounded-full bg-alfa-800 text-white text-xs hover:ring",
-        user_dropdown : "absolute rounded-sm top-8 right-4 shadow grid gap-3 p-3 z-20 text-xs font-medium dark:bg-dark-800",
+        user_dropdown : "absolute rounded-sm top-8 right-4 shadow grid gap-3 p-3 z-20 text-xs font-medium bg-white dark:bg-dark-800",
     }
 
     let user = undefined;
