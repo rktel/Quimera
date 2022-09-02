@@ -44,7 +44,7 @@
     <div class="bg-alfa-900">
 
         {#if users[0]}
-            <table class="bg-alfa-400 table-auto min-w-full">
+            <table class="bg-alfa-400 min-w-full">
                 <thead>
                     <tr>
                         <th>Nombre completo</th>
