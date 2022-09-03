@@ -5,7 +5,7 @@
     let password = "";
 
     const fLogin = () => {
-        Meteor.loginWithPassword(username, password);
+        Meteor.loginWithPassword(username, password, error=> error);
     };
     const styles = {
         container: "h-screen text-dark-800 dark:bg-dark-800 dark:text-white grid grid-cols-1 sm:grid-cols-[1fr,450px]",
