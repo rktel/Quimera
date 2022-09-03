@@ -85,23 +85,23 @@
 
             <div class="grid grid-rows-[auto,auto] gap-1">
                 <label for="firstname" class="text-dark-700 dark:text-dark-200 text-xs">Nombre</label>
-                <input bind:value="{firstname}" type="text" name="firstname" class="h-11 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500" required>
+                <input bind:value="{firstname}" type="text" name="firstname" class="h-9 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500" required>
             </div>
 
             <div class="grid grid-rows-[auto,auto] gap-1">
                 <label for="lastname" class="text-dark-700 dark:text-dark-200 text-xs">Apellido</label>
-                <input bind:value="{lastname}" type="text" name="lastname" class="h-10 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500" required>
+                <input bind:value="{lastname}" type="text" name="lastname" class="h-9 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500" required>
             </div>
             <div class="grid grid-rows-[auto,auto] gap-1">
                 <label for="_username" class="text-dark-700 dark:text-dark-200 text-xs">Nombre de usuario</label>
-                <input bind:value="{username}" type="text" name="_username" class="h-10 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500" required>
+                <input bind:value="{username}" type="text" name="_username" class="h-9 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500" required>
             </div>
             <div class="grid grid-rows-[auto,auto] gap-1">
                 <label for="_password" class="text-dark-700 dark:text-dark-200 text-xs">Contraseña</label>
-                <input bind:value="{password}" type="text" name="_password" class="h-10 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500" required>
+                <input bind:value="{password}" type="text" name="_password" class="h-9 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500" required>
             </div>
             <div class="">
-                <button class="bg-alfa-700 shadow text-white text-xs rounded w-full h-8 mt-2" on:click="{fCreateUser}">
+                <button class="bg-alfa-700 shadow text-white text-xs rounded w-full h-9 mt-2" on:click="{fCreateUser}">
                     Crear usuario
                 </button>
             </div>
