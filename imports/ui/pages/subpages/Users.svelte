@@ -101,7 +101,7 @@
                 <input bind:value="{password}" type="text" name="_password" class="h-9 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500" required>
             </div>
             <div class="">
-                <button class="bg-alfa-700 shadow text-white text-xs rounded w-full h-9 mt-2" on:click="{fCreateUser}">
+                <button class="bg-alfa-700 shadow text-white text-sm rounded w-full h-9 mt-2" on:click="{fCreateUser}">
                     Crear usuario
                 </button>
             </div>
