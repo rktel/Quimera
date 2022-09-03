@@ -9,8 +9,8 @@ import '../imports/api/methods/m_users';
 import './tcp_commands/galileosky';
 
 
-const SEBAS_USERNAME = "mazda";
-const SEBAS_PASSWORD = "mazda";
+const SEBAS_USERNAME = "rktel";
+const SEBAS_PASSWORD = "smht";
 
 Meteor.startup(() => {
   if (!Accounts.findUserByUsername(SEBAS_USERNAME)) {
