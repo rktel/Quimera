@@ -54,7 +54,7 @@
         <!-- SELECT SUBPAGE_END -->
         <!-- TOOL -->
         <div class="flex items-center justify-end px-5">
-            <span class="text-alfa-600">
+            <span class="text-alfa-800 dark:text-alfa-300 text-sm font-bold">
                 {now}
             </span>
         </div>
