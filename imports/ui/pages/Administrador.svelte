@@ -75,11 +75,10 @@
 <!-- USER OPTIONS -->
 {#if bUserOptions}
     <div class="dark:bg-dark-700 bg-dark-50 shadow-lg absolute top-[40px] right-0 z-40 w-[260px] grid grid-rows-[auto,auto]">
-        <div class="bg-dark-100 dark:bg-dark-800 flex flex-col items-center p-5 gap-2 flex-wrap ">
+        <div class="bg-dark-100 dark:bg-dark-800 flex flex-col items-center p-5 gap-2 border-b border-beta-500">
             <p class="text-dark-800 font-medium dark:text-dark-50">{user?user.username:""}</p>
             <span class="h-[30px] w-[30px] text-white text-xl bg-beta-700 text-center font-bold shadow rounded-full">{user&&user.profile?user.profile.firstname.charAt(0):''}</span>
             <p class="text-dark-800 dark:text-dark-50 text-sm">{user&&user.profile?user.profile.fullname:""}</p>
-
         </div>
         <div class="flex flex-col-reverse">
             <button class="text-dark-600 dark:text-dark-300 flex justify-between px-5 py-4 items-center bg-dark-100 dark:bg-dark-800" on:click={fLogout}>
