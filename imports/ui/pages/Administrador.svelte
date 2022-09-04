@@ -54,14 +54,14 @@
         <!-- SELECT SUBPAGE_END -->
         <!-- TOOL -->
         <div class="flex items-center justify-end px-5">
-            <span class="text-alfa-800 dark:text-alfa-300 text-sm font-bold">
+            <span class="text-dark-500 dark:text-alfa-400 text-sm font-bold">
                 {now}
             </span>
         </div>
         <!-- TOOL_END -->
         <!-- OPTION USER -->
-        <div class="bg-alfa-400">
-            C
+        <div class="flex items-center px-5">
+            <button class="h-[24px] w-[24px] text-white font-bold shadow hover:ring-beta-300 hover:ring-1 bg-beta-700 rounded-full">{user&&user.profile?user.profile.firstname.charAt(0):''}</button>
         </div>
         <!-- OPTION USER_END -->
     </div>
