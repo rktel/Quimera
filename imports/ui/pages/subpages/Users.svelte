@@ -36,7 +36,7 @@
             <button class="bg-alfa-700 shadow text-white text-xs rounded w-full h-8" on:click="{fGetAllUsers}"> Listar usuarios</button>
         </div>
         <div>
-            <button class="bg-alfa-700 shadow text-white text-xs rounded w-full h-8" on:click="{fToggleDrawer}"> Registar nuevo usuario</button>
+            <button class="bg-alfa-700 shadow text-white text-xs rounded w-full h-8" on:click="{fToggleDrawer}"> Registrar nuevo usuario</button>
         </div>
     </div>
     <!-- LEFT_END -->
@@ -81,9 +81,9 @@
             </button>
         </div>
         <!-- BAR_END -->
-        <div class="flex flex-col p-10 gap-6">
+        <form class="flex flex-col p-10 gap-6" on:submit|preventDefault={fCreateUser}>
             <div>
-                <h1 class="text-dark-900">REGISTRAR USUARIO</h1>
+                <h1 class="text-dark-900 dark:text-dark-100">REGISTRAR USUARIO</h1>
             </div>
             <div class="grid grid-rows-[auto,auto] gap-1">
                 <label for="firstname" class="text-dark-700 dark:text-dark-300 text-xs">Nombre</label>
@@ -103,11 +103,11 @@
                 <input bind:value="{password}" type="text" name="_password" class="h-9 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500" required>
             </div>
             <div class="">
-                <button class="bg-alfa-700 shadow text-white text-sm rounded w-full h-9 mt-2" on:click="{fCreateUser}">
-                    Registar
+                <button class="bg-alfa-700 shadow text-white text-sm rounded w-full h-9 mt-2" type="submit">
+                    Registrar
                 </button>
             </div>
-        </div>
+        </form>
     </div>
 {/if}
 
