@@ -46,21 +46,21 @@
     <!-- BAR -->
     <div class="grid grid-cols-[auto,1fr,auto] bg-dark-50 dark:bg-dark-700 border-b border-beta-500">
         <!-- SELECT SUBPAGE -->
-        <div class="flex text-dark-500">
+        <div class="flex text-dark-500 h-[40px]">
             {#each subpages as $subpage }
-            <button class="min-w-[150px] {$subpage.index === subpageOn.index?active:''}" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
+            <button class=" min-w-[150px] {$subpage.index === subpageOn.index?active:''}" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
             {/each}
         </div>
         <!-- SELECT SUBPAGE_END -->
         <!-- TOOL -->
-        <div class="flex items-center justify-end px-5">
-            <span class="text-dark-500 dark:text-white text-sm font-bold">
+        <div class="flex items-center justify-end px-5 h-[40px]">
+            <span class="text-dark-500 dark:text-white text-sm font-bold hidden sm:block">
                 {now}
             </span>
         </div>
         <!-- TOOL_END -->
         <!-- USER AVATAR -->
-        <div class="flex items-center px-5">
+        <div class="flex items-center px-5 h-[40px]">
             <button on:click={_=>bUserOptions =!bUserOptions} title={user&&user.profile?`${user.profile.firstname} (${user.username})`:""} class="h-[23px] w-[23px] text-white text-sm font-bold shadow hover:ring bg-beta-700 rounded-full">{user&&user.profile?user.profile.firstname.charAt(0):''}</button>
         </div>
         <!-- USER AVATAR_END -->
