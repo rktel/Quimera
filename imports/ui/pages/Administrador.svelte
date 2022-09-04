@@ -53,8 +53,10 @@
         </div>
         <!-- SELECT SUBPAGE_END -->
         <!-- TOOL -->
-        <div class="">
-            B
+        <div class="flex items-center justify-end px-5">
+            <span class="text-alfa-600">
+                {now}
+            </span>
         </div>
         <!-- TOOL_END -->
         <!-- OPTION USER -->
