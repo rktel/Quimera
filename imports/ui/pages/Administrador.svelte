@@ -39,7 +39,7 @@
     let timer = setInterval(fSetNow, 1 * 1000);
     onDestroy((_) => clearInterval(timer));
 </script>
-<div class="bg-alfa-400 h-screen grid grid-rows-[50px,1fr]">
+<div class="bg-alfa-400 h-screen grid grid-rows-[40px,1fr]">
     <div class="bg-alfa-200">a</div>
     <div class="bg-alfa-300">b</div>
 </div>
