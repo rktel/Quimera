@@ -29,7 +29,7 @@
     }
 </script>
 <!-- CONTAINER -->
-<div class="dark:bg-dark-800 h-[calc(100vh_-_32px)] grid grid-cols-[340px,1fr]">
+<div class="dark:bg-dark-700 bg-dark-50 grid grid-cols-[340px,1fr]">
     <!-- LEFT -->
     <div class="grid grid-rows-[50px,1fr] shadow-lg">
         <!-- BAR -->
@@ -83,7 +83,7 @@
 
 <!-- DRAWER -->
 {#if bDrawer}
-    <div class="dark:bg-dark-800 bg-white h-[calc(100vh_-_32px)] shadow-lg absolute top-8 z-40 w-[340px] grid grid-rows-[50px,1fr]">
+    <div class="dark:bg-dark-700 bg-dark-50 shadow-lg absolute top-[40px] bottom-0 z-40 w-[340px] grid grid-rows-[50px,1fr]">
         <!-- BAR -->
         <div class="flex justify-end px-4 items-center"> 
             <button class="h-6 w-6 shadow rounded-full text-white text-xs hover:ring" on:click={_=> bDrawer = false}>

@@ -38,8 +38,34 @@
     const fSetNow = () => now = fFormatDate(new Date());
     let timer = setInterval(fSetNow, 1 * 1000);
     onDestroy((_) => clearInterval(timer));
+    const active = 'text-dark-800 font-bold dark:text-dark-100'
 </script>
-<div class="bg-alfa-400 h-screen grid grid-rows-[40px,1fr]">
-    <div class="bg-alfa-200">a</div>
-    <div class="bg-alfa-300">b</div>
+
+<!-- CONTAINER -->
+<div class="h-screen grid grid-rows-[40px,1fr]">
+    <!-- BAR -->
+    <div class="grid grid-cols-[auto,1fr,auto] bg-dark-50 dark:bg-dark-700">
+        <!-- SELECT SUBPAGE -->
+        <div class="flex text-dark-500">
+            {#each subpages as $subpage }
+            <button class="min-w-[150px] {$subpage.index === subpageOn.index?active:''}" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
+            {/each}
+        </div>
+        <!-- SELECT SUBPAGE_END -->
+        <!-- TOOL -->
+        <div class="bg-alfa-300">
+            B
+        </div>
+        <!-- TOOL_END -->
+        <!-- OPTION USER -->
+        <div class="bg-alfa-400">
+            C
+        </div>
+        <!-- OPTION USER_END -->
+    </div>
+    <!-- BAR_END -->
+    <!-- SUBPAGE -->
+    <svelte:component this="{subpageOn.component}"></svelte:component>
+    <!-- SUBPAGE_END -->
 </div>
+<!-- CONTAINER_END -->
