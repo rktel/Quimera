@@ -16,7 +16,7 @@
     const fLoadSubpage = subpage => subpageOn = subpage;
     const styles = {
         active: "text-dark-800 font-bold dark:text-white",
-        container: "h-8 text-sm font-normal bg-white dark:bg-dark-800 text-dark-500 grid grid-cols-[120px,120px,120px,1fr,auto] border-dark-300 border-b shadow overflow-hidden",
+        container: "h-10 text-sm font-normal bg-white dark:bg-dark-800 text-dark-500 grid grid-cols-[120px,120px,120px,1fr,auto] shadow overflow-hidden",
         tool:"rounded-2xl bg-dark-200 ml-4 my-1 sm:flex justify-end px-4 gap-2 items-center",
         user_container: "bg-white flex justify-end items-center gap-4 px-4 overflow-hidden dark:bg-dark-800",
         user_avatar: "h-[22px] w-[22px] shadow rounded-full bg-alfa-800 text-white text-xs hover:ring",

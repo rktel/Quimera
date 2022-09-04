@@ -2,6 +2,7 @@
   import { Meteor } from "meteor/meteor";
   import { Router, Route, navigate } from "svelte-routing";
   import Administrator from "./pages/Administrator.svelte";
+  import Administrador from "./pages/Administrador.svelte";
   import Home from "./pages/Home.svelte";
   import Login from "./pages/Login.svelte";
 
@@ -44,7 +45,7 @@
     <main>
       <Route path="/">
         {#if userPermission === "administrator"}
-          <Administrator />
+          <Administrador />
         {/if}
         {#if userPermission === "supervisor"}
          <Home />
