@@ -44,7 +44,7 @@
 <!-- CONTAINER -->
 <div class="h-screen grid grid-rows-[40px,1fr]">
     <!-- BAR -->
-    <div class="grid grid-cols-[auto,1fr,auto] bg-dark-50 dark:bg-dark-700">
+    <div class="grid grid-cols-[auto,1fr,auto] bg-dark-50 dark:bg-dark-700 border-b border-beta-500">
         <!-- SELECT SUBPAGE -->
         <div class="flex text-dark-500">
             {#each subpages as $subpage }
@@ -53,7 +53,7 @@
         </div>
         <!-- SELECT SUBPAGE_END -->
         <!-- TOOL -->
-        <div class="bg-alfa-300">
+        <div class="">
             B
         </div>
         <!-- TOOL_END -->
