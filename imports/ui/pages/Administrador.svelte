@@ -11,6 +11,7 @@
         {index:1, name:"Usuarios", component: Users},
         {index:2, name:"Reportes", component: Reports},
         {index:3, name:"Mensajes", component: Messages},
+        {index:4, name:"Mensajes", component: Messages},
     ]
     let subpageOn = subpages[0];
     const fLoadSubpage = subpage => subpageOn = subpage;
@@ -30,7 +31,7 @@
     <!-- BAR -->
     <div class="h-[40px] grid grid-cols-[auto,1fr,auto] bg-dark-50 dark:bg-dark-700 border-b border-beta-500">
         <!-- SELECT SUBPAGE -->
-        <div class="flex text-dark-500 h-[40px]">
+        <div class="flex text-dark-500 h-[40px] overflow-y-scroll">
             {#each subpages as $subpage }
             <button class=" min-w-[150px] {$subpage.index === subpageOn.index?active:''}" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
             {/each}
