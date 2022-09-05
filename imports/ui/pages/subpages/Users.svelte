@@ -4,6 +4,7 @@
     let firstname;
     let lastname;
     let bDrawer = false;
+    let bLeftPanel = true;
     let users = [];
     const fToggleDrawer = () => bDrawer = !bDrawer;
     const fCreateUser = () =>{
@@ -11,7 +12,7 @@
         firstname = firstname.toLowerCase();
         lastname = lastname.toLowerCase();
         Meteor.call('users.create',{username,password,firstname,lastname});
-        fToggleDrawer();
+        //fToggleDrawer();
         fGetAllUsers();
         username = '';
         password = '';
@@ -27,55 +28,93 @@
         Meteor.call('users.remove',_id)
         fGetAllUsers()
     }
+    const fToggleAllLeft = ()=> {
+        if(bLeftPanel){
+            bDrawer = false;
+            bLeftPanel = false;
+        }else{
+            bDrawer = false;
+            bLeftPanel = true;
+        }
+
+    }
 </script>
 <!-- CONTAINER -->
-<div class="dark:bg-dark-700 bg-dark-50 grid grid-cols-[340px,1fr]">
-    <!-- LEFT -->
-    <div class="grid grid-rows-[50px,1fr] shadow-lg">
-        <!-- BAR -->
-        <div class="flex justify-end px-4 items-center"> 
+<div class="dark:bg-dark-700 bg-dark-50 h-[calc(100%_-_40px)] flex">
+    <!-- LEFT -->   
+    {#if bLeftPanel}
+        <div class="grid grid-rows-[50px,1fr] shadow-lg basis-[300px]">
+            <!-- BAR -->
+            <div class="flex justify-end px-4 items-center"> 
 
+            </div>
+            <!-- BAR_END -->
+            <div class="flex flex-col p-10 gap-6">
+                <div>
+                    <h1 class="text-dark-700 dark:text-dark-100 font-bold text-sm">SELECCIONE OPCION</h1>
+                </div>
+                <div>
+                    <button class="bg-alfa-600 shadow uppercase font-bold  text-white text-xs rounded w-full h-9" on:click="{fGetAllUsers}"> Listar usuarios</button>
+                </div>
+                <div>
+                    <button class="bg-alfa-600 shadow uppercase font-bold  text-white text-xs rounded w-full h-9" on:click="{fToggleDrawer}"> Registrar nuevo usuario</button>
+                </div>
+            </div>
         </div>
-        <!-- BAR_END -->
-        <div class="flex flex-col p-10 gap-6">
-            <div>
-                <h1 class="text-dark-700 dark:text-dark-100 font-bold text-sm">SELECCIONE OPCION</h1>
-            </div>
-            <div>
-                <button class="bg-alfa-600 shadow uppercase font-bold  text-white text-xs rounded w-full h-9" on:click="{fGetAllUsers}"> Listar usuarios</button>
-            </div>
-            <div>
-                <button class="bg-alfa-600 shadow uppercase font-bold  text-white text-xs rounded w-full h-9" on:click="{fToggleDrawer}"> Registrar nuevo usuario</button>
-            </div>
-        </div>
-    </div>
+    {/if}
     <!-- LEFT_END -->
+
     <!-- RIGHT -->
-    <div class="p-5 overflow-hidden">
-
+    <div class="overflow-hidden flex-1 p-5 h-full">
+    
         {#if users[0]}
-            <table class="min-w-full text-sm">
-                <thead>
-                    <tr class="font-medium text-dark-700 dark:text-white h-10">
-                        <th>Nombre completo</th>
-                        <th>Usuario</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {#each users as user }
-                    <tr class="text-dark-600 dark:text-dark-400 text-center h-9">
-                        <td>{user.profile.fullname}</td>
-                        <td>{user.username}</td>
-                        <td>
-                            <button class="bg-beta-700 shadow text-white text-xs rounded h-7 min-w-[100px]" on:click="{_=>fRemoveUser(user._id)}">Eliminar</button>
-                        </td>
-                    </tr>
-                    {/each}
-                </tbody>
-            </table>
-        {/if}
+            <!-- BAR ACTION -->
+            <div class="bg-dark-200 h-[30px] flex border-dark-100 border-b">
+                <!-- toggle all left panels -->
+                <button class="h-[30px] px-1 bg-dark-50" on:click={fToggleAllLeft}>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-dark-500" viewBox="0 0 512 512"><path d="M406.6 374.6l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224l-293.5 0 41.4-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288l293.5 0-41.4 41.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"/></svg>
+                </button>
+              <!-- toggle all left panels_end -->
 
+                <!-- select columns -->
+                <!-- select columns_end -->
+
+                <!-- pagination -->
+                <!-- pagination_end -->
+            </div>
+            <!-- BAR ACTION_END -->
+
+            <!-- TABLE CONTAINER -->
+            <div class="overflow-scroll h-[calc(100%_-_30px)]">
+                <table class="min-w-full text-sm">
+                    <thead class="bg-dark-200 dark:bg-dark-900 text-left sticky top-0">
+                        <tr class="font-medium text-dark-700 dark:text-white h-10">
+                            <th class="px-5">#</th>
+                            <th class="px-5">Nombre</th>            
+                            <th class="px-5">Apellido</th>
+                            <th class="px-5">Usuario</th>
+                            <th class="px-5">Creado</th>
+                            <th class="px-5">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {#each users as user,i }
+                        <tr class="text-dark-600 dark:text-dark-200 dark:bg-dark-800 h-9 border-b border-dark-200 dark:border-dark-600">
+                            <td class="px-5">{i+1}</td>
+                            <td class="px-5">{user.profile.firstname}</td>
+                            <td class="px-5">{user.profile.lastname}</td>
+                            <td class="px-5">{user.username}</td>
+                            <td class="px-5">{user.profile.createdAtFormat}</td>
+                            <td class="px-5">
+                                <button class="bg-beta-700 shadow text-white text-xs rounded h-7 min-w-[60px]" on:click="{_=>fRemoveUser(user._id)}">Eliminar</button>
+                            </td>
+                        </tr>
+                        {/each}
+                    </tbody>
+                </table>
+            </div>
+            <!-- TABLE CONTAINER_END-->
+        {/if}
     </div>
     <!-- RIGHT_END -->
 </div>
@@ -83,7 +122,7 @@
 
 <!-- DRAWER -->
 {#if bDrawer}
-    <div class="dark:bg-dark-700 bg-dark-50 shadow-lg absolute top-[40px] bottom-0 z-40 w-[340px] grid grid-rows-[50px,1fr]">
+    <div class="dark:bg-dark-700 bg-dark-50 shadow-lg absolute top-[40px] bottom-0 z-40 w-[300px] grid grid-rows-[50px,1fr]">
         <!-- BAR -->
         <div class="flex justify-end px-4 items-center"> 
             <button class="h-6 w-6 shadow rounded-full text-white text-xs hover:ring" on:click={_=> bDrawer = false}>

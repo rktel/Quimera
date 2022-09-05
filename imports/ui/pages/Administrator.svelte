@@ -2,7 +2,7 @@
     import { Meteor } from 'meteor/meteor';
     import { s_user } from '../../api/stores';
     import { onDestroy } from "svelte";
-    import { clickOutside } from '../tools/clickOutside';
+    import { clickOutside } from '../../tools';
     import Users from "./subpages/Users.svelte";
     import Reports from "./subpages/Reports.svelte";
     import Messages from "./subpages/Messages.svelte";

@@ -2,7 +2,7 @@
     import { Meteor } from 'meteor/meteor';
     import { s_user } from '../../api/stores';
     import { onDestroy } from "svelte";
-    import { clickOutside } from '../tools/clickOutside';
+    import { formatSpecial} from '../../tools'
     import Users from "./subpages/Users.svelte";
     import Reports from "./subpages/Reports.svelte";
     import Messages from "./subpages/Messages.svelte";
@@ -18,33 +18,17 @@
     s_user.subscribe(newValue => user = newValue);
     let bUserOptions = false
     const fLogout = () => Meteor.logout();
-
-    const fFormatDate = (date) => {
-        const fPad2 = (num) => {
-            return num.toString().padStart(2, "0");
-        };
-
-        if (date) {
-            return (
-                [fPad2(date.getDate()), date.toLocaleString("es-PE", { month: "short" })].join(" ")  +
-                " " +
-                [fPad2(date.getHours()), fPad2(date.getMinutes())].join(":")
-            );
-        } else {
-            return undefined;
-        }
-    };
-    let now = fFormatDate(new Date());
-    const fSetNow = () => now = fFormatDate(new Date());
+    let now = formatSpecial(new Date());
+    const fSetNow = () => now = formatSpecial(new Date());
     let timer = setInterval(fSetNow, 1 * 1000);
     onDestroy((_) => clearInterval(timer));
     const active = 'text-dark-800 font-bold dark:text-dark-100'
 </script>
 
 <!-- CONTAINER -->
-<div class="h-screen grid grid-rows-[40px,1fr]">
+<div class="h-screen flex flex-col">
     <!-- BAR -->
-    <div class="grid grid-cols-[auto,1fr,auto] bg-dark-50 dark:bg-dark-700 border-b border-beta-500">
+    <div class="h-[40px] grid grid-cols-[auto,1fr,auto] bg-dark-50 dark:bg-dark-700 border-b border-beta-500">
         <!-- SELECT SUBPAGE -->
         <div class="flex text-dark-500 h-[40px]">
             {#each subpages as $subpage }

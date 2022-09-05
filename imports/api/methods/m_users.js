@@ -1,11 +1,13 @@
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
+import { formatDate } from '../../tools';
 
 Meteor.users.deny({ update: () => true });
 
 Meteor.methods({
     'users.create': function (userObj) {
         const { username, password, firstname, lastname } = userObj;
+        const now = new Date();
         if (!Accounts.findUserByUsername(username)) {
             const _id = Accounts.createUser({
                 username: username,
@@ -17,7 +19,9 @@ Meteor.methods({
                         accountType: 'supervisor',
                         firstname: capitalize(firstname),
                         lastname: capitalize(lastname),
-                        fullname: capitalize(firstname) + " " + capitalize(lastname)
+                        fullname: capitalize(firstname) + " " + capitalize(lastname),
+                        createdAt: now,
+                        createdAtFormat: formatDate(now)
                     }
                 }
             })
