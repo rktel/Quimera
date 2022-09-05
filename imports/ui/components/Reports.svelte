@@ -78,14 +78,12 @@
         <div class="p-3 flex flex-col gap-3">
 
             <div class="flex flex-col">
-                <label for="dateReportSelect" class="inputLabel"
-                    >Intervalo</label>
-
-                    <select name="dateReportSelect" id="dateReportSelect" bind:value={dateReportSelected} class="form-select">
-                        <option value={0}>Hoy</option>
-                        <option value={1}>Ayer</option>
-                        <option value={2}>Fecha</option>
-                    </select>
+                <label for="dateReportSelect" class="inputLabel">Intervalo</label>
+                <select name="dateReportSelect" id="dateReportSelect" bind:value={dateReportSelected} class="form-select">
+                    <option value={0}>Hoy</option>
+                    <option value={1}>Ayer</option>
+                    <option value={2}>Fecha</option>
+                </select>
             </div>
             {#if dateReportSelected === 2}
                 <div class="flex flex-col">

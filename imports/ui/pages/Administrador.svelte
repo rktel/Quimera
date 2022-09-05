@@ -11,9 +11,8 @@
         {index:1, name:"Usuarios", component: Users},
         {index:2, name:"Reportes", component: Reports},
         {index:3, name:"Mensajes", component: Messages},
-        {index:4, name:"Mensajes", component: Messages},
     ]
-    let subpageOn = subpages[0];
+    let subpageOn = subpages[1];
     const fLoadSubpage = subpage => subpageOn = subpage;
     let user = undefined;
     s_user.subscribe(newValue => user = newValue);

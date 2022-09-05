@@ -49,6 +49,7 @@
 
             </div>
             <!-- BAR_END -->
+            <!-- OPTIONS -->
             <div class="flex flex-col p-10 gap-6">
                 <div>
                     <h1 class="text-dark-700 dark:text-dark-100 font-bold text-sm">SELECCIONE OPCION</h1>
@@ -60,6 +61,7 @@
                     <button class="bg-alfa-600 shadow uppercase font-bold  text-white text-xs rounded w-full h-9" on:click="{fToggleDrawer}"> Registrar nuevo usuario</button>
                 </div>
             </div>
+            <!-- OPTIONS_END -->
         </div>
     {/if}
     <!-- LEFT_END -->
@@ -85,7 +87,7 @@
             <!-- BAR ACTION_END -->
 
             <!-- TABLE CONTAINER -->
-            <div class="overflow-scroll h-[calc(100%_-_30px)]">
+            <div class="overflow-auto h-[calc(100%_-_30px)]">
                 <table class="min-w-full text-sm">
                     <thead class="bg-dark-200 dark:bg-dark-900 text-left sticky top-0">
                         <tr class="font-medium text-dark-700 dark:text-white h-10">
@@ -135,20 +137,20 @@
                 <h1 class="text-dark-700 dark:text-dark-100 font-bold text-sm">REGISTRAR USUARIO</h1>
             </div>
             <div class="grid grid-rows-[auto,auto] gap-1">
-                <label for="firstname" class="text-dark-700 dark:text-dark-300 text-xs">Nombre</label>
+                <label for="firstname" class="text-dark-700 dark:text-dark-300 text-xs">Nombre:</label>
                 <input bind:value="{firstname}" type="text" name="firstname" class="h-9 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500" required>
             </div>
 
             <div class="grid grid-rows-[auto,auto] gap-1">
-                <label for="lastname" class="text-dark-700 dark:text-dark-300 text-xs">Apellido</label>
+                <label for="lastname" class="text-dark-700 dark:text-dark-300 text-xs">Apellido:</label>
                 <input bind:value="{lastname}" type="text" name="lastname" class="h-9 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500" required>
             </div>
             <div class="grid grid-rows-[auto,auto] gap-1">
-                <label for="_username" class="text-dark-700 dark:text-dark-300 text-xs">Nombre de usuario</label>
+                <label for="_username" class="text-dark-700 dark:text-dark-300 text-xs">Nombre de usuario:</label>
                 <input bind:value="{username}" type="text" name="_username" class="h-9 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500" required>
             </div>
             <div class="grid grid-rows-[auto,auto] gap-1">
-                <label for="_password" class="text-dark-700 dark:text-dark-300 text-xs">Contraseña</label>
+                <label for="_password" class="text-dark-700 dark:text-dark-300 text-xs">Contraseña:</label>
                 <input bind:value="{password}" type="text" name="_password" class="h-9 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500" required>
             </div>
             <div class="">
