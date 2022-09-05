@@ -31,7 +31,7 @@
     <!-- BAR -->
     <div class="h-[40px] grid grid-cols-[auto,1fr,auto] bg-dark-50 dark:bg-dark-700 border-b border-beta-500">
         <!-- SELECT SUBPAGE -->
-        <div class="flex text-dark-500 h-[40px] overflow-y-scroll">
+        <div class="flex text-dark-500 h-[40px] overflow-x-scroll">
             {#each subpages as $subpage }
             <button class=" min-w-[150px] {$subpage.index === subpageOn.index?active:''}" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
             {/each}
