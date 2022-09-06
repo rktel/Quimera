@@ -187,7 +187,7 @@
                     </thead>
                     <tbody>
                         {#each reports as report,i}
-                        <tr class="text-dark-600 dark:text-dark-200 dark:bg-dark-800 h-9 border-b border-dark-200 dark:border-dark-600 {i%2?'bg-dark-100 dark:bg-dark-700':''}">
+                        <tr class="text-dark-600 dark:text-dark-200 dark:bg-dark-800 h-9 border-b border-dark-200 dark:border-dark-600 {i%2?'bg-dark-100 dark:bg-dark-900':''}">
                             {#each headers as header }
                                 <td class="pl-5 whitespace-nowrap {header.label ==='Raw data'? 'pr-5':''}">{report[header.label] === undefined ? "": report[header.label] }</td>
                             {/each}
