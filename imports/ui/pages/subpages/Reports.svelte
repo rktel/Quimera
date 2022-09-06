@@ -262,7 +262,7 @@
                         </span>
                         <select bind:value="{pagination.itemsPerPage}" class="text-xs text-dark-500 bg-dark-300 dark:text-dark-200 dark:bg-dark-800">
                             {#each pagination.itemsPerPageArray as itemsPerPage}
-                              <option class="text-xs text-dark-500" value="{itemsPerPage}" on:click="{pagination.fItemsPerPageAction}">{itemsPerPage}</option>
+                              <option class="text-xs text-dark-500" value="{itemsPerPage}" on:click={pagination.fItemsPerPageAction}>{itemsPerPage}</option>
                             {/each}
                         </select>
                     </div>
@@ -272,7 +272,7 @@
                         </span>
                         <select bind:value="{pagination.pageSelected}" class="text-xs text-dark-500 bg-dark-300 dark:text-dark-200 dark:bg-dark-800">
                             {#each pagination.pages as page}
-                              <option class="text-xs text-dark-500" value="{page}" on:click="{pagination.fpageAction}">{page}</option>
+                              <option class="text-xs text-dark-500" value="{page}" on:click={pagination.fpageAction}>{page}</option>
                             {/each}
                         </select>
                     </div>
