@@ -143,7 +143,7 @@
                 </div>
                 {#if reports[0]}
                 <div class="flex">
-                    <button class="bg-beta-600 shadow uppercase font-bold  text-white  rounded w-full h-8" on:click={fCreateExcel}>
+                    <button class="bg-beta-600 shadow uppercase  text-white  rounded w-full h-8" on:click={fCreateExcel}>
                         descargar
                     </button>
                     <!-- <p class="text-gray-600  text-center mt-1">Se incluiran todos los campos {brawData?"+ raw data":""}</p> -->
