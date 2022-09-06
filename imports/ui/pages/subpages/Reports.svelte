@@ -177,27 +177,22 @@
 
             <!-- TABLE CONTAINER -->
             <div class="overflow-auto h-[calc(100%_-_30px)]">
-                <table class="min-w-full text-sm">
+                <table class="text-xs">
                     <thead class="bg-dark-200 dark:bg-dark-900 text-left sticky top-0">
                         <tr class="font-medium text-dark-700 dark:text-white h-10">
                             {#each headers as header}
-                                <th class="px-5">{header.label}</th>
+                                <th class="pl-5 whitespace-nowrap">{header.label}</th>
                             {/each}
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- {#each users as user,i }
-                        <tr class="text-dark-600 dark:text-dark-200 dark:bg-dark-800 h-9 border-b border-dark-200 dark:border-dark-600">
-                            <td class="px-5">{i+1}</td>
-                            <td class="px-5">{user.profile.firstname}</td>
-                            <td class="px-5">{user.profile.lastname}</td>
-                            <td class="px-5">{user.username}</td>
-                            <td class="px-5">{user.profile.createdAtFormat}</td>
-                            <td class="px-5">
-                                <button class="bg-beta-700 shadow text-white text-xs rounded h-7 min-w-[60px]" on:click="{_=>fRemoveUser(user._id)}">Eliminar</button>
-                            </td>
+                        {#each reports as report,i}
+                        <tr class="text-dark-600 dark:text-dark-200 dark:bg-dark-800 h-9 border-b border-dark-200 dark:border-dark-600 {i%2?'bg-dark-100 dark:bg-dark-700':''}">
+                            {#each headers as header }
+                                <td class="pl-5 whitespace-nowrap {header.label ==='Raw data'? 'pr-5':''}">{report[header.label] === undefined ? "": report[header.label] }</td>
+                            {/each}
                         </tr>
-                        {/each} -->
+                        {/each}
                     </tbody>
                 </table>
             </div>
