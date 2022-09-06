@@ -47,7 +47,7 @@
             }
             return array;
         },
-        fpageAction: (e) => {
+        fpageAction: () => {
             pagination.totalOfItems = reports.length;
             pagination.totalOfPages = Math.ceil(pagination.totalOfItems/pagination.itemsPerPage);
             pagination.pages = pagination.fNumbers(pagination.totalOfPages);
@@ -63,7 +63,7 @@
             // sort.sortedData = pagination.data;
             //sort.mainAction(sort.selectedHeader);
         },
-        fItemsPerPageAction: (e) => {
+        fItemsPerPageAction: () => {
             pagination.pageSelected = 1;
             pagination.fpageAction();
         }
