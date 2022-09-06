@@ -196,7 +196,7 @@
                     </tbody>
                 </table>
             </div>
-            <!-- TABLE CONTAINER_END-->
+            <!-- TABLE CONTAINER_END -->
         {/if}
     </div>
     <!-- RIGHT_END -->
