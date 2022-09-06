@@ -32,13 +32,13 @@
         <!-- SELECT SUBPAGE -->
         <div class="flex text-dark-500 h-[40px] overflow-x-auto">
             {#each subpages as $subpage }
-            <button class=" min-w-[150px] {$subpage.index === subpageOn.index?active:''}" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
+            <button class="text-sm min-w-[150px] {$subpage.index === subpageOn.index?active:''}" on:click="{_=>fLoadSubpage($subpage)}">{$subpage.name}</button>
             {/each}
         </div>
         <!-- SELECT SUBPAGE_END -->
         <!-- TOOL -->
         <div class="flex items-center justify-end px-5 h-[40px]">
-            <span class="text-dark-500 dark:text-white text-sm font-bold hidden sm:block">
+            <span class="text-dark-500 dark:text-white text-xs font-bold hidden sm:block">
                 {now}
             </span>
         </div>
