@@ -21,6 +21,7 @@
 
         XLSX.writeFile(file, imei + '.xlsx');
     }
+
     const jGetReport = () => {
         if(Number(imei)){
             Meteor.call('users.reports.set.imei',imei);
@@ -168,6 +169,7 @@
               <!-- toggle all left panels_end -->
 
                 <!-- select columns -->
+                
                 <!-- select columns_end -->
 
                 <!-- pagination -->

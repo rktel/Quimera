@@ -44,7 +44,7 @@ Meteor.methods({
             default:
                 break;
         }
-        console.log(startDay_, endDay_);
+        // console.log(startDay_, endDay_);
 
         const {protocolID} = Meteor.call('sessions.getSingle',imei_);
         let headers, project;
@@ -57,9 +57,13 @@ Meteor.methods({
         const reports = await Reports.rawCollection().
             aggregate([
                 { 
-                    $match: { imei: imei_, dateAndTime: { $gte: startDay_, $lte: endDay_ } } },
+                    $match: { imei: imei_, dateAndTime: { $gte: startDay_, $lte: endDay_ } } 
+                },
                 {
                     $project: project
+                },
+                {
+                    $sort: { dateAndTime : -1 }
                 }
             ]).toArray();
 
