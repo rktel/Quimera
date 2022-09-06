@@ -160,7 +160,7 @@
     <div class="overflow-hidden flex-1 p-5 h-full">
         {#if headers[0]}
             <!-- BAR ACTION -->
-            <div class="h-[30px] flex bg-dark-300 dark:bg-black dark:border-dark-800  border-dark-50 border-b">
+            <div class="h-[30px] flex bg-dark-300 dark:bg-dark-900 dark:border-dark-800  border-dark-50 border-b">
                 <!-- toggle all left panels -->
                 <button class="h-[30px] px-2" on:click={fToggleLeft}>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-dark-500 dark:fill-dark-200" viewBox="0 0 512 512"><path d="M406.6 374.6l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224l-293.5 0 41.4-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288l293.5 0-41.4 41.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"/></svg>
@@ -178,7 +178,7 @@
             <!-- TABLE CONTAINER -->
             <div class="overflow-auto h-[calc(100%_-_30px)]">
                 <table class="text-xs">
-                    <thead class="bg-dark-200 dark:bg-dark-900 text-left sticky top-0">
+                    <thead class="bg-dark-200 dark:bg-dark-800 text-left sticky top-0">
                         <tr class="font-medium text-dark-700 dark:text-white h-10">
                             {#each headers as header}
                                 <th class="pl-5 whitespace-nowrap">{header.label}</th>
@@ -187,7 +187,7 @@
                     </thead>
                     <tbody>
                         {#each reports as report,i}
-                        <tr class="text-dark-600 dark:text-dark-200  h-9 border-b border-dark-200 dark:border-dark-600 {i%2?'bg-dark-100 dark:bg-dark-600':''}">
+                        <tr class="text-dark-600 dark:text-dark-200 dark:bg-dark-600 h-9 border-b border-dark-200 dark:border-dark-600 {i%2?'bg-dark-100 dark:bg-dark-500':''}">
                             {#each headers as header }
                                 <td class="pl-5 whitespace-nowrap {header.label ==='Raw data'? 'pr-5':''}">{report[header.label] === undefined ? "": report[header.label] }</td>
                             {/each}
