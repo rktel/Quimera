@@ -57,8 +57,8 @@
             pagination.itemsPerPageArray = [100, 200, 500, 1000];
 
            // tableBody = pagination.data;
-            sort.sortedData = pagination.data;
-            sort.mainAction(sort.selectedHeader);
+            // sort.sortedData = pagination.data;
+            //sort.mainAction(sort.selectedHeader);
         },
         fItemsPerPageAction: () => {
             pagination.pageSelected = 1;
@@ -302,7 +302,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {#each sort.sortedData as report,i}
+                        {#each pagination.data as report,i}
                         <tr class="text-dark-600 dark:text-dark-200 dark:bg-dark-700 h-8 border-b border-dark-200 dark:border-dark-600 {i%2?'bg-dark-100 dark:bg-dark-600':''}">
                             <td class="pl-5 whitespace-nowrap">{i+1}</td>
                             {#each headers as header }
