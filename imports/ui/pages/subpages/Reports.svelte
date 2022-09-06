@@ -258,7 +258,7 @@
                 <div class="flex text-xs items-center gap-2">
                     <div class="px-2">
                         <span class="text-dark-500 dark:text-dark-200">
-                            Filas por pagina :
+                            Filas por paginax :
                         </span>
                         <select bind:value="{pagination.itemsPerPage}" class="text-xs text-dark-500 bg-dark-300 dark:text-dark-200 dark:bg-dark-800">
                             {#each pagination.itemsPerPageArray as itemsPerPage}
