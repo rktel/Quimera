@@ -55,11 +55,6 @@
             pagination.end = (pagination.pageSelected - 1)* pagination.itemsPerPage + pagination.itemsPerPage 
             pagination.data = reports.slice(pagination.start, pagination.end );
             pagination.itemsPerPageArray = [100, 200, 500, 1000];
-
-            console.log('pages:',pagination.pages);
-            console.log('data:',pagination.data);
-
-           // tableBody = pagination.data;
             sort.sortedData = pagination.data;
             //sort.mainAction(sort.selectedHeader);
         },
@@ -96,57 +91,10 @@
         }
     }
 
-    const jgetReports = (_) => {
-        if(Number(imei)){
-            
-            Meteor.call('users.reports.set.imei', imei);
-        switch (dateReportSelected) {
-            case 0:
-                Meteor.call("reports.getTodayReport", imei, (e, r) => {
-                    reports = r;
-                    tableHeaders = Object.keys(r[0]);
-                    for (const key in tableHeaders) {
-                            headersToSee.push({
-                                label: tableHeaders[key],
-                                state: true
-                            })
-                    }
-                    console.log(headersToSee);
-                    console.log(reports);
-                });
-                break;
-            case 1:
-                Meteor.call("reports.getYesterdayReport", imei, (e, r) => {
-                    reports = r;
-                });
-                break;
-            case 2:
-                Meteor.call(
-                    "reports.getRangeReport",
-                    imei,
-                    startDay,
-                    endDay,
-                    (e, r) => {
-                        reports = r;
-                    }
-                );
-                break;
-            default:
-                break;
-        }
-        }
-
-    };
     if(user && user.profile && user.profile.reports){
         imei = user.profile.reports.imei
     }
-    $:{
-        console.log(pagination.itemsPerPage)
-        console.log(pagination.pageSelected)
-    }
-    function hello () {
-        console.log(new Date(), '=> ','Peppa Pig')
-    }
+
 </script>
 <!-- CONTAINER -->
 <div class="dark:bg-dark-700 bg-dark-50 h-[calc(100%_-_40px)] flex">
