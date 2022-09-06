@@ -267,7 +267,7 @@
                         <span class="text-dark-500 dark:text-dark-200">
                             Filas por paginax :
                         </span>
-                        <select bind:value={pagination.itemsPerPage} class="text-xs text-dark-500 bg-dark-300 dark:text-dark-200 dark:bg-dark-800" on:change={hello}>
+                        <select bind:value={pagination.itemsPerPage} class="text-xs text-dark-500 bg-dark-300 dark:text-dark-200 dark:bg-dark-800" on:change={pagination.fItemsPerPageAction}>
                             {#each pagination.itemsPerPageArray as itemsPerPage}
                               <option class="text-xs text-dark-500" value="{itemsPerPage}" >{itemsPerPage}</option>
                             {/each}
@@ -277,7 +277,7 @@
                         <span class="text-dark-500 dark:text-dark-200">
                             Pagina :
                         </span>
-                        <select bind:value={pagination.pageSelected} class="text-xs text-dark-500 bg-dark-300 dark:text-dark-200 dark:bg-dark-800" on:change={hello}>
+                        <select bind:value={pagination.pageSelected} class="text-xs text-dark-500 bg-dark-300 dark:text-dark-200 dark:bg-dark-800" on:change={pagination.fPageAction}>
                             {#each pagination.pages as page}
                               <option class="text-xs text-dark-500" value="{page}" >{page}</option>
                             {/each}
