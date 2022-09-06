@@ -54,7 +54,7 @@
             pagination.start = (pagination.pageSelected - 1)* pagination.itemsPerPage,
             pagination.end = (pagination.pageSelected - 1)* pagination.itemsPerPage + pagination.itemsPerPage 
             pagination.data = reports.slice(pagination.start, pagination.end );
-            pagination.itemsPerPageArray = [100, 200, 500, 1000];
+            pagination.itemsPerPageArray = [100, 200, 500, 1000, 2000];
             sort.sortedData = pagination.data;
             //sort.mainAction(sort.selectedHeader);
         },
