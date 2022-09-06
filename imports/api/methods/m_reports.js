@@ -6,14 +6,14 @@ const fetch = require('node-fetch');
 Meteor.methods({
     async getReport(query_=0,imei_, startDay_= 0, endDay_=0){
         imei_ = Number(imei_);
-
+        console.log(query_)
         switch (query_) {
             case 0: // today
                 startDay_ = new Date();
                 endDay_ = new Date();
 
                 startDay_.setHours(0, 0, 0, 0);
-               // startDay_.setHours(startDay_.getHours() - 5);
+                startDay_.setHours(startDay_.getHours() + 5);
 
                 endDay_.setHours(23, 59, 59, 999);
                // endDay_.setHours(endDay_.getHours() - 5);
@@ -26,20 +26,20 @@ Meteor.methods({
                 endDay_.setDate(endDay_.getDate() - 1);
 
                 startDay_.setHours(0, 0, 0, 0);
-                startDay_.setHours(startDay_.getHours() - 5);
+                //startDay_.setHours(startDay_.getHours() - 5);
 
                 endDay_.setHours(23, 59, 59, 999);
-                endDay_.setHours(endDay_.getHours() - 5);
+                //endDay_.setHours(endDay_.getHours() - 5);
                 break;
             case 2: // range
                 startDay_ = new Date(startDay_);
                 endDay_ = new Date(endDay_);
                 
                 startDay_.setHours(0, 0, 0, 0);
-                startDay_.setHours(startDay_.getHours() - 5);
+                //startDay_.setHours(startDay_.getHours() - 5);
 
                 endDay_.setHours(23, 59, 59, 999);
-                endDay_.setHours(endDay_.getHours() - 5);
+                //endDay_.setHours(endDay_.getHours() - 5);
                 break;
             default:
                 break;
