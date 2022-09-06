@@ -58,7 +58,7 @@
 
            // tableBody = pagination.data;
             sort.sortedData = pagination.data;
-            //sort.mainAction(sort.selectedHeader);
+            sort.mainAction(sort.selectedHeader);
         },
         fItemsPerPageAction: () => {
             pagination.pageSelected = 1;
