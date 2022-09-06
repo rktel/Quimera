@@ -60,7 +60,7 @@
             console.log('data:',pagination.data);
 
            // tableBody = pagination.data;
-            // sort.sortedData = pagination.data;
+            sort.sortedData = pagination.data;
             //sort.mainAction(sort.selectedHeader);
         },
         fItemsPerPageAction: () => {
