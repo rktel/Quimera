@@ -60,11 +60,12 @@ Meteor.methods({
                     $match: { imei: imei_, dateAndTime: { $gte: startDay_, $lte: endDay_ } } 
                 },
                 {
-                    $project: project
+                    $sort: { dateAndTime : -1 }
                 },
                 {
-                    $sort: { dateAndTime : -1 }
-                }
+                    $project: project
+                },
+
             ]).toArray();
 
         if(!reports[0]){
