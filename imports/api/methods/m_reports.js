@@ -13,10 +13,10 @@ Meteor.methods({
                 endDay_ = new Date();
 
                 startDay_.setHours(0, 0, 0, 0);
-                startDay_.setHours(startDay_.getHours() + 5);
+               // startDay_.setHours(startDay_.getHours() - 5);
 
                 endDay_.setHours(23, 59, 59, 999);
-                endDay_.setHours(endDay_.getHours() + 5);
+               // endDay_.setHours(endDay_.getHours() - 5);
                 break;
             case 1: // yesterday
                 startDay_ = new Date();
@@ -26,24 +26,26 @@ Meteor.methods({
                 endDay_.setDate(endDay_.getDate() - 1);
 
                 startDay_.setHours(0, 0, 0, 0);
-                startDay_.setHours(startDay_.getHours() + 5);
+                startDay_.setHours(startDay_.getHours() - 5);
 
                 endDay_.setHours(23, 59, 59, 999);
-                endDay_.setHours(endDay_.getHours() + 5);
+                endDay_.setHours(endDay_.getHours() - 5);
                 break;
             case 2: // range
                 startDay_ = new Date(startDay_);
                 endDay_ = new Date(endDay_);
                 
                 startDay_.setHours(0, 0, 0, 0);
-                startDay_.setHours(startDay_.getHours() + 5);
+                startDay_.setHours(startDay_.getHours() - 5);
 
                 endDay_.setHours(23, 59, 59, 999);
-                endDay_.setHours(endDay_.getHours() + 5);
+                endDay_.setHours(endDay_.getHours() - 5);
                 break;
             default:
                 break;
         }
+        console.log(startDay_, endDay_);
+
         const {protocolID} = Meteor.call('sessions.getSingle',imei_);
         let headers, project;
 
@@ -55,12 +57,15 @@ Meteor.methods({
         const reports = await Reports.rawCollection().
             aggregate([
                 { 
-                    $match: { imei: imei_, serverTime: { $gte: startDay_, $lte: endDay_ } } },
+                    $match: { imei: imei_, dateAndTime: { $gte: startDay_, $lte: endDay_ } } },
                 {
                     $project: project
                 }
             ]).toArray();
 
+        if(!reports[0]){
+            return false;
+        }
         return {
             headers,
             reports

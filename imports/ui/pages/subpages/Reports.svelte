@@ -25,7 +25,7 @@
         if(Number(imei)){
             Meteor.call('users.reports.set.imei',imei);
             Meteor.call('getReport',dateReportSelected, imei,startDay,endDay, (error, result)=>{
-                if(!error){
+                if(!error && result){
                     headers = result.headers;
                     reports = result.reports;
                 }
