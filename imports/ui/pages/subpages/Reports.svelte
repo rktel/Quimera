@@ -30,7 +30,7 @@
                     headers = result.headers;
                     reports = result.reports;
                     sort.sortedData = result.reports;
-                    pagination.fpageAction();
+                    pagination.fPageAction();
                 }
             })
         }
@@ -47,7 +47,7 @@
             }
             return array;
         },
-        fpageAction: () => {
+        fPageAction: () => {
             pagination.totalOfItems = reports.length;
             pagination.totalOfPages = Math.ceil(pagination.totalOfItems/pagination.itemsPerPage);
             pagination.pages = pagination.fNumbers(pagination.totalOfPages);
@@ -65,7 +65,7 @@
         },
         fItemsPerPageAction: () => {
             pagination.pageSelected = 1;
-            pagination.fpageAction();
+            pagination.fPageAction();
         }
     };
 
@@ -143,6 +143,9 @@
     $:{
         console.log(pagination.itemsPerPage)
         console.log(pagination.pageSelected)
+    }
+    function hello () {
+        console.log(new Date(), '=> ','Peppa Pig')
     }
 </script>
 <!-- CONTAINER -->
@@ -266,7 +269,7 @@
                         </span>
                         <select bind:value={pagination.itemsPerPage} class="text-xs text-dark-500 bg-dark-300 dark:text-dark-200 dark:bg-dark-800">
                             {#each pagination.itemsPerPageArray as itemsPerPage}
-                              <option class="text-xs text-dark-500" value="{itemsPerPage}" on:change={pagination.fItemsPerPageAction}>{itemsPerPage}</option>
+                              <option class="text-xs text-dark-500" value="{itemsPerPage}" on:change={hello}>{itemsPerPage}</option>
                             {/each}
                         </select>
                     </div>
@@ -276,7 +279,7 @@
                         </span>
                         <select bind:value={pagination.pageSelected} class="text-xs text-dark-500 bg-dark-300 dark:text-dark-200 dark:bg-dark-800">
                             {#each pagination.pages as page}
-                              <option class="text-xs text-dark-500" value="{page}" on:change={pagination.fpageAction}>{page}</option>
+                              <option class="text-xs text-dark-500" value="{page}" on:change={hello}>{page}</option>
                             {/each}
                         </select>
                     </div>
