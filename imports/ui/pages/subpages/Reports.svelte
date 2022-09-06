@@ -38,7 +38,7 @@
 
 
     let pagination = {
-        itemsPerPage: 100,
+        itemsPerPage: 500,
         pageSelected:1,
         fNumbers: (length)=>{
             let array = [];
