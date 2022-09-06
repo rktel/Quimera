@@ -177,7 +177,7 @@
 
             <!-- TABLE CONTAINER -->
             <div class="overflow-auto h-[calc(100%_-_30px)]">
-                <table class="text-xs">
+                <table class="text-xs" id="report-table">
                     <thead class="bg-dark-200 dark:bg-dark-800 text-left sticky top-0">
                         <tr class="font-medium text-dark-700 dark:text-white h-10">
                             {#each headers as header}
