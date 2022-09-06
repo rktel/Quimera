@@ -6,7 +6,7 @@ const fetch = require('node-fetch');
 Meteor.methods({
     async getReport(query_=0,imei_, startDay_= 0, endDay_=0){
         imei_ = Number(imei_);
-        console.log(query_)
+
         switch (query_) {
             case 0: // today
                 startDay_ = new Date();
