@@ -81,7 +81,7 @@
 <div class="dark:bg-dark-700 bg-dark-50 h-[calc(100%_-_40px)] flex">
     <!-- LEFT -->   
     {#if bLeftPanel}
-        <div class="grid grid-rows-[50px,1fr] shadow-lg basis-[300px]">
+        <div class="grid grid-rows-[50px,1fr] shadow-lg basis-[300px] text-xs">
 
             <!-- BAR -->
             <div class="flex justify-end px-4 items-center"> 
@@ -91,11 +91,11 @@
             <!-- OPTIONS -->
             <div class="flex flex-col p-10 gap-6">
                 <div>
-                    <h1 class="text-dark-700 dark:text-dark-100 font-bold text-sm">SELECCIONE OPCIONES</h1>
+                    <h1 class="text-dark-700 dark:text-dark-100 font-bold ">SELECCIONE OPCION</h1>
                 </div>
                 <div class="grid grid-rows-[auto,auto] gap-1">
-                    <label for="dateReportSelect" class="text-dark-700 dark:text-dark-300 text-xs">Fecha:</label>
-                    <select name="dateReportSelect" id="dateReportSelect" bind:value={dateReportSelected} class="h-9 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500 bg-white">
+                    <label for="dateReportSelect" class="text-dark-700 dark:text-dark-300 ">Fecha:</label>
+                    <select name="dateReportSelect" id="dateReportSelect" bind:value={dateReportSelected} class="h-8 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500 bg-white">
                         <option value={0}>Hoy</option>
                         <option value={1}>Ayer</option>
                         <option value={2}>Intervalo</option>
@@ -103,11 +103,11 @@
                 </div>
                 {#if dateReportSelected === 2}
                 <div class="grid grid-rows-[auto,auto] gap-1">
-                    <label for="date-start" class="text-dark-700 dark:text-dark-300 text-xs"
+                    <label for="date-start" class="text-dark-700 dark:text-dark-300 "
                         >Inicio:</label>
 
                         <input
-                        class="h-9 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500"
+                        class="h-8 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500"
                         type="date"
                         name="date-start"
                         id="date-start"
@@ -115,11 +115,11 @@
                     />
                 </div>    
                 <div class="grid grid-rows-[auto,auto] gap-1">
-                    <label for="date-end" class="text-dark-700 dark:text-dark-300 text-xs"
+                    <label for="date-end" class="text-dark-700 dark:text-dark-300 "
                         >Fin:</label>
 
                         <input
-                        class="h-9 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500"
+                        class="h-8 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500"
                         type="date"
                         name="date-end"
                         id="date-end"
@@ -128,10 +128,10 @@
                 </div>               
                 {/if}
                 <div class="grid grid-rows-[auto,auto] gap-1">
-                    <label for="imei" class="text-dark-700 dark:text-dark-300 text-xs"
+                    <label for="imei" class="text-dark-700 dark:text-dark-300 "
                         >IMEI:</label>
                         <input
-                        class="h-9 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500"
+                        class="h-8 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500"
                         type="text"
                         name="imei"
                         id="imei"
@@ -139,14 +139,14 @@
                     />
                 </div>
                 <div>
-                    <button disabled={!imei} on:click={jGetReport} class="bg-alfa-600 shadow uppercase font-bold  text-white text-xs rounded w-full h-9" > consultar</button>
+                    <button disabled={!imei} on:click={jGetReport} class="bg-alfa-600 shadow uppercase  text-white  rounded w-full h-8" > consultar</button>
                 </div>
                 {#if reports[0]}
                 <div class="flex">
-                    <button class="bg-beta-600 shadow uppercase font-bold  text-white text-xs rounded w-full h-9" on:click={fCreateExcel}>
+                    <button class="bg-beta-600 shadow uppercase font-bold  text-white  rounded w-full h-8" on:click={fCreateExcel}>
                         descargar
                     </button>
-                    <!-- <p class="text-gray-600 text-xs text-center mt-1">Se incluiran todos los campos {brawData?"+ raw data":""}</p> -->
+                    <!-- <p class="text-gray-600  text-center mt-1">Se incluiran todos los campos {brawData?"+ raw data":""}</p> -->
                 </div>
                 {/if}
             </div>
@@ -157,10 +157,10 @@
     <!-- LEFT_END -->
 
     <!-- RIGHT -->
-    <div class="overflow-hidden flex-1 p-5 h-full dark:bg-dark-900">
+    <div class="overflow-hidden flex-1 p-5 h-full">
         {#if headers[0]}
             <!-- BAR ACTION -->
-            <div class="h-[30px] flex bg-dark-300 dark:bg-dark-900 dark:border-dark-800  border-dark-50 border-b">
+            <div class="h-[30px] flex bg-dark-300 dark:bg-dark-800 dark:border-dark-800  border-dark-50 border-b">
                 <!-- toggle all left panels -->
                 <button class="h-[30px] px-2" on:click={fToggleLeft}>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-dark-500 dark:fill-dark-200" viewBox="0 0 512 512"><path d="M406.6 374.6l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224l-293.5 0 41.4-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288l293.5 0-41.4 41.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"/></svg>
@@ -187,7 +187,7 @@
                     </thead>
                     <tbody>
                         {#each reports as report,i}
-                        <tr class="text-dark-600 dark:text-dark-200 dark:bg-dark-700 h-9 border-b border-dark-200 dark:border-dark-600 {i%2?'bg-dark-100 dark:bg-dark-600':''}">
+                        <tr class="text-dark-600 dark:text-dark-200 dark:bg-dark-700 h-8 border-b border-dark-200 dark:border-dark-600 {i%2?'bg-dark-100 dark:bg-dark-600':''}">
                             {#each headers as header }
                                 <td class="pl-5 whitespace-nowrap {header.label ==='Raw data'? 'pr-5':''}">{report[header.label] === undefined ? "": report[header.label] }</td>
                             {/each}
