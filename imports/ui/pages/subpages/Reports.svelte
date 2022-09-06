@@ -10,7 +10,7 @@
     let startDay, endDay, imei;
     let reports = [];
     let headers = [];
-
+    let bDropHeaders = false;
     const fToggleLeft = () => bLeftPanel = !bLeftPanel;
     const fCreateExcel = (_) => {
         const data = document.querySelector("#report-table");
@@ -29,10 +29,70 @@
                 if(!error && result){
                     headers = result.headers;
                     reports = result.reports;
+                    sort.sortedData = result.reports;
+                    pagination.fpageAction();
                 }
             })
         }
+    };
+
+
+    let pagination = {
+        itemsPerPage: 100,
+        pageSelected:1,
+        fNumbers: (length)=>{
+            let array = [];
+            for (let index = 0; index < length; index++) {
+                array[index] = index + 1;
+            }
+            return array;
+        },
+        fpageAction: () => {
+            pagination.totalOfItems = reports.length;
+            pagination.totalOfPages = Math.ceil(pagination.totalOfItems/pagination.itemsPerPage);
+            pagination.pages = pagination.fNumbers(pagination.totalOfPages);
+            pagination.start = (pagination.pageSelected - 1)* pagination.itemsPerPage,
+            pagination.end = (pagination.pageSelected - 1)* pagination.itemsPerPage + pagination.itemsPerPage 
+            pagination.data = reports.slice(pagination.start, pagination.end );
+            pagination.itemsPerPageArray = [100, 200, 500, 1000];
+
+           // tableBody = pagination.data;
+            sort.sortedData = pagination.data;
+            //sort.mainAction(sort.selectedHeader);
+        },
+        fItemsPerPageAction: () => {
+            pagination.pageSelected = 1;
+            pagination.fpageAction();
+        }
+    };
+
+    let sort = {
+        selectedHeader : { label: 'Fecha Servidor', state: true, type:1},
+        ascendingOrder : false,
+        sortByNumber : (header) => {
+            sort.sortedData = sort.sortedData.sort((obj1,obj2)=>{
+                return sort.ascendingOrder ? obj1[header.label] - obj2[header.label] :  obj2[header.label] - obj1[header.label];
+            });
+            sort.selectedHeader = header;
+        },
+        sortByString : (header) => {
+            sort.sortedData = sort.sortedData.sort((obj1,obj2)=>{
+                if (obj1[header.label] < obj2[header.label]){
+                    return -1;
+                }else if(obj1[header.label] > obj2[header.label]){
+                    return 1;
+                }
+                return 0;
+            });
+            if(!sort.ascendingOrder){
+                sort.sortedData = sort.sortedData.reverse();
+            }
+            sort.selectedHeader = header;
+        },mainAction : (header) => {
+            (header.type === 0)?sort.sortByNumber(header):sort.sortByString(header)
+        }
     }
+
     const jgetReports = (_) => {
         if(Number(imei)){
             
@@ -161,7 +221,7 @@
     <div class="overflow-hidden flex-1 p-5 h-full">
         {#if headers[0]}
             <!-- BAR ACTION -->
-            <div class="h-[30px] flex bg-dark-300 dark:bg-dark-800 dark:border-dark-800  border-dark-50 border-b">
+            <div class="h-[30px] flex gap-2 bg-dark-300 dark:bg-dark-800 dark:border-dark-800  border-dark-50 border-b">
                 <!-- toggle all left panels -->
                 <button class="h-[30px] px-2" on:click={fToggleLeft}>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-dark-500 dark:fill-dark-200" viewBox="0 0 512 512"><path d="M406.6 374.6l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224l-293.5 0 41.4-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288l293.5 0-41.4 41.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"/></svg>
@@ -169,10 +229,56 @@
               <!-- toggle all left panels_end -->
 
                 <!-- select columns -->
-                
+                <div class="flex">
+                    <button class="h-[30px] px-2" on:click={_ => bDropHeaders=!bDropHeaders}>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-dark-500 dark:fill-dark-200" viewBox="0 0 512 512"><path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zm64 64V416H224V160H64zm384 0H288V416H448V160z"/></svg>
+                    </button>
+                    {#if bDropHeaders}
+                        <div class="absolute bg-dark-100 z-50 mt-[30px] text-xs text-dark-500 shadow-lg flex flex-col w-[160px] dark:bg-dark-800 dark:text-dark-300">
+                            {#each headers as header }
+                                <div class="flex justify-between p-2">
+                                    <div>
+                                        {header.label}
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" bind:checked={header.state}>
+                                    </div>
+                                </div>
+                            {/each}
+                        </div>                        
+                    {/if}
+
+                </div>
                 <!-- select columns_end -->
 
                 <!-- pagination -->
+                <div class="flex text-xs items-center gap-2">
+                    <div class="px-2">
+                        <span class="text-dark-500 dark:text-dark-200">
+                            Filas por pagina :
+                        </span>
+                        <select bind:value="{pagination.itemsPerPage}" class="text-xs text-dark-500 bg-dark-300 dark:text-dark-200 dark:bg-dark-800">
+                            {#each pagination.itemsPerPageArray as itemsPerPage}
+                              <option class="text-xs text-dark-500" value="{itemsPerPage}" on:click="{pagination.fItemsPerPageAction}">{itemsPerPage}</option>
+                            {/each}
+                        </select>
+                    </div>
+                    <div class="px-2">
+                        <span class="text-dark-500 dark:text-dark-200">
+                            Pagina :
+                        </span>
+                        <select bind:value="{pagination.pageSelected}" class="text-xs text-dark-500 bg-dark-300 dark:text-dark-200 dark:bg-dark-800">
+                            {#each pagination.pages as page}
+                              <option class="text-xs text-dark-500" value="{page}" on:click="{pagination.fpageAction}">{page}</option>
+                            {/each}
+                        </select>
+                    </div>
+                    <div class="px-2">
+                        <span class="text-dark-500 dark:text-dark-200">
+                            {pagination.totalOfItems} filas en total
+                        </span>
+                    </div>
+                </div>
                 <!-- pagination_end -->
             </div>
             <!-- BAR ACTION_END -->
@@ -182,16 +288,25 @@
                 <table class="text-xs" id="report-table">
                     <thead class="bg-dark-200 dark:bg-dark-800 text-left sticky top-0">
                         <tr class="font-medium text-dark-700 dark:text-white h-10">
+                            <th class="pl-5 whitespace-nowrap">#</th>
                             {#each headers as header}
-                                <th class="pl-5 whitespace-nowrap">{header.label}</th>
+                                {#if header.state}
+                                <th class="pl-5 whitespace-nowrap" on:click={_ => sort.mainAction(header)}>
+                                    {header.label}
+                                    <span on:click={()=> sort.ascendingOrder = !sort.ascendingOrder} class="px-2 cursor-pointer {header.label === sort.selectedHeader.label?'visible':'invisible'}">
+                                        {@html sort.ascendingOrder? "&uarr;": "&darr;"}
+                                    </span>
+                                </th>
+                                {/if}
                             {/each}
                         </tr>
                     </thead>
                     <tbody>
-                        {#each reports as report,i}
+                        {#each sort.sortedData as report,i}
                         <tr class="text-dark-600 dark:text-dark-200 dark:bg-dark-700 h-8 border-b border-dark-200 dark:border-dark-600 {i%2?'bg-dark-100 dark:bg-dark-600':''}">
+                            <td class="pl-5 whitespace-nowrap">{i+1}</td>
                             {#each headers as header }
-                                <td class="pl-5 whitespace-nowrap {header.label ==='Raw data'? 'pr-5':''}">{report[header.label] === undefined ? "": report[header.label] }</td>
+                                <td class="{header.state?'':'hidden'} pl-5 whitespace-nowrap {header.label ==='Raw data'? 'pr-5':''}">{report[header.label] === undefined ? "": report[header.label] }</td>
                             {/each}
                         </tr>
                         {/each}
