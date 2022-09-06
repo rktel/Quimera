@@ -140,6 +140,10 @@
     if(user && user.profile && user.profile.reports){
         imei = user.profile.reports.imei
     }
+    $:{
+        console.log(pagination.itemsPerPage)
+        console.log(pagination.pageSelected)
+    }
 </script>
 <!-- CONTAINER -->
 <div class="dark:bg-dark-700 bg-dark-50 h-[calc(100%_-_40px)] flex">
@@ -260,7 +264,7 @@
                         <span class="text-dark-500 dark:text-dark-200">
                             Filas por paginax :
                         </span>
-                        <select bind:value="{pagination.itemsPerPage}" class="text-xs text-dark-500 bg-dark-300 dark:text-dark-200 dark:bg-dark-800">
+                        <select bind:value={pagination.itemsPerPage} class="text-xs text-dark-500 bg-dark-300 dark:text-dark-200 dark:bg-dark-800">
                             {#each pagination.itemsPerPageArray as itemsPerPage}
                               <option class="text-xs text-dark-500" value="{itemsPerPage}" on:click={_=> console.log('peppa 1')}>{itemsPerPage}</option>
                             {/each}
@@ -270,7 +274,7 @@
                         <span class="text-dark-500 dark:text-dark-200">
                             Pagina :
                         </span>
-                        <select bind:value="{pagination.pageSelected}" class="text-xs text-dark-500 bg-dark-300 dark:text-dark-200 dark:bg-dark-800">
+                        <select bind:value={pagination.pageSelected} class="text-xs text-dark-500 bg-dark-300 dark:text-dark-200 dark:bg-dark-800">
                             {#each pagination.pages as page}
                               <option class="text-xs text-dark-500" value="{page}" on:click={_=> console.log('peppa 2')}>{page}</option>
                             {/each}
