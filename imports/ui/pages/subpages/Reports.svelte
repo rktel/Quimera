@@ -157,7 +157,7 @@
     <!-- LEFT_END -->
 
     <!-- RIGHT -->
-    <div class="overflow-hidden flex-1 p-5 h-full">
+    <div class="overflow-hidden flex-1 p-5 h-full dark:bg-dark-900">
         {#if headers[0]}
             <!-- BAR ACTION -->
             <div class="h-[30px] flex bg-dark-300 dark:bg-dark-900 dark:border-dark-800  border-dark-50 border-b">
@@ -187,7 +187,7 @@
                     </thead>
                     <tbody>
                         {#each reports as report,i}
-                        <tr class="text-dark-600 dark:text-dark-200 dark:bg-dark-600 h-9 border-b border-dark-200 dark:border-dark-600 {i%2?'bg-dark-100 dark:bg-dark-500':''}">
+                        <tr class="text-dark-600 dark:text-dark-200 dark:bg-dark-700 h-9 border-b border-dark-200 dark:border-dark-600 {i%2?'bg-dark-100 dark:bg-dark-600':''}">
                             {#each headers as header }
                                 <td class="pl-5 whitespace-nowrap {header.label ==='Raw data'? 'pr-5':''}">{report[header.label] === undefined ? "": report[header.label] }</td>
                             {/each}
