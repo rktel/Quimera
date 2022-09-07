@@ -22,7 +22,7 @@
         XLSX.writeFile(file, imei + '.xlsx');
     }
 
-    const jGetReport = () => {
+    const fGetReport = () => {
         if(Number(imei)){
             Meteor.call('users.reports.set.imei',imei);
             Meteor.call('getReport',dateReportSelected, imei,startDay,endDay, (error, result)=>{
@@ -158,7 +158,7 @@
                     />
                 </div>
                 <div>
-                    <button disabled={!imei} on:click={jGetReport} class="bg-alfa-600 shadow uppercase  text-white  rounded w-full h-8" > consultar</button>
+                    <button disabled={!imei} on:click={fGetReport} class="bg-alfa-600 shadow uppercase  text-white  rounded w-full h-8" > consultar</button>
                 </div>
                 {#if reports[0]}
                 <div class="flex">

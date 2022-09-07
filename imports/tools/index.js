@@ -3,7 +3,7 @@ export function formatDate(date) {
         return num.toString().padStart(2, "0");
     }
 
-    if (date) {
+    if (date && date instanceof Date) {
         return (
             [
                 pad2(date.getDate()),
@@ -26,11 +26,27 @@ export const formatSpecial = (date) => {
         return num.toString().padStart(2, "0");
     };
 
-    if (date) {
+    if (date && date instanceof Date) {
         return (
             [fPad2(date.getDate()), date.toLocaleString("es-PE", { month: "short" })].join(" ")  +
             " " +
             [fPad2(date.getHours()), fPad2(date.getMinutes())].join(":")
+        );
+    } else {
+        return undefined;
+    }
+};
+
+export const formatChat = (date) => {
+    const fPad2 = (num) => {
+        return num.toString().padStart(2, "0");
+    };
+
+    if (date && date instanceof Date) {
+        return (
+            [fPad2(date.getDate()), date.toLocaleString("es-PE", { month: "short" })].join(" ")  +
+            " " +
+            [fPad2(date.getHours()), fPad2(date.getMinutes()), fPad2(date.getSeconds())].join(":")
         );
     } else {
         return undefined;

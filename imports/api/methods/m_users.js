@@ -42,8 +42,16 @@ Meteor.methods({
                 }
             })
         }
-          
- 
+    },
+    'users.messages.set.imei': function (imei) {
+        if(this.userId){
+            imei = Number(imei);
+            Meteor.users.update({_id: this.userId},{
+                $set:{
+                    "profile.messages.imei": imei
+                }
+            })
+        }
     },
    
 })

@@ -8,6 +8,8 @@ import '../imports/api/methods/m_users';
 
 import './tcp_commands/galileosky';
 
+import '../imports/api/publications/p_commands';
+import '../imports/api/publications/p_responses';
 
 const SEBAS_USERNAME = "rktel";
 const SEBAS_PASSWORD = "smht";
