@@ -60,7 +60,7 @@
         }
     }
 </script>
-    <div class="bg-beta-900 text-white sm:h-[calc(100%_-_40px)] h-[calc(100%_-_80px)]  flex flex-col ">
+    <div class="bg-beta-900 text-white sm:h-[calc(100%_-_40px)] h-[calc(100%_-_100px)]  flex flex-col ">
         <div class="bg-dark-400 h-[60px]">
             1
         </div>
