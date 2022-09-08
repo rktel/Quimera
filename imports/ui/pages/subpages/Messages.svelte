@@ -112,12 +112,12 @@
 
     <!-- RIGHT -->
     {#if bPanelRight}
-    <div class="overflow-hidden flex flex-col-reverse justify-between flex-1 p-5 h-full text-xs">
+    <div class="overflow-hidden flex flex-col justify-between flex-1 p-5 h-full text-xs">
         <div class="bg-alfa-600 h-1"></div>
         <!-- CHAT -->
         <div class="bg-special flex-1 flex overflow-auto ">
             <!-- RESPONSES -->
-            <div class="flex-1 flex flex-col py-5">
+            <div class="flex-1 flex flex-col ">
                 {#if subResponses.ready()}
                     {#each responses as response }
                         <div class="rounded-sm m-2 flex ">
@@ -133,7 +133,7 @@
             </div>
             <!-- RESPONSES_END -->
             <!-- COMMANDS -->
-            <div class="flex-1 flex flex-col py-5">
+            <div class="flex-1 flex flex-col ">
                 {#if subCommands.ready()}
                     {#each commands as command}
                         <div class="rounded-sm m-2 flex justify-end ">
