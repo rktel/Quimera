@@ -112,7 +112,8 @@
 
     <!-- RIGHT -->
     {#if bPanelRight}
-    <div class="overflow-hidden flex flex-col justify-between flex-1 p-5 h-full text-xs">
+    <!-- flex flex-col justify-between flex-1 -->
+    <div class="overflow-hidden p-5 h-full text-xs grid grid-rows-[1px,1fr,56px] w-full">  
         <div class="bg-alfa-600 h-1"></div>
         <!-- CHAT -->
         <div class="bg-special flex-1 flex overflow-auto p-3">
