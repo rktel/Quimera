@@ -112,7 +112,7 @@
 
     <!-- RIGHT -->
     {#if bPanelRight}
-    <div class="overflow-hidden flex flex-col-reverse justify-between flex-1 p-5 h-full text-xs ">
+    <div class="overflow-hidden flex flex-col-reverse justify-between flex-1 px-5 py-10 h-full text-xs">
         <div class="bg-alfa-600 h-1"></div>
         <!-- CHAT -->
         <div class="bg-special flex-1 flex overflow-auto">
