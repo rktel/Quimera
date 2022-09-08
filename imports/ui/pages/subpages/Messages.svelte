@@ -60,11 +60,11 @@
         }
     }
 </script>
-    <div class="bg-beta-900 text-white h-[calc(100%_-_40px)] flex flex-col justify-between">
+    <div class="bg-beta-900 text-white h-[calc(100%_-_40px)] flex flex-col ">
         <div>
             1
         </div>
-        <div>
+        <div class="bg-alfa-300 h-[700px]">
             2
         </div>
         <div class="bg-beta-200 h-[50px]">
