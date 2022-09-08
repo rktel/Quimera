@@ -64,7 +64,7 @@
         <div class="bg-dark-400 h-[60px]">
             1
         </div>
-        <div class="bg-alfa-300 h-[700px]">
+        <div class="bg-alfa-300 h-[500px]">
             2
         </div>
         <div class="bg-beta-200 h-[50px]">
