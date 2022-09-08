@@ -60,14 +60,14 @@
         }
     }
 </script>
-    <div class="bg-beta-900 text-white h-[calc(100%_-_40px)] flex flex-col ">
+    <div class="bg-beta-900 text-white sm:h-[calc(100%_-_40px)] h-[calc(100%_-_80px)]  flex flex-col ">
         <div class="bg-dark-400 h-[60px]">
             1
         </div>
         <div class="bg-alfa-300 flex-1">
             2
         </div>
-        <div class="bg-beta-200 h-[200px]">
+        <div class="bg-beta-200 h-[60px]">
             3
         </div>
     </div>
