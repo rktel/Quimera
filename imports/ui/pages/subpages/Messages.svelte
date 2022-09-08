@@ -113,8 +113,8 @@
     <!-- RIGHT -->
     {#if bPanelRight}
     <!-- flex flex-col justify-between flex-1 -->
-    <div class="overflow-hidden p-5 h-full text-xs grid grid-rows-[56px,1fr,56px] w-full">  
-        <div class="flex items-center gap-5 h-14 bg-alfa-600 px-5 overflow-auto">
+    <div class="overflow-auto p-5 h-full text-xs grid grid-rows-[56px,1fr,56px] w-full">  
+        <div class="flex items-center gap-5 h-14 bg-alfa-600 px-5">
             <div>
                 <button class="h-9 w-9 rounded-full bg-white shadow-lg grid place-content-center" on:click={fTogglePanelLeft}>
                     {#if bLeftPanel}
