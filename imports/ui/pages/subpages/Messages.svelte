@@ -61,7 +61,7 @@
     }
 </script>
     <div class="bg-beta-900 text-white h-[calc(100%_-_40px)] flex flex-col ">
-        <div>
+        <div class="bg-dark-400 h-[60px]">
             1
         </div>
         <div class="bg-alfa-300 h-[700px]">
