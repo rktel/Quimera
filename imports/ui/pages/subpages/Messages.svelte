@@ -67,7 +67,7 @@
         <div class="bg-alfa-300 flex-1">
             2
         </div>
-        <div class="bg-beta-200 h-[50px]">
+        <div class="bg-beta-200 h-[200px]">
             3
         </div>
     </div>
