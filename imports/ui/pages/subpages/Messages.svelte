@@ -113,7 +113,7 @@
     <!-- RIGHT -->
     {#if bPanelRight}
     <!-- flex flex-col justify-between flex-1 -->
-    <div class="overflow-hidden p-5 h-full text-xs grid grid-rows-[56px,1fr,2px] w-full">  
+    <div class="overflow-hidden p-5 h-full text-xs grid grid-rows-[56px,1fr,56px] w-full">  
         <div class="flex items-center gap-5 h-14 bg-alfa-600 px-5 overflow-auto">
             <div>
                 <button class="h-9 w-9 rounded-full bg-white shadow-lg grid place-content-center" on:click={fTogglePanelLeft}>
@@ -136,7 +136,7 @@
         </div>
 
         <!-- CHAT -->
-        <div class="bg-special flex-1 flex overflow-auto p-3">
+        <div class="bg-special flex  p-3">
             <!-- RESPONSES -->
             <div class="flex-1 flex flex-col ">
                 {#if subResponses.ready()}
@@ -171,7 +171,7 @@
             <!-- COMMANDS_END -->
         </div>
         <!-- CHAT_END -->
-        <div class="bg-alfa-600 h-1"></div>
+        <div class="bg-alfa-600 h-14"></div>
 
     </div>
     {/if}
