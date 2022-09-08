@@ -115,13 +115,13 @@
     <div class="overflow-hidden flex flex-col justify-between flex-1 p-5 h-full text-xs">
         <div class="bg-alfa-600 h-1"></div>
         <!-- CHAT -->
-        <div class="bg-special flex-1 flex overflow-auto">
+        <div class="bg-special flex-1 flex overflow-auto p-3">
             <!-- RESPONSES -->
             <div class="flex-1 flex flex-col ">
                 {#if subResponses.ready()}
                     {#each responses as response }
                         <div class="rounded-sm flex">
-                            <div class="bg-beta-200 h-10 px-5 m-3  overflow-auto flex items-center min-w-[400px] rounded-xl">
+                            <div class="bg-beta-200 h-10 px-5 mb-3  overflow-auto flex items-center min-w-[400px] rounded-xl">
                                 <div class="whitespace-nowrap">
                                     <p class="text-dark-700">{response.response}</p>
                                     <p class="text-dark-600" style="font-size: 10px;">{formatChat(response.receivedTime)}</p>
@@ -137,7 +137,7 @@
                 {#if subCommands.ready()}
                     {#each commands as command}
                         <div class="rounded-sm flex justify-end ">
-                            <div class="bg-alfa-200 h-10 px-5 m-3 overflow-auto flex justify-end items-center min-w-[200px] rounded-xl">
+                            <div class="bg-alfa-200 h-10 px-5 mb-3 overflow-auto flex justify-end items-center min-w-[200px] rounded-xl">
                                 <div class="whitespace-nowrap">
                                     <p class="text-dark-700">{command.commandText}</p>
                                     <p class="text-dark-600" style="font-size: 10px;">{formatChat(command.createdTime)}</p>
@@ -150,7 +150,7 @@
             <!-- COMMANDS_END -->
         </div>
         <!-- CHAT_END -->
-        <div class="flex items-center gap-5 h-14 bg-alfa-600 px-5">
+        <div class="flex items-center gap-5 h-14 bg-alfa-600 px-5 overflow-auto">
             <div>
                 <button class="h-9 w-9 rounded-full bg-white shadow-lg grid place-content-center" on:click={fTogglePanelLeft}>
                     {#if bLeftPanel}
