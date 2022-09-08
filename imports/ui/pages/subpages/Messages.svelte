@@ -115,14 +115,14 @@
     <div class="overflow-hidden flex flex-col justify-between flex-1 p-5 h-full text-xs">
         <div class="bg-alfa-600 h-1"></div>
         <!-- CHAT -->
-        <div class="bg-special flex-1 flex overflow-auto ">
+        <div class="bg-special flex-1 flex overflow-auto">
             <!-- RESPONSES -->
             <div class="flex-1 flex flex-col ">
                 {#if subResponses.ready()}
                     {#each responses as response }
-                        <div class="rounded-sm m-2 flex ">
-                            <div class="bg-beta-200 h-10 px-5 whitespace-nowrap overflow-auto flex items-center min-w-[400px] rounded-xl">
-                                <div>
+                        <div class="rounded-sm flex">
+                            <div class="bg-beta-200 h-10 px-5 m-3  overflow-auto flex items-center min-w-[400px] rounded-xl">
+                                <div class="whitespace-nowrap">
                                     <p class="text-dark-700">{response.response}</p>
                                     <p class="text-dark-600" style="font-size: 10px;">{formatChat(response.receivedTime)}</p>
                                 </div>
@@ -136,9 +136,9 @@
             <div class="flex-1 flex flex-col ">
                 {#if subCommands.ready()}
                     {#each commands as command}
-                        <div class="rounded-sm m-2 flex justify-end ">
-                            <div class="bg-alfa-200 h-10 px-5 whitespace-nowrap overflow-auto flex justify-end items-center min-w-[200px] rounded-xl">
-                                <div>
+                        <div class="rounded-sm flex justify-end ">
+                            <div class="bg-alfa-200 h-10 px-5 m-3 overflow-auto flex justify-end items-center min-w-[200px] rounded-xl">
+                                <div class="whitespace-nowrap">
                                     <p class="text-dark-700">{command.commandText}</p>
                                     <p class="text-dark-600" style="font-size: 10px;">{formatChat(command.createdTime)}</p>
                                 </div>
@@ -150,7 +150,7 @@
             <!-- COMMANDS_END -->
         </div>
         <!-- CHAT_END -->
-        <div class="flex items-center gap-5 ">
+        <div class="flex items-center gap-5 h-14 bg-alfa-600 px-5">
             <div>
                 <button class="h-9 w-9 rounded-full bg-white shadow-lg grid place-content-center" on:click={fTogglePanelLeft}>
                     {#if bLeftPanel}
@@ -162,8 +162,9 @@
                 </button>
             </div>
 
-            <form class="flex items-center gap-5 h-[50px]" on:submit|preventDefault={fSendMessage}>
-                <input required bind:value={singleCommand} type="text" class="h-9 w-[260px] shadow-lg ring-1 ring-dark-300 rounded-2xl px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500">
+            <form class="flex items-center gap-5 h-[50px] resize" on:submit|preventDefault={fSendMessage}>
+
+                <input required bind:value={singleCommand} type="text" class="h-9 w-[360px] shadow-lg ring-1 ring-dark-300 rounded-2xl px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500">
                 <button type="submit" disabled={!singleCommand} class="h-9 w-9 rounded-full bg-white shadow-lg grid place-content-center">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-5 w-5 fill-alfa-700 dark:fill-dark-100"><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L277.3 424.9l-40.1 74.5c-5.2 9.7-16.3 14.6-27 11.9S192 499 192 488V392c0-5.3 1.8-10.5 5.1-14.7L362.4 164.7c2.5-7.1-6.5-14.3-13-8.4L170.4 318.2l-32 28.9 0 0c-9.2 8.3-22.3 10.6-33.8 5.8l-85-35.4C8.4 312.8 .8 302.2 .1 290s5.5-23.7 16.1-29.8l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
                 </button>
