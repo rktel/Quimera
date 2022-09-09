@@ -61,17 +61,19 @@
     }
 </script>
 <!-- CONTAINER -->
-<div class="flex justify-between h-[calc(100%_-_40px)]">
+<div class="flex h-[calc(100%_-_40px)]">
     <!-- LEFT PANEL -->
-    <div class="bg-alfa-900 text-dark-800 h-[calc(100%_-_1px)] w-[300px] flex flex-col overflow-y-auto">
-        1
-    </div>
+    {#if bLeftPanel}
+        <div class="bg-alfa-900 text-dark-800 h-[calc(100%_-_1px)] w-[300px] flex flex-col overflow-y-auto">
+            1
+        </div>
+    {/if}
     <!-- LEFT PANEL_END -->
 
     <!-- RIGHT PANEL -->
-    <div class="bg-beta-900 text-dark-800 h-[calc(100%_-_1px)] w-auto  flex flex-col overflow-y-auto">
+    <div class="bg-beta-900 text-dark-800 h-[calc(100%_-_1px)] flex-1  flex flex-col overflow-y-auto">
         <!-- tools -->
-        <div class="bg-alfa-400 h-[46px] flex px-5">
+        <div class="bg-alfa-400 h-[46px] flex justify-end sm:justify-start px-5">
             <div class="grid place-content-center">
                 <button class="h-7 w-7 rounded-md bg-white shadow-lg grid place-content-center" on:click={fTogglePanelLeft}>
                     {#if bLeftPanel}
