@@ -75,9 +75,16 @@
             </div>
         </div>
         <!-- tools_end -->
-        <div class="bg-alfa-300 flex-1">
-            2
+        <!-- messages -->
+        <div class="bg-alfa-300 flex-1 flex p-5">
+            <div class="bg-beta-800 basis-1/2 overflow-auto">
+                Adddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd9
+            </div>
+            <div class="bg-alfa-800 basis-1/2 overflow-auto">
+                Bdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd7
+            </div>
         </div>
+        <!-- messages_end -->
         <!-- input action -->
         <div class="bg-beta-200 h-[60px] flex px-5">
             <div class="bg-beta-400 flex-1 flex items-center">
