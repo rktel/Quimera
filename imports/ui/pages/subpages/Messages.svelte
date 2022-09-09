@@ -61,7 +61,7 @@
     }
 </script>
 <!-- CONTAINER -->
-<div class="flex h-[calc(100%_-_40px)]">
+<div class="flex sm:h-[calc(100%_-_40px)] h-[calc(100%_-_99px)]">
     <!-- LEFT PANEL -->
     {#if bLeftPanel}
         <div class="bg-alfa-900 text-dark-800 h-[calc(100%_-_1px)] w-[300px] flex flex-col overflow-y-auto">
