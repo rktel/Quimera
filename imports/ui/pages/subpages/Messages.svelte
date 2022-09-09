@@ -64,8 +64,48 @@
 <div class="flex sm:h-[calc(100%_-_40px)] h-[calc(100%_-_99px)]">
     <!-- LEFT PANEL -->
     {#if bLeftPanel}
-        <div class="bg-alfa-900 text-dark-800 h-[calc(100%_-_1px)] w-[300px] flex flex-col">
-            1
+        <div class="grid grid-rows-[50px,1fr] shadow-lg basis-[300px] text-xs">
+
+            <!-- BAR -->
+            <div class="flex justify-end px-4 items-center"> 
+
+            </div>
+            <!-- BAR_END -->
+            <!-- OPTIONS -->
+            <div class="flex flex-col p-10 gap-6">
+                <div>
+                    <h1 class="text-dark-700 dark:text-dark-100 font-bold ">BUSCAR DISPOSITIVO</h1>
+                </div>
+
+
+                <div class="grid grid-rows-[auto,auto] gap-1">
+                    <label for="imei" class="text-dark-700 dark:text-dark-300 "
+                        >IMEI:</label>
+                        <input
+                        class="h-8 ring-1 ring-dark-300 rounded px-3 dark:text-dark-800 focus:outline-none focus:ring-alfa-500"
+                        type="text"
+                        name="imei"
+
+                        bind:value={imei}
+                    />
+                </div>
+                <div>
+                    <button disabled={!imei} on:click={fGetSession} class="bg-alfa-600 shadow uppercase  text-white  rounded w-full h-8" > consultar</button>
+                </div>
+                {#if session}
+                    <div class="grid grid-rows-[auto,auto] gap-1">
+                        <label for="imei" class="text-dark-700 dark:text-dark-300 ">Ultima conexion:</label>
+                        <div class="flex items-center justify-center h-8 ring-1 rounded px-3 dark:text-dark-800 ring-alfa-500">
+                            {formatSpecial(session.createdTime) ? formatSpecial(session.createdTime) : session.createdTime}
+                        </div>
+                    </div>
+                {/if}
+                <!-- <div>
+                    <button disabled={!imei} class="bg-beta-600 shadow uppercase  text-white  rounded w-full h-8" > iniciar comunicacion</button>
+                </div> -->
+        </div>
+            <!-- OPTIONS_END -->
+
         </div>
     {/if}
     <!-- LEFT PANEL_END -->
