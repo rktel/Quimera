@@ -61,7 +61,7 @@
     }
 </script>
 <!-- CONTAINER -->
-<div class="grid grid-cols-[300px,1fr] h-[calc(100%_-_40px)]">
+<div class="flex justify-between h-[calc(100%_-_40px)]">
     <!-- LEFT PANEL -->
     <div class="bg-alfa-900 text-dark-800 h-[calc(100%_-_1px)] w-[300px] flex flex-col overflow-y-auto">
         1
