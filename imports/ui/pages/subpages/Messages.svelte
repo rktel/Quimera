@@ -69,7 +69,7 @@
     <!-- LEFT PANEL_END -->
 
     <!-- RIGHT PANEL -->
-    <div class="bg-beta-900 text-dark-800 h-[calc(100%_-_1px)] flex-auto  flex flex-col overflow-y-auto">
+    <div class="bg-beta-900 text-dark-800 h-[calc(100%_-_1px)] flex-1  flex flex-col overflow-y-auto">
         <!-- tools -->
         <div class="bg-alfa-400 h-[46px] flex px-5">
             <div class="grid place-content-center">
