@@ -62,9 +62,9 @@
 </script>
     <div class="bg-beta-900 text-white md:h-[calc(100%_-_40px)] h-[calc(100vh_-_97px)]  flex flex-col overflow-y-auto">
         <!-- tools -->
-        <div class="bg-dark-400 h-[60px] flex px-5">
+        <div class="bg-dark-400 h-[46px] flex px-5">
             <div class="bg-alfa-300 grid place-content-center">
-                <button class="h-9 w-9 rounded-md bg-white shadow-lg grid place-content-center" on:click={fTogglePanelLeft}>
+                <button class="h-7 w-7 rounded-md bg-white shadow-lg grid place-content-center" on:click={fTogglePanelLeft}>
                     {#if bLeftPanel}
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-5 w-5 fill-beta-700 dark:fill-dark-100"><path d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z"/></svg>
                     {/if}
@@ -77,12 +77,149 @@
         <!-- tools_end -->
         <!-- messages -->
         <div class="bg-alfa-300 flex-1 flex p-5">
-            <div class="bg-beta-800 basis-1/2 overflow-auto">
-                Adddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd9
+            <!-- responses -->
+            <div class="bg-beta-800 basis-1/2 overflow-hidden flex flex-col py-3">
+                <!-- singleResponse -->
+                <div class="bg-dark-700 h-[50px] flex mb-2">
+                    <div class="flex flex-col gap-1 bg-dark-900 justify-center px-3 rounded-xl overflow-auto">
+                        <p class="text-xs font-bold whitespace-nowrap">Lorem, beatae, sequi, quia reiciendis?</p>
+                        <p style="font-size: 10px;">12 ago. 2022 - 14:22:24</p>
+                    </div>
+                </div>
+                <!-- singleResponse_end -->
+                <!-- singleResponse -->
+                <div class="bg-dark-700 h-[50px] flex mb-2">
+                    <div class="flex flex-col gap-1 bg-dark-900 justify-center px-3 rounded-xl overflow-auto">
+                        <p class="text-xs font-bold whitespace-nowrap">Lorem, beatae, sequi, quia reiciendis? Lorem, beatae, sequi, quia reiciendis?</p>
+                        <p style="font-size: 10px;">12 ago. 2022 - 14:22:24</p>
+                    </div>
+                </div>
+                <!-- singleResponse_end -->
+                <!-- singleResponse -->
+                <div class="bg-dark-700 h-[50px] flex mb-2">
+                    <div class="flex flex-col gap-1 bg-dark-900 justify-center px-3 rounded-xl overflow-auto">
+                        <p class="text-xs font-bold whitespace-nowrap">Lorem, beatae, sequi, quia reiciendis?</p>
+                        <p style="font-size: 10px;">12 ago. 2022 - 14:22:24</p>
+                    </div>
+                </div>
+                <!-- singleResponse_end -->
+                <!-- singleResponse -->
+                <div class="bg-dark-700 h-[50px] flex mb-2">
+                    <div class="flex flex-col gap-1 bg-dark-900 justify-center px-3 rounded-xl overflow-auto">
+                        <p class="text-xs font-bold whitespace-nowrap">Lorem, beatae, sequi, quia reiciendis? Lorem, beatae, sequi, quia reiciendis?</p>
+                        <p style="font-size: 10px;">12 ago. 2022 - 14:22:24</p>
+                    </div>
+                </div>
+                <!-- singleResponse_end -->
+                <!-- singleResponse -->
+                <div class="bg-dark-700 h-[50px] flex mb-2">
+                    <div class="flex flex-col gap-1 bg-dark-900 justify-center px-3 rounded-xl overflow-auto">
+                        <p class="text-xs font-bold whitespace-nowrap">Lorem, beatae, sequi, quia reiciendis?</p>
+                        <p style="font-size: 10px;">12 ago. 2022 - 14:22:24</p>
+                    </div>
+                </div>
+                <!-- singleResponse_end -->
+                <!-- singleResponse -->
+                <div class="bg-dark-700 h-[50px] flex mb-2">
+                    <div class="flex flex-col gap-1 bg-dark-900 justify-center px-3 rounded-xl overflow-auto">
+                        <p class="text-xs font-bold whitespace-nowrap">Lorem, beatae, sequi, quia reiciendis? Lorem, beatae, sequi, quia reiciendis?</p>
+                        <p style="font-size: 10px;">12 ago. 2022 - 14:22:24</p>
+                    </div>
+                </div>
+                <!-- singleResponse_end -->
+                <!-- singleResponse -->
+                <div class="bg-dark-700 h-[50px] flex mb-2">
+                    <div class="flex flex-col gap-1 bg-dark-900 justify-center px-3 rounded-xl overflow-auto">
+                        <p class="text-xs font-bold whitespace-nowrap">Lorem, beatae, sequi, quia reiciendis?</p>
+                        <p style="font-size: 10px;">12 ago. 2022 - 14:22:24</p>
+                    </div>
+                </div>
+                <!-- singleResponse_end -->
+                <!-- singleResponse -->
+                <div class="bg-dark-700 h-[50px] flex mb-2">
+                    <div class="flex flex-col gap-1 bg-dark-900 justify-center px-3 rounded-xl overflow-auto">
+                        <p class="text-xs font-bold whitespace-nowrap">Lorem, beatae, sequi, quia reiciendis? Lorem, beatae, sequi, quia reiciendis?</p>
+                        <p style="font-size: 10px;">12 ago. 2022 - 14:22:24</p>
+                    </div>
+                </div>
+                <!-- singleResponse_end -->
             </div>
-            <div class="bg-alfa-800 basis-1/2 overflow-auto">
-                Bdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd7
+            <!-- responses_end -->
+
+            <!-- commands -->
+            <div class="bg-alfa-800 basis-1/2 overflow-hidden flex flex-col py-3">
+
+                <!-- singleResponse -->
+                <div class="bg-dark-700 h-[50px]  flex justify-end mb-2">
+                    <div class="flex flex-col gap-1 bg-dark-900 justify-center px-3 rounded-xl overflow-auto">
+                        <p class="text-xs font-bold whitespace-nowrap">Lorem, ipsum recusandae error, beatae, sequi, quia reiciendis?</p>
+                        <p style="font-size: 10px;" class="text-right">12 ago. 2022 - 14:22:24</p>
+                    </div>
+                </div>
+                <!-- singleResponse_end -->
+
+               <!-- singleResponse -->
+                <div class="bg-dark-700 h-[50px]  flex justify-end mb-2">
+                    <div class="flex flex-col gap-1 bg-dark-900 justify-center px-3 rounded-xl overflow-auto">
+                        <p class="text-xs font-bold whitespace-nowrap">Lorem, beatae, sequi, quia reiciendis?</p>
+                        <p style="font-size: 10px;" class="text-right">12 ago. 2022 - 14:22:24</p>
+                    </div>
+                </div>
+            <!-- singleResponse_end -->
+                <!-- singleResponse -->
+                <div class="bg-dark-700 h-[50px]  flex justify-end mb-2">
+                    <div class="flex flex-col gap-1 bg-dark-900 justify-center px-3 rounded-xl overflow-auto">
+                        <p class="text-xs font-bold whitespace-nowrap">Lorem, ipsum recusandae error, beatae, sequi, quia reiciendis?</p>
+                        <p style="font-size: 10px;" class="text-right">12 ago. 2022 - 14:22:24</p>
+                    </div>
+                </div>
+                <!-- singleResponse_end -->
+
+               <!-- singleResponse -->
+                <div class="bg-dark-700 h-[50px]  flex justify-end mb-2">
+                    <div class="flex flex-col gap-1 bg-dark-900 justify-center px-3 rounded-xl overflow-auto">
+                        <p class="text-xs font-bold whitespace-nowrap">Lorem, beatae, sequi, quia reiciendis?</p>
+                        <p style="font-size: 10px;" class="text-right">12 ago. 2022 - 14:22:24</p>
+                    </div>
+                </div>
+            <!-- singleResponse_end -->
+                <!-- singleResponse -->
+                <div class="bg-dark-700 h-[50px]  flex justify-end mb-2">
+                    <div class="flex flex-col gap-1 bg-dark-900 justify-center px-3 rounded-xl overflow-auto">
+                        <p class="text-xs font-bold whitespace-nowrap">Lorem, ipsum recusandae error, beatae, sequi, quia reiciendis?</p>
+                        <p style="font-size: 10px;" class="text-right">12 ago. 2022 - 14:22:24</p>
+                    </div>
+                </div>
+                <!-- singleResponse_end -->
+
+               <!-- singleResponse -->
+                <div class="bg-dark-700 h-[50px]  flex justify-end mb-2">
+                    <div class="flex flex-col gap-1 bg-dark-900 justify-center px-3 rounded-xl overflow-auto">
+                        <p class="text-xs font-bold whitespace-nowrap">Lorem, beatae, sequi, quia reiciendis?</p>
+                        <p style="font-size: 10px;" class="text-right">12 ago. 2022 - 14:22:24</p>
+                    </div>
+                </div>
+            <!-- singleResponse_end -->
+                <!-- singleResponse -->
+                <div class="bg-dark-700 h-[50px]  flex justify-end mb-2">
+                    <div class="flex flex-col gap-1 bg-dark-900 justify-center px-3 rounded-xl overflow-auto">
+                        <p class="text-xs font-bold whitespace-nowrap">Lorem, ipsum recusandae error, beatae, sequi, quia reiciendis?</p>
+                        <p style="font-size: 10px;" class="text-right">12 ago. 2022 - 14:22:24</p>
+                    </div>
+                </div>
+                <!-- singleResponse_end -->
+
+               <!-- singleResponse -->
+                <div class="bg-dark-700 h-[50px]  flex justify-end mb-2">
+                    <div class="flex flex-col gap-1 bg-dark-900 justify-center px-3 rounded-xl overflow-auto">
+                        <p class="text-xs font-bold whitespace-nowrap">Lorem, beatae, sequi, quia reiciendis?</p>
+                        <p style="font-size: 10px;" class="text-right">12 ago. 2022 - 14:22:24</p>
+                    </div>
+                </div>
+            <!-- singleResponse_end -->
+
             </div>
+            <!-- commands_end -->
         </div>
         <!-- messages_end -->
         <!-- input action -->
