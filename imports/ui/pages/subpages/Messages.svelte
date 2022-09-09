@@ -64,14 +64,14 @@
 <div class="flex sm:h-[calc(100%_-_40px)] h-[calc(100%_-_99px)]">
     <!-- LEFT PANEL -->
     {#if bLeftPanel}
-        <div class="bg-alfa-900 text-dark-800 h-[calc(100%_-_1px)] w-[300px] flex flex-col overflow-y-auto">
+        <div class="bg-alfa-900 text-dark-800 h-[calc(100%_-_1px)] w-[300px] flex flex-col">
             1
         </div>
     {/if}
     <!-- LEFT PANEL_END -->
 
     <!-- RIGHT PANEL -->
-    <div class="bg-beta-900 text-dark-800 h-[calc(100%_-_1px)] flex-1  flex flex-col overflow-y-auto">
+    <div class="bg-beta-900 text-dark-800 h-[calc(100%_-_1px)] flex-1  flex flex-col">
         <!-- tools -->
         <div class="bg-alfa-400 h-[46px] flex justify-end sm:justify-start px-5">
             <div class="grid place-content-center">
