@@ -61,15 +61,15 @@
     }
 </script>
 <!-- CONTAINER -->
-<div class="flex h-[calc(100%_-_40px)]">
+<div class="grid grid-cols-[300px,1fr] h-[calc(100%_-_40px)]">
     <!-- LEFT PANEL -->
-    <div class="bg-alfa-900 text-dark-800 h-[calc(100%_-_1px)] basis-[300px] flex flex-col overflow-y-auto">
+    <div class="bg-alfa-900 text-dark-800 h-[calc(100%_-_1px)] w-[300px] flex flex-col overflow-y-auto">
         1
     </div>
     <!-- LEFT PANEL_END -->
 
     <!-- RIGHT PANEL -->
-    <div class="bg-beta-900 text-dark-800 h-[calc(100%_-_1px)] basis-[calc(100%_-_300px)]  flex flex-col overflow-y-auto">
+    <div class="bg-beta-900 text-dark-800 h-[calc(100%_-_1px)] w-auto  flex flex-col overflow-y-auto">
         <!-- tools -->
         <div class="bg-alfa-400 h-[46px] flex px-5">
             <div class="grid place-content-center">
