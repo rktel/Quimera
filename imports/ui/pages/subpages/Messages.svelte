@@ -60,7 +60,7 @@
         }
     }
 </script>
-    <div class="bg-beta-900 text-white md:h-[calc(100%_-_40px)] h-[calc(100vh_-_97px)]  flex flex-col ">
+    <div class="bg-beta-900 text-white md:h-[calc(100%_-_40px)] h-[calc(100vh_-_97px)]  flex flex-col overflow-y-auto">
         <!-- tools -->
         <div class="bg-dark-400 h-[60px] flex px-5">
             <div class="bg-alfa-300 grid place-content-center">
