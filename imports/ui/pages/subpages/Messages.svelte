@@ -26,6 +26,7 @@
     const fTogglePanelLeft = ()=> bLeftPanel = !bLeftPanel
     
     const fSendMessage = () =>{
+        console.log(imei, singleCommand);
         if(bPanelRight){
             Meteor.call('commands.origin',imei, singleCommand);
         }
