@@ -111,9 +111,9 @@
     <!-- LEFT PANEL_END -->
 
     <!-- RIGHT PANEL -->
-    <div class="bg-beta-900 text-dark-800 h-[calc(100%_-_1px)] flex-1  flex flex-col">
+    <div class="bg-beta-900 text-dark-800 h-[calc(100%_-_1px)] flex-1  flex flex-col overflow-x-hidden">
         <!-- tools -->
-        <div class="bg-alfa-400 h-[46px] flex justify-end px-5">
+        <div class="bg-alfa-400 h-[46px] flex justify-start sm:justify-end px-5">
             <div class="grid place-content-center">
                 <button class="h-7 w-7 rounded-md bg-white shadow-lg grid place-content-center" on:click={fTogglePanelLeft}>
                     {#if bLeftPanel}
