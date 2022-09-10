@@ -9,8 +9,7 @@ Meteor.methods({
 
         switch (query_) {
             case 0: // today
-                startDay_ = new Date();
-                endDay_ = new Date();
+
                 console.log('A:',startDay_.toUTCString(), startDay_.toString());
                 console.log('B:',startDay_.getUTCDate(), startDay_.getDate());
                 if(startDay_.getUTCDate()>startDay_.getDate()){
