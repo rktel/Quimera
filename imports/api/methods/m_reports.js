@@ -4,7 +4,7 @@ import { Reports } from '../collections/c_reports';
 const fetch = require('node-fetch');
 
 Meteor.methods({
-    async getReport(query_=0,imei_, startDay_= 0, endDay_=0){
+    async getReport(query_=0,imei_, startDay_, endDay_){
         imei_ = Number(imei_);
 
         switch (query_) {
