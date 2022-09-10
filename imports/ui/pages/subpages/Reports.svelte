@@ -23,6 +23,10 @@
     }
 
     const fGetReport = () => {
+                let startDay_ = new Date();
+                let endDay_ = new Date();
+                console.log(startDay_.toUTCString(), startDay_.toString());
+                console.log(startDay_.getUTCDate(), startDay_.getDate());
         if(Number(imei)){
             Meteor.call('users.reports.set.imei',imei);
             Meteor.call('getReport',dateReportSelected, imei,startDay,endDay, (error, result)=>{
