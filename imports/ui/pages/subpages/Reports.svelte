@@ -1,5 +1,6 @@
 <script>
     import { Meteor } from "meteor/meteor";
+    import {navigate} from 'svelte-routing'
     const XLSX = require("xlsx");
     import {s_user} from '../../../api/stores';
 
@@ -13,13 +14,15 @@
     let bDropHeaders = false;
     const fToggleLeft = () => bLeftPanel = !bLeftPanel;
     const fCreateExcel = (_) => {
-        const data = document.querySelector("#report-table");
 
-        var file = XLSX.utils.table_to_book(data, {raw: true});
+        navigate("post/" + imei, { replace: true });
+        // const data = document.querySelector("#report-table");
 
-        XLSX.write(file, { bookType: 'xlsx', bookSST: true, type: 'base64' });
+        // var file = XLSX.utils.table_to_book(data, {raw: true});
 
-        XLSX.writeFile(file, imei + '.xlsx');
+        // XLSX.write(file, { bookType: 'xlsx', bookSST: true, type: 'base64' });
+
+        // XLSX.writeFile(file, imei + '.xlsx');
     }
 
     const fGetReport = () => {
