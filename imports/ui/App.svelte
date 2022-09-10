@@ -5,7 +5,7 @@
   import Administrador from "./pages/Administrador.svelte";
   import Home from "./pages/Home.svelte";
   import Login from "./pages/Login.svelte";
-  
+
   import Post from "./pages/Post.svelte";
 
   import { s_user } from "../api/stores";
@@ -53,7 +53,7 @@
          <Home />
         {/if}
       </Route>
-      <Route path="post/:id">
+      <Route path="post/:id" >
         <Post></Post>
       </Route>
     </main>
