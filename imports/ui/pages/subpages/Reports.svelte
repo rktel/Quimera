@@ -23,18 +23,16 @@
     }
 
     const fGetReport = () => {
-
+        let a, b;
         if(Number(imei)){
-            if(dateReportSelected<2){
-                startDay = new Date();
-                endDay = new Date();
-            }
+            a = new Date();
+            b = new Date();
             if(dateReportSelected===2){
-                startDay = new Date(startDay);
-                endDay = new Date(endDay);              
+                a = new Date(startDay);
+                b = new Date(endDay);              
             }
             Meteor.call('users.reports.set.imei',imei);
-            Meteor.call('getReport',dateReportSelected, imei,startDay,endDay, (error, result)=>{
+            Meteor.call('getReport',dateReportSelected, imei,a,b, (error, result)=>{
                 if(!error && result){
                     headers = result.headers;
                     reports = result.reports;
