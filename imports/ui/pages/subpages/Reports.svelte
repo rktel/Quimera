@@ -1,6 +1,6 @@
 <script>
     import { Meteor } from "meteor/meteor";
-    import {navigate} from 'svelte-routing'
+    import { link } from "svelte-routing";
     const XLSX = require("xlsx");
     import {s_user} from '../../../api/stores';
 
@@ -175,7 +175,7 @@
                     <button class="bg-beta-600 shadow uppercase  text-white  rounded w-full h-8" on:click={fCreateExcel}>
                         descargar
                     </button>
-                    <a href={"http://96.126.127.74:3000/post/"+ imei } target="_blank">Post</a>
+                    <a href={"/post"+imei} use:link replace>Replace this URL</a>
                     <!-- <p class="text-gray-600  text-center mt-1">Se incluiran todos los campos {brawData?"+ raw data":""}</p> -->
                 </div>
                 {/if}
