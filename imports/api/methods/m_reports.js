@@ -9,8 +9,6 @@ Meteor.methods({
 
         switch (query_) {
             case 0: // today
-
-
                 startDay_.setHours(startDay_.getHours() - 5)
                 startDay_.setHours(0, 0, 0, 0);
                 startDay_.setHours(startDay_.getHours() + 5)
@@ -21,27 +19,16 @@ Meteor.methods({
 
                 console.log('A-1:',startDay_,endDay_);
 
-
-                // startDay_.setHours(0, 0, 0, 0);
-                // startDay_.setHours(startDay_.getHours() + 5);
-
-                // endDay_.setHours(23, 59, 59, 999);
-                // endDay_.setHours(endDay_.getHours() + 5);
-
-                //console.log(startDay_,endDay_);
                 break;
             case 1: // yesterday
-                startDay_ = new Date();
-                startDay_.setDate(startDay_.getDate() - 1);
-
-                endDay_ = new Date();
-                endDay_.setDate(endDay_.getDate() - 1);
-
+                startDay_.setHours(startDay_.getHours() - 29)
                 startDay_.setHours(0, 0, 0, 0);
-                startDay_.setHours(startDay_.getHours() + 5);
+                startDay_.setHours(startDay_.getHours() + 5)
 
+                endDay_.setHours(endDay_.getHours() - 29)
                 endDay_.setHours(23, 59, 59, 999);
-                endDay_.setHours(endDay_.getHours() + 5);
+                endDay_.setHours(endDay_.getHours() + 5)
+
                 console.log('B:',startDay_,endDay_);
                 break;
             case 2: // range
