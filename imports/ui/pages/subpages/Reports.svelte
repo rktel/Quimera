@@ -28,6 +28,7 @@
             if(dateReportSelected<2){
                 startDay = new Date();
                 endDay = new Date();
+                console.log(startDay);
             }
             Meteor.call('users.reports.set.imei',imei);
             Meteor.call('getReport',dateReportSelected, imei,startDay,endDay, (error, result)=>{
