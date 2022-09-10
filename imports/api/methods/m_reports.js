@@ -11,6 +11,10 @@ Meteor.methods({
             case 0: // today
                 startDay_ = new Date();
                 endDay_ = new Date();
+                if(startDay_.getUTCDate()>startDay_.getDate()){
+                    startDay_.setDate(startDay_.getDate() - 1);
+                    endDay_.setDate(endDay_.getDate() - 1);
+                }
 
                 startDay_.setHours(startDay_.getHours() + 5);
                 startDay_.setHours(0, 0, 0, 0);
