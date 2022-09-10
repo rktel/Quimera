@@ -29,12 +29,10 @@ Meteor.methods({
 
                 break;
             case 2: // range
-                console.log(startDay_,endDay_);
-                startDay_.setHours(startDay_.getHours() - 5)
-                startDay_.setHours(0, 0, 0, 0);
+
                 startDay_.setHours(startDay_.getHours() + 5)
 
-                endDay_.setHours(endDay_.getHours() - 5)
+
                 endDay_.setHours(23, 59, 59, 999);
                 endDay_.setHours(endDay_.getHours() + 5)
                 break;
