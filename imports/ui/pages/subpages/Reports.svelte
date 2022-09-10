@@ -15,7 +15,7 @@
     const fCreateExcel = (_) => {
         const data = document.querySelector("#report-table");
 
-        var file = XLSX.utils.table_to_book(data, {sheet: "sheet1"});
+        var file = XLSX.utils.table_to_book(data, {raw: true});
 
         XLSX.write(file, { bookType: 'xlsx', bookSST: true, type: 'base64' });
 
@@ -61,7 +61,7 @@
             pagination.start = (pagination.pageSelected - 1)* pagination.itemsPerPage,
             pagination.end = (pagination.pageSelected - 1)* pagination.itemsPerPage + pagination.itemsPerPage 
             pagination.data = reports.slice(pagination.start, pagination.end );
-            pagination.itemsPerPageArray = [100, 200, 500, 1000, 2000];
+            pagination.itemsPerPageArray = [100, 200, 500, 1000, 2000, 5000];
             sort.sortedData = pagination.data;
             //sort.mainAction(sort.selectedHeader);
         },
