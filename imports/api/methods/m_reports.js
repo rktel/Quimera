@@ -21,7 +21,7 @@ Meteor.methods({
 
                 endDay_.setHours(23, 59, 59, 999);
                 endDay_.setHours(endDay_.getHours() + 5);
-                
+                console.log(startDay_,endDay_);
                 break;
             case 1: // yesterday
                 startDay_ = new Date();
@@ -35,6 +35,7 @@ Meteor.methods({
 
                 endDay_.setHours(23, 59, 59, 999);
                 endDay_.setHours(endDay_.getHours() + 5);
+                console.log(startDay_,endDay_);
                 break;
             case 2: // range
                 startDay_ = new Date(startDay_);
@@ -45,6 +46,7 @@ Meteor.methods({
 
                 endDay_.setHours(23, 59, 59, 999);
                 endDay_.setHours(endDay_.getHours() + 5);
+                console.log(startDay_,endDay_);
                 break;
             default:
                 break;
