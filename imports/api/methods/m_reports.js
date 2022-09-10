@@ -13,11 +13,12 @@ Meteor.methods({
 
                 startDay_.setHours(startDay_.getHours() - 5)
                 startDay_.setHours(0, 0, 0, 0);
-                console.log('A-1:',startDay_);
-                if(startDay_.getUTCDate()>startDay_.getDate()){
-                    startDay_.setDate(startDay_.getDate() - 1);
-                    endDay_.setDate(endDay_.getDate() - 1);
-                }
+
+                endDay_.setHours(endDay_.getHours() - 5)
+                endDay_.setHours(0, 0, 0, 0);
+
+                console.log('A-1:',startDay_,endDay_);
+
 
                 // startDay_.setHours(0, 0, 0, 0);
                 // startDay_.setHours(startDay_.getHours() + 5);
