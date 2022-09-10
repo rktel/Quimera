@@ -10,8 +10,8 @@ Meteor.methods({
         switch (query_) {
             case 0: // today
 
-                console.log('A:',startDay_.toUTCString(), startDay_.toString());
-                console.log('B:',startDay_.getUTCDate(), startDay_.getDate());
+                console.log('A:',startDay_, startDay_.setHours(startDay_.getHours() - 5));
+
                 if(startDay_.getUTCDate()>startDay_.getDate()){
                     startDay_.setDate(startDay_.getDate() - 1);
                     endDay_.setDate(endDay_.getDate() - 1);
@@ -37,7 +37,7 @@ Meteor.methods({
 
                 endDay_.setHours(23, 59, 59, 999);
                 endDay_.setHours(endDay_.getHours() + 5);
-                console.log('C:',startDay_,endDay_);
+                console.log('B:',startDay_,endDay_);
                 break;
             case 2: // range
                 startDay_ = new Date(startDay_);
@@ -48,7 +48,7 @@ Meteor.methods({
 
                 endDay_.setHours(23, 59, 59, 999);
                 endDay_.setHours(endDay_.getHours() + 5);
-                console.log('D:',startDay_,endDay_);
+                console.log('C:',startDay_,endDay_);
                 break;
             default:
                 break;
