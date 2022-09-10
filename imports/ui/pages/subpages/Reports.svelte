@@ -175,7 +175,7 @@
                     <button class="bg-beta-600 shadow uppercase  text-white  rounded w-full h-8" on:click={fCreateExcel}>
                         descargar
                     </button>
-                    <a href={"/post"+imei} use:link replace>Replace this URL</a>
+                    <a href={"/post/"+imei} use:link replace>Replace this URL</a>
                     <!-- <p class="text-gray-600  text-center mt-1">Se incluiran todos los campos {brawData?"+ raw data":""}</p> -->
                 </div>
                 {/if}
