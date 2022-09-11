@@ -1,6 +1,5 @@
 <script>
     import { Meteor } from "meteor/meteor";
-    import { link } from "svelte-routing";
     const XLSX = require("xlsx");
     import {s_user} from '../../../api/stores';
 
@@ -16,13 +15,13 @@
     const fCreateExcel = (_) => {
 
         navigate("post/" + imei, { replace: true });
-        // const data = document.querySelector("#report-table");
+        const data = document.querySelector("#report-table");
 
-        // var file = XLSX.utils.table_to_book(data, {raw: true});
+        var file = XLSX.utils.table_to_book(data, {raw: true});
 
-        // XLSX.write(file, { bookType: 'xlsx', bookSST: true, type: 'base64' });
+        XLSX.write(file, { bookType: 'xlsx', bookSST: true, type: 'base64' });
 
-        // XLSX.writeFile(file, imei + '.xlsx');
+        XLSX.writeFile(file, imei + '.xlsx');
     }
 
     const fGetReport = () => {
@@ -175,7 +174,7 @@
                     <button class="bg-beta-600 shadow uppercase  text-white  rounded w-full h-8" on:click={fCreateExcel}>
                         descargar
                     </button>
-                    <a href={"/post/"+imei} use:link target="_blank">Replace this URL</a>
+      
                     <!-- <p class="text-gray-600  text-center mt-1">Se incluiran todos los campos {brawData?"+ raw data":""}</p> -->
                 </div>
                 {/if}

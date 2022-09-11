@@ -1,12 +1,12 @@
 <script>
   import { Meteor } from "meteor/meteor";
   import { Router, Route, navigate } from "svelte-routing";
-  import Administrator from "./pages/Administrator.svelte";
+
   import Administrador from "./pages/Administrador.svelte";
   import Home from "./pages/Home.svelte";
   import Login from "./pages/Login.svelte";
 
-  import Post from "./pages/Post.svelte";
+
 
   import { s_user } from "../api/stores";
   export let url = "";
@@ -22,6 +22,7 @@
     s_user.update((el) => Meteor.user());
 
     if (bLogged) {
+      console.log(url);
       navigate("/", { replace: true });
     } else {
       navigate("/login", { replace: true });
@@ -52,9 +53,6 @@
         {#if userPermission === "supervisor"}
          <Home />
         {/if}
-      </Route>
-      <Route path="post/:id" >
-        <Post></Post>
       </Route>
     </main>
   {/if}
