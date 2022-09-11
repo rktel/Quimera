@@ -22,7 +22,6 @@
     s_user.update((el) => Meteor.user());
 
     if (bLogged) {
-      console.log(url);
       navigate("/", { replace: true });
     } else {
       navigate("/login", { replace: true });
