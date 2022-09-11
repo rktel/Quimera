@@ -14,7 +14,7 @@
     const fToggleLeft = () => bLeftPanel = !bLeftPanel;
     const fCreateExcel = (_) => {
 
-        navigate("post/" + imei, { replace: true });
+     
         const data = document.querySelector("#report-table");
 
         var file = XLSX.utils.table_to_book(data, {raw: true});
