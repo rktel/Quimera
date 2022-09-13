@@ -15,4 +15,9 @@ Meteor.methods({
         const session = await Sessions.findOne({ imei });
         return session;
     }
+    ,
+    'sessions.getBySessionID': async function (id) {
+        const session = await Sessions.findOne({ '_session.id': id });
+        return session;
+    }
 });
