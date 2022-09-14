@@ -56,10 +56,10 @@ Meteor.methods({
         const reports = await Reports.rawCollection().
             aggregate([
                 { 
-                    $match: { imei: imei_, dateAndTime: { $gte: startDay_, $lte: endDay_ } } 
+                    $match: { imei: imei_, timestamp: { $gte: startDay_, $lte: endDay_ } } 
                 },
                 {
-                    $sort: { dateAndTime : -1 }
+                    $sort: { timestamp : -1 }
                 },
                 {
                     $project: project
