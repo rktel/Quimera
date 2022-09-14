@@ -33,6 +33,28 @@ Meteor.methods({
                         });
                      });
                 }
+                if (sessionResult.protocolID === 8) {
+                   
+                    Meteor.call('teltonika.build.command', $imei, $command, (error2, buildedCommand) => {
+                        const now = new Date();
+                        const { _command, _randomNumber } = buildedCommand;
+                        const _cmdObject = {
+                            createdTime: now,
+                            createdTimeFormat: formatDate(now),
+                            imei: Number($imei),
+                            commandText: $command,
+                            randomNumber: _randomNumber,
+                            protocolID : 8,
+                            msgType: 'command'
+                        };
+                        Meteor.call('commands.insert', _cmdObject, (e, r) => {
+                            if (r) {
+                                // comando guardado
+                                Meteor.call('teltonika.send', _command, sessionResult._session);
+                            }
+                        });
+                     });
+                }
 
             }
 
