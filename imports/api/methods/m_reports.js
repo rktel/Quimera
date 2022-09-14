@@ -48,6 +48,10 @@ Meteor.methods({
             headers = galileoskyHeaders;
             project = galileoskyProject;
         }
+        if(protocolID === 8){
+            headers = teltonikaHeaders;
+            project = teltonikaProject;
+        }
 
         const reports = await Reports.rawCollection().
             aggregate([
@@ -131,6 +135,46 @@ function getAddress(id,lat,lon){
             console.log('Error en getAddress:', e);
         })
 }
+
+const teltonikaProject = {
+    _id:0,
+    "Fecha Servidor": "$serverTimeFormat",
+    "Fecha AVL": "$timestamp",
+    "IMEI": "$imei",
+    "Mensaje Tipo":"$msgType",
+    //"Record":"$numberOfRecord",
+    "Latitud":"$latitude",
+    "Longitud":"$longitude",
+    "Altitud":"$altitude",
+    "Satelites":"$satellites",
+    "Velocidad":"$speed",
+    "Rumbo":"$angle",
+    //"HDOP":"$hdop",
+    //"Fix GNSS":"$coordinatesCorrectness",
+    //"Voltaje Entrada 0": "$inputVoltage0",
+    //"Kilometraje": "$odometer",
+    "Raw data": "$raw" 
+}
+
+const teltonikaHeaders = [
+    { label:"Fecha Servidor", state: true, type:1},
+    { label:"Fecha AVL", state: true, type:1},
+    { label:"IMEI", state: true, type:0},
+    { label:"Mensaje Tipo", state: true, type:1},
+    //{ label:"Record", state: true, type:0},
+    { label:"Latitud", state: true,type:0},
+    { label:"Longitud", state: true,type:0},
+    { label:"Altitud", state: true,type:0},
+    { label:"Satelites", state: true,type:0},
+    { label:"Velocidad", state: true,type:0},
+    { label:"Rumbo", state: true,type:0},
+    //{ label:"HDOP", state: true,type:0},
+    //{ label:"Fix GNSS", state: true,type:0},
+    //{ label:"Voltaje Entrada 0", state: true,type:0},
+    //{ label:"Kilometraje", state: true,type:0},
+    { label:"Raw data",state: true,type:1},
+]
+
 
 const galileoskyProject = {
     _id:0,
