@@ -55,11 +55,11 @@
     }
     $m:{
         if(session && sessionChatTime && subCommands.ready()){
-            commands = Commands.find({imei, createdTime: {$gte: sessionChatTime}}).fetch();
+            commands = Commands.find({imei, serverTime: {$gte: sessionChatTime}}).fetch();
             
         }
         if(session && sessionChatTime && subResponses.ready()){
-            responses = Responses.find({imei, receivedTime: {$gte: sessionChatTime}}).fetch();
+            responses = Responses.find({imei, serverTime: {$gte: sessionChatTime}}).fetch();
   
         }
     }
