@@ -6,7 +6,7 @@ Meteor.methods({
 
         Meteor.call('sessions.getSingle', $imei, (error1, sessionResult) => {
 
-            if (Date.now() - sessionResult.createdTime.getTime() > 600 * 1000) {
+            if (Date.now() - sessionResult.serverTime.getTime() > 600 * 1000) {
                 console.log("No se envia comando");
 
             } else {
