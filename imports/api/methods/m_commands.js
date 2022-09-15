@@ -17,8 +17,8 @@ Meteor.methods({
                         const now = new Date();
                         const { _command, _randomNumber } = buildedCommand;
                         const _cmdObject = {
-                            createdTime: now,
-                            createdTimeFormat: formatDate(now),
+                            serverTime: now,
+                            serverTimeFormat: formatDate(now),
                             imei: Number($imei),
                             commandText: $command,
                             randomNumber: _randomNumber,
@@ -39,8 +39,8 @@ Meteor.methods({
                         const now = new Date();
                         const { _command, _randomNumber } = buildedCommand;
                         const _cmdObject = {
-                            createdTime: now,
-                            createdTimeFormat: formatDate(now),
+                            serverTime: now,
+                            serverTimeFormat: formatDate(now),
                             imei: Number($imei),
                             commandText: $command,
                             randomNumber: _randomNumber,

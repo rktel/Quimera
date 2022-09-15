@@ -41,39 +41,32 @@ Meteor.methods({
         }
         // console.log(startDay_, endDay_);
 
-        const {protocolID} = Meteor.call('sessions.getSingle',imei_);
-        let headers, project;
-
-        if(protocolID === 7){
-            headers = galileoskyHeaders;
-            project = galileoskyProject;
-        }
-        if(protocolID === 8){
-            headers = teltonikaHeaders;
-            project = teltonikaProject;
-        }
+        const { protocolID } = Meteor.call('sessions.getSingle',imei_);
 
         const reports = await Reports.rawCollection().
             aggregate([
                 { 
-                    $match: { imei: imei_, timestamp: { $gte: startDay_, $lte: endDay_ } } 
+                    $match: { imei: imei_, serverTime: { $gte: startDay_, $lte: endDay_ } } 
                 },
                 {
-                    $sort: { timestamp : -1 }
+                    $sort: { serverTime : -1 }
                 },
                 {
-                    $project: project
+                    $project: {_id: 0, ack: 0, serverTime: 0, timestamp: 0}
                 },
 
             ]).toArray();
 
         if(!reports[0]){
             return false;
+        }else{
+            return {
+                headers : Object.keys(reports[0]),
+                reports
+            }
+            
         }
-        return {
-            headers,
-            reports
-        }
+
     },
     'reports.insert': function (report_array) {
         let reportFlag = null;
@@ -124,6 +117,7 @@ Meteor.methods({
     }
 })
 
+/*
 function getAddress(id,lat,lon){
     const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&zoom=18&addressdetails=1`;
     fetch(url)
@@ -135,24 +129,23 @@ function getAddress(id,lat,lon){
             console.log('Error en getAddress:', e);
         })
 }
+*/
 
+/*
 const teltonikaProject = {
     _id:0,
     "Fecha Servidor": "$serverTimeFormat",
     "Fecha AVL": "$timestamp",
     "IMEI": "$imei",
     "Mensaje Tipo":"$msgType",
-    //"Record":"$numberOfRecord",
+
     "Latitud":"$latitude",
     "Longitud":"$longitude",
     "Altitud":"$altitude",
     "Satelites":"$satellites",
     "Velocidad":"$speed",
     "Rumbo":"$angle",
-    //"HDOP":"$hdop",
-    //"Fix GNSS":"$coordinatesCorrectness",
-    //"Voltaje Entrada 0": "$inputVoltage0",
-    //"Kilometraje": "$odometer",
+
     "Raw data": "$raw" 
 }
 
@@ -161,17 +154,14 @@ const teltonikaHeaders = [
     { label:"Fecha AVL", state: true, type:1},
     { label:"IMEI", state: true, type:0},
     { label:"Mensaje Tipo", state: true, type:1},
-    //{ label:"Record", state: true, type:0},
+
     { label:"Latitud", state: true,type:0},
     { label:"Longitud", state: true,type:0},
     { label:"Altitud", state: true,type:0},
     { label:"Satelites", state: true,type:0},
     { label:"Velocidad", state: true,type:0},
     { label:"Rumbo", state: true,type:0},
-    //{ label:"HDOP", state: true,type:0},
-    //{ label:"Fix GNSS", state: true,type:0},
-    //{ label:"Voltaje Entrada 0", state: true,type:0},
-    //{ label:"Kilometraje", state: true,type:0},
+
     { label:"Raw data",state: true,type:1},
 ]
 
@@ -214,3 +204,4 @@ const galileoskyHeaders = [
     { label:"Kilometraje", state: true,type:0},
     { label:"Raw data",state: true,type:1},
 ]
+*/
