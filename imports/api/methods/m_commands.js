@@ -34,7 +34,7 @@ Meteor.methods({
                      });
                 }
                 if (sessionResult.protocolID === 8) {
-                   
+console.log('Here');
                     Meteor.call('teltonika.build.command', $imei, $command, (error2, buildedCommand) => {
                         const now = new Date();
                         const { _command, _randomNumber } = buildedCommand;
