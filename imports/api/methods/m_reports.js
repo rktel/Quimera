@@ -61,7 +61,7 @@ Meteor.methods({
             return false;
         }else{
             return {
-                headers : Object.keys(reports[0]),
+                headers : headersRefactor(Object.keys(reports[0])),
                 reports
             }
             
@@ -116,6 +116,31 @@ Meteor.methods({
         return reports;
     }
 })
+
+function headersRefactor(_headers) {
+    let headers = [];
+
+    for(index in _headers){
+      let type = 1;
+      if(keys[index] === 'latitude' ||
+        keys[index] === 'longitude' ||
+         keys[index] === 'altitude' ||
+         keys[index] === 'satellites' ||
+         keys[index] === 'speed' ||
+         keys[index] === 'angle' ||
+         keys[index] === 'odometer' 
+        ){
+        type = 0;
+      }
+      let header = {
+        label: keys[index],
+        state: true,
+        type,
+      }
+      headers.push(header)
+    }
+    return headers
+}
 
 /*
 function getAddress(id,lat,lon){
@@ -205,3 +230,4 @@ const galileoskyHeaders = [
     { label:"Raw data",state: true,type:1},
 ]
 */
+
