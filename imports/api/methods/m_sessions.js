@@ -3,10 +3,10 @@ import { Sessions } from '../collections/c_sessions';
 
 Meteor.methods({
     'sessions.upsert': function (dataObject) {
-        const { imei, _session, createdTime, createdTimeFormat, protocolID } = dataObject;
+        const { imei, _session, serverTime, serverTimeFormat, protocolID } = dataObject;
         Sessions.upsert({ imei }, {
             $set: {
-                _session, createdTime, createdTimeFormat, protocolID
+                _session, serverTime, serverTimeFormat, protocolID
             }
         })
     },
