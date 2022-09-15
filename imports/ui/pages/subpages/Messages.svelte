@@ -100,7 +100,7 @@
                     <div class="grid grid-rows-[auto,auto] gap-1">
                         <label for="imei" class="text-dark-700 dark:text-dark-300 ">Ultima conexion:</label>
                         <div class="flex items-center justify-center h-8 ring-1 rounded px-3 dark:text-dark-800 ring-alfa-500">
-                            {formatSpecial(session.createdTime) ? formatSpecial(session.createdTime) : session.createdTime}
+                            {formatSpecial(session.serverTime) ? formatSpecial(session.serverTime) : session.serverTime}
                         </div>
                     </div>
                 {/if}
@@ -137,11 +137,11 @@
                 <div class=" basis-3/5 overflow-hidden flex flex-col py-3">
                     <!-- arrayResponse -->
                     {#if responses[0]}
-                        {#each responses as { response, receivedTime }}
+                        {#each responses as { response, serverTime }}
                             <div class="h-[50px] flex mb-3">
                                 <div class="flex flex-col gap-1 bg-beta-200 justify-center px-3 rounded-xl overflow-auto">
                                     <p class="text-xs font-bold whitespace-nowrap text-dark-600">{response}</p>
-                                    <p style="font-size: 10px;" class="text-dark-500">{formatChat(receivedTime)}</p>
+                                    <p style="font-size: 10px;" class="text-dark-500">{formatChat(serverTime)}</p>
                                 </div>
                             </div>
                         {/each}
@@ -154,11 +154,11 @@
                 <div class=" basis-2/5 overflow-hidden flex flex-col py-3">
                     <!-- arrayCommands -->
                     {#if commands[0]}
-                        {#each commands as {commandText, createdTime} }
+                        {#each commands as {commandText, serverTime} }
                             <div class="h-[50px]  flex justify-end mb-3">
                                 <div class="flex flex-col gap-1 bg-alfa-200 justify-center px-3 rounded-xl overflow-auto">
                                     <p class="text-xs font-bold whitespace-nowrap text-dark-600">{commandText}</p>
-                                    <p style="font-size: 10px;" class="text-right text-dark-500">{formatChat(createdTime)}</p>
+                                    <p style="font-size: 10px;" class="text-right text-dark-500">{formatChat(serverTime)}</p>
                                 </div>
                             </div>
                         {/each}
