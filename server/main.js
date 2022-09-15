@@ -7,6 +7,7 @@ import '../imports/api/methods/m_responses';
 import '../imports/api/methods/m_users';
 
 import './tcp_commands/galileosky';
+import './tcp_commands/teltonika';
 
 import '../imports/api/publications/p_commands';
 import '../imports/api/publications/p_responses';
