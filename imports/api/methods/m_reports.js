@@ -122,18 +122,18 @@ function headersRefactor(_headers) {
 
     for(index in _headers){
       let type = 1;
-      if(keys[index] === 'latitude' ||
-        keys[index] === 'longitude' ||
-         keys[index] === 'altitude' ||
-         keys[index] === 'satellites' ||
-         keys[index] === 'speed' ||
-         keys[index] === 'angle' ||
-         keys[index] === 'odometer' 
+      if(_headers[index] === 'latitude' ||
+        _headers[index] === 'longitude' ||
+         _headers[index] === 'altitude' ||
+         _headers[index] === 'satellites' ||
+         _headers[index] === 'speed' ||
+         _headers[index] === 'angle' ||
+         _headers[index] === 'odometer' 
         ){
         type = 0;
       }
       let header = {
-        label: keys[index],
+        label: _headers[index],
         state: true,
         type,
       }
