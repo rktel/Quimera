@@ -55,6 +55,28 @@ Meteor.methods({
                         });
                      });
                 }
+                if (sessionResult.protocolID === 9) {
+
+                    Meteor.call('queclink.build.command', $imei, $command, (error2, buildedCommand) => {
+                        const now = new Date();
+                        const { _command, _randomNumber } = buildedCommand;
+                        const _cmdObject = {
+                            serverTime: now,
+                            serverTimeFormat: formatDate(now),
+                            imei: Number($imei),
+                            commandText: $command,
+                            randomNumber: _randomNumber,
+                            protocolID : 9,
+                            msgType: 'command'
+                        };
+                        Meteor.call('commands.insert', _cmdObject, (e, r) => {
+                            if (r) {
+                                // comando guardado
+                                Meteor.call('queclink.send', _command, sessionResult._session);
+                            }
+                        });
+                     });
+                }
 
             }
 

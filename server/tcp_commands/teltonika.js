@@ -36,7 +36,7 @@ Meteor.methods({
         CRC_16[2] = aux[0];
         CRC_16[3] = aux[1];
         const command = [...preamble, ...dataSize, ...codecID, ...commandQuantity1, ...type, ...commandSize, ...commandBuffer, ...commandQuantity2, ...CRC_16];
-        console.log('command:',command);
+        // console.log('command:',command);
         return {
             _command: command,
             _randomNumber: Number(now)
