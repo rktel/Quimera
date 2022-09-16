@@ -134,7 +134,7 @@ function headersRefactor(_headers) {
       }
       let header = {
         label: _headers[index],
-        state: _headers[index] === 'raw'?false: true,
+        state: true,
         type,
       }
       headers.push(header)
