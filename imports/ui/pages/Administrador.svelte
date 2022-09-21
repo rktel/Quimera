@@ -1,5 +1,6 @@
 <script>
     import { Meteor } from 'meteor/meteor';
+    import { clickOutside } from '../../tools' 
     import { s_user } from '../../api/stores';
     import { onDestroy } from "svelte";
     import { formatSpecial} from '../../tools'
@@ -7,6 +8,7 @@
     import Reports from "./subpages/Reports.svelte";
     import Messages from "./subpages/Messages.svelte";
     
+    const fClickOutside = ()=> bUserOptions = false
     const subpages = [
         {index:1, name:"Usuarios", component: Users},
         {index:2, name:"Reportes", component: Reports},
@@ -58,7 +60,7 @@
 
 <!-- USER OPTIONS -->
 {#if bUserOptions}
-    <div class="dark:bg-dark-700 bg-dark-50 shadow-lg absolute top-[40px] right-0 z-40 w-[260px] grid grid-rows-[auto,auto]">
+    <div class="dark:bg-dark-700 bg-dark-50 shadow-lg absolute top-[40px] right-0 z-40 w-[260px] grid grid-rows-[auto,auto]" use:clickOutside on:click_outside={fClickOutside}>
         <div class="bg-dark-100 dark:bg-dark-800 flex flex-col items-center p-5 gap-2">
             <p class="text-dark-800 font-medium dark:text-dark-50">{user?user.username:""}</p>
             <span class="h-[30px] w-[30px] text-white text-xl bg-beta-700 text-center font-bold shadow rounded-full">{user&&user.profile?user.profile.firstname.charAt(0):''}</span>
