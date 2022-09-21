@@ -41,7 +41,7 @@ Meteor.methods({
         }
         // console.log(startDay_, endDay_);
 
-        const { protocolID } = Meteor.call('sessions.getSingle',imei_);
+        // const { protocolID } = Meteor.call('sessions.getSingle',imei_);
 
         const reports = await Reports.rawCollection().
             aggregate([
