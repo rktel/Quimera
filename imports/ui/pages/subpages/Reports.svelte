@@ -1,6 +1,6 @@
 <script>
     import { Meteor } from "meteor/meteor";
-    import { fly } from 'svelte/transition';
+
     const XLSX = require("xlsx");
     import {s_user} from '../../../api/stores';
     import { clickOutside } from '../../../tools';
@@ -112,7 +112,7 @@
 <div class="dark:bg-dark-700 bg-dark-50 h-[calc(100%_-_40px)] flex">
     <!-- LEFT -->   
     {#if bLeftPanel}
-        <div class="grid grid-rows-[50px,1fr] shadow-lg basis-[300px] text-xs" transition:fly="{{ x: 0, duration: 300 }}">
+        <div class="grid grid-rows-[50px,1fr] shadow-lg basis-[300px] text-xs" >
 
             <!-- BAR -->
             <div class="flex justify-end px-4 items-center"> 
@@ -189,7 +189,7 @@
     <!-- LEFT_END -->
 
     <!-- RIGHT -->
-    <div class="overflow-hidden flex-1 p-5 h-full transition-all duration-300">
+    <div class="overflow-hidden flex-1 p-5 h-full">
         {#if headers[0]}
             <!-- BAR ACTION -->
             <div class="h-[30px] flex gap-2 bg-dark-300 dark:bg-dark-800 dark:border-dark-800  border-dark-50 border-b">
