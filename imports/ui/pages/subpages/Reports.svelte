@@ -2,7 +2,9 @@
     import { Meteor } from "meteor/meteor";
     const XLSX = require("xlsx");
     import {s_user} from '../../../api/stores';
+    import { clickOutside } from '../../../tools';
 
+    const fClickOutside = ()=> bDropHeaders = false
     let user = undefined;
     s_user.subscribe(newValue => user = newValue);
     let bLeftPanel = true;
@@ -202,7 +204,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-dark-500 dark:fill-dark-200" viewBox="0 0 512 512"><path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zm64 64V416H224V160H64zm384 0H288V416H448V160z"/></svg>
                     </button>
                     {#if bDropHeaders}
-                        <div class="absolute bg-dark-100 z-50 mt-[30px] text-xs text-dark-500 shadow-lg flex flex-col w-[160px] dark:bg-dark-800 dark:text-dark-300">
+                        <div class="absolute bg-dark-100 z-50 mt-[30px] text-xs text-dark-500 shadow-lg flex flex-col w-[160px] dark:bg-dark-800 dark:text-dark-300" use:clickOutside on:click_outside={fClickOutside}>
                             {#each headers as header }
                                 <div class="flex justify-between p-2">
                                     <div>
