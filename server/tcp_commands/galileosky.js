@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { fetch, Headers } from 'meteor/fetch';
 
-const url = 'http://96.126.127.74:1880/galileosky';
+const url = 'http://172.105.149.34:20000/galileosky';
 
 Meteor.methods({
     'galileosky.send': async function (_commandArray, _session) {
