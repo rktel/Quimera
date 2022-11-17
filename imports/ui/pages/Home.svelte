@@ -6,11 +6,13 @@
     import { formatSpecial} from '../../tools'
     import Reports from "./subpages/Reports.svelte";
     import Messages from "./subpages/Messages.svelte";
+    import RealTime from './subpages/RealTime.svelte';
 
     const fClickOutside = ()=> bUserOptions = false
     const subpages = [
         {index:1, name:"Reportes", component: Reports},
         {index:2, name:"Mensajes", component: Messages},
+        {index:3, name:"Tiempo Real", component: RealTime},
     ]
     let subpageOn = subpages[0];
     const fLoadSubpage = subpage => subpageOn = subpage;

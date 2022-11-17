@@ -12,6 +12,7 @@ import './tcp_commands/queclink';
 
 import '../imports/api/publications/p_commands';
 import '../imports/api/publications/p_responses';
+import './udp'
 
 const SEBAS_USERNAME = "rktel";
 const SEBAS_PASSWORD = "smht";
