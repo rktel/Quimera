@@ -1,6 +1,7 @@
 // UDP Server
 const udp = require('dgram')
 const server = udp.createSocket('udp4')
+import { udpStreamer } from '../../imports/api/streamers'
 
 server.on('error',function(error){
     console.log('Error: ' + error);
@@ -10,6 +11,7 @@ server.on('error',function(error){
 server.on('message', function(msg, info){
     console.log('Data received from client : ' + msg.toString());
     console.log('Received %d bytes from %s:%d\n',msg.length, info.address, info.port);
+    udpStreamer.emit('data', msg.toString())
 })
 
 server.on('listening',function(){

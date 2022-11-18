@@ -13,6 +13,10 @@ import './tcp_commands/queclink';
 import '../imports/api/publications/p_commands';
 import '../imports/api/publications/p_responses';
 import './udp'
+import {udpStreamer} from '../imports/api/streamers'
+
+udpStreamer.allowRead('all');
+udpStreamer.allowWrite('all');
 
 const SEBAS_USERNAME = "rktel";
 const SEBAS_PASSWORD = "smht";
