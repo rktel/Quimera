@@ -25,3 +25,4 @@ rdb:svelte-meteor-data  # Meteor package which allows us to consume Meteor's rea
 fetch
 accounts-password
 rocketchat:streamer
+underscore
