@@ -6,7 +6,7 @@
   import Home from "./pages/Home.svelte";
   import Login from "./pages/Login.svelte";
   import GalileoskyUDP from './pages/GalileoskyUDP.svelte'
-
+  import HunterUDP from './pages/HunterUDP.svelte'
 
   import { s_user } from "../api/stores";
   export let url = "";
@@ -54,6 +54,9 @@
         {/if}
         {#if userPermission === "galileoskyUDP"}
           <GalileoskyUDP/>
+        {/if}
+        {#if userPermission === "hunterUDP"}
+          <HunterUDP/>
         {/if}
       </Route>
     </main>

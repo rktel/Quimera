@@ -13,7 +13,7 @@ import './tcp_commands/queclink';
 import '../imports/api/publications/p_commands';
 import '../imports/api/publications/p_responses';
 import './udp/index'
-import '/udp/hunterUDP'
+import './udp/hunterUDP'
 
 import {udpStreamer} from '../imports/api/streamers'
 import {udpStreamerHunter} from '../imports/api/streamers'
@@ -32,11 +32,14 @@ const GALILEOSKY_USERNAME = "galileosky";
 const GALILEOSKY_PASSWORD = "udp$2017";
 
 
+const HUNTER_USERNAME = "hunter";
+const HUNTER_PASSWORD = "hunter$2017";
+// hunterUDP
 Meteor.startup(() => {
-  if (!Accounts.findUserByUsername(GALILEOSKY_USERNAME)) {
+  if (!Accounts.findUserByUsername(HUNTER_USERNAME)) {
     Accounts.createUser({
-      username: GALILEOSKY_USERNAME,
-      password: GALILEOSKY_PASSWORD,
+      username: HUNTER_USERNAME,
+      password: HUNTER_PASSWORD,
     });
   }
 });
