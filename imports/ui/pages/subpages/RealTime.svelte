@@ -13,5 +13,7 @@
 </script>
 <h1>Real Time</h1>
 {#if _data.length > 0}
-    <h2>{_data}</h2>
+    {#each _data as e }
+    <h2>{e}</h2>
+    {/each}
 {/if}
