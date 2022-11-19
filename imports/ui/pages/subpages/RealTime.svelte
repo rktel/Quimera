@@ -11,6 +11,7 @@
      })
 
      onDestroy(function(){
+        udpStreamer.on('data',function(){});
         console.log('On Destroy:', _data);
      })
 
