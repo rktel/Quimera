@@ -12,7 +12,7 @@ server.on('error',function(error){
 server.on('message', function(msg, info){
     console.log('Data received from client : ' + msg.toString());
     console.log('Received %d bytes from %s:%d\n',msg.length, info.address, info.port);
-    udpStreamer.emit('data', msg.toString('hex'))
+    udpStreamer.emit('galileoskyData', msg.toString('hex'))
 })
 
 server.on('listening',function(){

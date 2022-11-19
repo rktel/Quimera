@@ -2,7 +2,7 @@
     import { formatDate } from '../../../tools'
     import { udpStreamer } from '../../../api/streamers'
     let _data = []
-    udpStreamer.on('data', function(data){
+    udpStreamer.on('galileoskyData', function(data){
         const now = formatDate( new Date() )
         data = now + '>>  ' + data
         _data.splice(0,-1,data)
