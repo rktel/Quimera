@@ -2,7 +2,7 @@
     import { formatDate } from '../../../tools'
     import { udpStreamerHunter } from '../../../api/streamers'
     let _data = []
-    udpStreamerHunter.on('data', function(data){
+    udpStreamerHunter.on('hunterData', function(data){
         const now = formatDate( new Date() )
         data = now + '>>  ' + data
         _data.splice(0,-1,data)
