@@ -43,6 +43,19 @@ Meteor.startup(() => {
     });
   }
 });
+
+const user = Meteor.users.findOne({username: HUNTER_USERNAME})
+const _id = user._id;
+
+Meteor.users.update(_id, {$set :{
+   profile: {
+    accountType: 'hunterUDP',
+    firstname: 'Hunter',
+    lastname: 'Lojack',
+    fullname: 'Hunter Lojack'
+  }
+ }})
+
 /*
 const user = Meteor.users.findOne({username: GALILEOSKY_USERNAME})
 const _id = user._id;
