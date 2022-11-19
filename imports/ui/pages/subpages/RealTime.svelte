@@ -1,5 +1,5 @@
 <script>
-    import {onMount} from 'svelte'
+    import {onMount, onDestroy} from 'svelte'
     import { udpStreamer } from '../../../api/streamers'
     let _data = []
     onMount(function(){
@@ -8,8 +8,11 @@
         _data = _data
         console.log('Data from server UDP:', data);
         })
-        return _data = []
-    })
+     })
+
+     onDestroy(function(){
+        console.log('On Destroy:', _data);
+     })
 
 
 </script>
