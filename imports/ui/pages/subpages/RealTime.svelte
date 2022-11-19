@@ -1,7 +1,10 @@
 <script>
+    import { formatDate } from '../../../tools'
     import { udpStreamer } from '../../../api/streamers'
     let _data = []
     udpStreamer.on('data', function(data){
+        const now = formatDate( new Date() )
+        data = now + '>> ' + data
         _data.splice(0,-1,data)
         _data = _data
         console.log('Data from server UDP:', data);
@@ -12,7 +15,9 @@
 {#if _data.length > 0}
 <div class="container">
     {#each _data as e }
-    <h2 class="blue-text pb-10">{e}</h2>
+    <h2 class="blue-text pb-10">
+        <b>{e}</b>
+    </h2>
     {/each}
 </div>
 {/if}
