@@ -8,6 +8,7 @@
         _data = _data
         console.log('Data from server UDP:', data);
         })
+        return _data = []
     })
 
 
