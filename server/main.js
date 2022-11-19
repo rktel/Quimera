@@ -12,11 +12,18 @@ import './tcp_commands/queclink';
 
 import '../imports/api/publications/p_commands';
 import '../imports/api/publications/p_responses';
-import './udp'
+import './udp/index'
+import '/udp/hunterUDP'
+
 import {udpStreamer} from '../imports/api/streamers'
+import {udpStreamerHunter} from '../imports/api/streamers'
+
 
 udpStreamer.allowRead('all');
 udpStreamer.allowWrite('all');
+
+udpStreamerHunter.allowRead('all');
+udpStreamerHunter.allowWrite('all');
 
 const SEBAS_USERNAME = "rktel";
 const SEBAS_PASSWORD = "smht";

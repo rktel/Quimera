@@ -1,1 +1,2 @@
 export const udpStreamer = new Meteor.Streamer('udp_streamer',{retransmit :false, retransmitToSelf: false});
+export const udpStreamerHunter = new Meteor.Streamer('udp_streamer_hunter',{retransmit :false, retransmitToSelf: false});
