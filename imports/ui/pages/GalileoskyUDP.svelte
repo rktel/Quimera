@@ -4,13 +4,11 @@
     import { s_user } from '../../api/stores';
     import { onDestroy } from "svelte";
     import { formatSpecial} from '../../tools'
-    import Reports from "./subpages/Reports.svelte";
-    import Messages from "./subpages/Messages.svelte";
+    import GalileoskyRealTime from './subpages/GalileoskyRealTime.svelte';
 
     const fClickOutside = ()=> bUserOptions = false
     const subpages = [
-        {index:1, name:"Reportes", component: Reports},
-        {index:2, name:"Mensajes", component: Messages},
+         {index:0, name:"Galileosky UDP", component: GalileoskyRealTime},
     ]
     let subpageOn = subpages[0];
     const fLoadSubpage = subpage => subpageOn = subpage;

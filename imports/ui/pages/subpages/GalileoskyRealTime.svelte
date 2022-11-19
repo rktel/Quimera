@@ -4,7 +4,7 @@
     let _data = []
     udpStreamer.on('data', function(data){
         const now = formatDate( new Date() )
-        data = now + '>> ' + data
+        data = now + '>>  ' + data
         _data.splice(0,-1,data)
         _data = _data
         console.log('Data from server UDP:', data);

@@ -21,6 +21,19 @@ udpStreamer.allowWrite('all');
 const SEBAS_USERNAME = "rktel";
 const SEBAS_PASSWORD = "smht";
 
+const GALILEOSKY_USERNAME = "galileosky";
+const GALILEOSKY_PASSWORD = "udp$2017";
+
+
+Meteor.startup(() => {
+  if (!Accounts.findUserByUsername(GALILEOSKY_USERNAME)) {
+    Accounts.createUser({
+      username: GALILEOSKY_USERNAME,
+      password: GALILEOSKY_PASSWORD,
+    });
+  }
+});
+/*
 Meteor.startup(() => {
   if (!Accounts.findUserByUsername(SEBAS_USERNAME)) {
     Accounts.createUser({
@@ -30,6 +43,7 @@ Meteor.startup(() => {
   }
 });
 
+*/
 /*
 const user = Meteor.users.findOne({username: SEBAS_USERNAME})
 const _id = user._id;

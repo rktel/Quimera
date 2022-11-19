@@ -5,7 +5,7 @@
   import Administrador from "./pages/Administrador.svelte";
   import Home from "./pages/Home.svelte";
   import Login from "./pages/Login.svelte";
-
+  import GalileoskyUDP from './pages/GalileoskyUDP.svelte'
 
 
   import { s_user } from "../api/stores";
@@ -51,6 +51,9 @@
         {/if}
         {#if userPermission === "supervisor"}
          <Home />
+        {/if}
+        {#if userPermission === "galileoskyUDP"}
+          <GalileoskyUDP/>
         {/if}
       </Route>
     </main>
