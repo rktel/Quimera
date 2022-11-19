@@ -8,7 +8,7 @@
 
     const fClickOutside = ()=> bUserOptions = false
     const subpages = [
-         {index:0, name:"Galileosky UDP", component: GalileoskyRealTime},
+         {index:0, name:"Galileosky UDP: 2222", component: GalileoskyRealTime},
     ]
     let subpageOn = subpages[0];
     const fLoadSubpage = subpage => subpageOn = subpage;

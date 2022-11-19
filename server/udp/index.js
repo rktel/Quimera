@@ -1,6 +1,7 @@
 // UDP Server
 const udp = require('dgram')
 const server = udp.createSocket('udp4')
+const PORT = 2222
 import { udpStreamer } from '../../imports/api/streamers'
 
 server.on('error',function(error){
@@ -28,4 +29,4 @@ server.on('listening',function(){
     console.log('Socket is closed !');
   });
 
-  server.bind(2222);
+  server.bind(PORT);
