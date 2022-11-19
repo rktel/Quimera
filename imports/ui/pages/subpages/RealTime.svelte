@@ -4,7 +4,7 @@
     let _data = []
     onMount(function(){
         udpStreamer.on('data', function(data){
-        _data = [...data, ..._data]
+        _data = _data.push(data)
         console.log('Data from server UDP:', data);
         })
     })
