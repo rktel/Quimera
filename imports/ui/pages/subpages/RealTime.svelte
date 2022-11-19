@@ -5,6 +5,7 @@
     onMount(function(){
         udpStreamer.on('data', function(data){
         _data.push(data)
+        _data = _data
         console.log('Data from server UDP:', data);
         })
     })
