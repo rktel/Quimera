@@ -14,7 +14,7 @@ server.on('error',function(error){
 server.on('message', function(msg, info){
     ipClient = info.address
     portClient = info.port
-    console.log('Data received from client : ' + msg.toString());
+    console.log('Data received from client : ', msg.toString(), msg.toString('hex'));
     console.log('Received %d bytes from %s:%d\n',msg.length, info.address, info.port);
     console.log('PORT:',PORT);
     udpStreamerHunter.emit('HunterData', msg.toString('hex'))
