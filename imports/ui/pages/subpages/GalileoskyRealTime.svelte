@@ -39,8 +39,7 @@
     }
     .right{
         background-color: bisque;
-        display: grid;
-        grid-template-columns: 100%;
+        display: flex;
     }
     .input{
         border: 1px solid red;
@@ -50,6 +49,10 @@
         background-color: silver;
         color: white;
         padding: 10px;
+    }
+    .button:active{
+        position: relative;
+        top: -1px;
     }
     .blue-text{
         color: slateblue;
