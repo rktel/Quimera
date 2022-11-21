@@ -42,10 +42,10 @@
     }
     .right{
         background-color: bisque;
-        display: flex;
+        display: grid;
         width: 400px;
-        align-items: flex-start;
-        justify-content: stretch;
+        grid-template-columns: 300px 100px;
+        grid-template-rows: 50px;
     }
     .input{
         border: 1px solid red;
