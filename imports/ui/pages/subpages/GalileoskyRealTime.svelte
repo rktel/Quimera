@@ -43,8 +43,9 @@
     .right{
         background-color: bisque;
         display: flex;
-        width: 300px;
+        width: 400px;
         align-items: flex-start;
+        justify-content: stretch;
     }
     .input{
         border: 1px solid red;
