@@ -22,8 +22,8 @@
         {/each}
     </div>
     <div class="right">
-        <input type="text">
-        <button>Send</button>
+        <input type="text" placeholder="Message" class="input">
+        <button class="button">Send</button>
     </div>
 </div>
 {/if}
@@ -38,7 +38,18 @@
         background-color: aquamarine;
     }
     .right{
-        border-color: bisque;
+        background-color: bisque;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .input{
+        border: 1px solid red;
+        padding: 10px;
+    }
+    .button{
+        background-color: silver;
+        color: white;
+        padding: 10px;
     }
     .blue-text{
         color: slateblue;
