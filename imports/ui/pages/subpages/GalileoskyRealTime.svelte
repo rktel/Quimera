@@ -44,6 +44,7 @@
         background-color: bisque;
         display: flex;
         width: 300px;
+        align-items: flex-start;
     }
     .input{
         border: 1px solid red;
