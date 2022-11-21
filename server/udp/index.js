@@ -22,6 +22,7 @@ server.on('message', function(msg, info){
 //  'rxUDP'
 udpStreamer.on('rxUDP', function(data){
     //const msg = Buffer.from(data, 'hex')
+    console.log('DARA:', data)
     server.send(data,portClient,ipClient,function(error){
       if(error){ 
         client.close();
