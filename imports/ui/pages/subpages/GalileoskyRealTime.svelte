@@ -2,6 +2,7 @@
     import { formatDate } from '../../../tools'
     import { udpStreamer } from '../../../api/streamers'
     let _data = []
+    let message = '';
     udpStreamer.on('galileoskyData', function(data){
         const now = formatDate( new Date() )
         data = now + '>>  ' + data
@@ -9,7 +10,10 @@
         _data = _data
         console.log('Data from server UDP:', data);
     })
-
+    function sendMessage(){
+        if(message.length > 0)
+            udpStreamer.emit('rxUDP', message)
+    }
 </script>
 
 {#if _data.length > 0}
@@ -22,8 +26,8 @@
         {/each}
     </div>
     <div class="right">
-        <input type="text" placeholder="Message" class="input">
-        <button class="button">Send</button>
+        <input type="text" placeholder="Message" class="input" bind:value={message}>
+        <button class="button" on:click={sendMessage}>Send</button>
     </div>
 </div>
 {/if}
