@@ -32,7 +32,7 @@
     .container{
         padding: 20px;
         display: flex;
-
+        background-color: peru;
     }
     .left{
         background-color: aquamarine;
