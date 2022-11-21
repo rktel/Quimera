@@ -13,7 +13,7 @@
 </script>
 
 {#if _data.length > 0}
-<div class="container">
+<div class="full">
     <div class="left">
         {#each _data as e }
         <h2 class="blue-text pb-10">
@@ -29,7 +29,7 @@
 {/if}
 
 <style>
-    .container{
+    .full{
         padding: 20px;
         width: 100%;
         height: calc(100vh - 60px);
