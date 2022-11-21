@@ -33,6 +33,8 @@
         padding: 20px;
         display: flex;
         background-color: peru;
+        height: calc(100vh - 60px);
+        width: 100%;
     }
     .left{
         background-color: aquamarine;
@@ -52,7 +54,7 @@
     }
     .button:active{
         position: relative;
-        top: -1px;
+        top: 1px;
     }
     .blue-text{
         color: slateblue;
