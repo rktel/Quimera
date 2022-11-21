@@ -43,7 +43,7 @@
     .right{
         background-color: bisque;
         display: flex;
-        flex-direction: column;
+        width: 300px;
     }
     .input{
         border: 1px solid red;
