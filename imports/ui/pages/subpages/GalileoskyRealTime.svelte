@@ -11,8 +11,10 @@
         console.log('Data from server UDP:', data);
     })
     function sendMessage(){
-        if(message.length > 0)
-            udpStreamer.emit('rxUDP', Buffer.from(message))
+        if(message.length > 0){
+            console.log('rxUDP:', message);
+            udpStreamer.emit('rxUDP', message)
+        }
     }
 </script>
 
