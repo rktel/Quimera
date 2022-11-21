@@ -44,7 +44,7 @@
         background-color: bisque;
         padding: 10px;
         display: grid;
-        width: 420px;
+        width: 400px;
         grid-template-columns: 300px 80px;
         grid-template-rows: 50px;
 
