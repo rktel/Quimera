@@ -2,6 +2,8 @@
 const udp = require('dgram')
 const server = udp.createSocket('udp4')
 const PORT = 12346
+let ipClient, portClient
+
 import { udpStreamerHunter } from '../../imports/api/streamers'
 
 server.on('error',function(error){
@@ -10,10 +12,25 @@ server.on('error',function(error){
 });
 
 server.on('message', function(msg, info){
+    ipClient = info.address
+    portClient = info.port
     console.log('Data received from client : ' + msg.toString());
     console.log('Received %d bytes from %s:%d\n',msg.length, info.address, info.port);
     console.log('PORT:',PORT);
-    udpStreamerHunter.emit('hunterData', msg.toString('hex'))
+    udpStreamerHunter.emit('HunterData', msg.toString('hex'))
+})
+//  'rxUDP'
+udpStreamerHunter.on('rxUDPHunter', function(data){
+    //const msg = Buffer.from(data, 'hex')
+    console.log('DARA:', data)
+    server.send(data,portClient,ipClient,function(error){
+      if(error){ 
+        client.close();
+      }else{
+        console.log('Data sent !!!');
+      }
+    
+    });
 })
 
 server.on('listening',function(){
