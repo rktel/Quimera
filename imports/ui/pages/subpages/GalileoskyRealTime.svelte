@@ -38,13 +38,16 @@
     }
     .left{
         background-color: aquamarine;
+        padding: 10px;
     }
     .right{
         background-color: bisque;
+        padding: 10px;
         display: grid;
         width: 400px;
         grid-template-columns: 300px 100px;
         grid-template-rows: 50px;
+
     }
     .input{
         border: 1px solid red;
