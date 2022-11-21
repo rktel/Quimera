@@ -33,7 +33,6 @@
         padding: 20px;
         width: 100%;
         height: calc(100vh - 60px);
-        display: flex;
         background-color: peru;
     }
     .left{
