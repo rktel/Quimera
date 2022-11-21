@@ -35,6 +35,7 @@
         height: calc(100vh - 60px);
         background-color: peru;
         display: flex;
+        justify-content: space-between;
     }
     .left{
         background-color: aquamarine;
