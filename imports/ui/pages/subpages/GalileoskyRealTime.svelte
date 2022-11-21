@@ -31,8 +31,8 @@
 <style>
     .container{
         padding: 20px;
-        display: grid;
-        grid-template-columns: 90% 10%;
+        display: flex;
+
     }
     .left{
         background-color: aquamarine;
