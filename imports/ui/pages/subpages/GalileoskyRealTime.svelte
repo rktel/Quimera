@@ -42,6 +42,8 @@
     }
     .right{
         background-color: bisque;
+        display: flex;
+        flex-direction: column;
     }
     .input{
         border: 1px solid red;
