@@ -14,17 +14,31 @@
 
 {#if _data.length > 0}
 <div class="container">
-    {#each _data as e }
-    <h2 class="blue-text pb-10">
-        <b>{e}</b>
-    </h2>
-    {/each}
+    <div class="left">
+        {#each _data as e }
+        <h2 class="blue-text pb-10">
+            <b>{e}</b>
+        </h2>
+        {/each}
+    </div>
+    <div class="right">
+        <input type="text">
+        <button>Send</button>
+    </div>
 </div>
 {/if}
 
 <style>
     .container{
         padding: 20px;
+        display: grid;
+        grid-template-columns: 90% 10%;
+    }
+    .left{
+        background-color: aquamarine;
+    }
+    .right{
+        border-color: bisque;
     }
     .blue-text{
         color: slateblue;
