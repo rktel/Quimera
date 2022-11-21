@@ -23,7 +23,7 @@ server.on('message', function(msg, info){
 udpStreamer.on('rxUDP', function(data){
     const msg = Buffer.from(data, 'hex')
     server.send(msg,portClient,ipClient,function(error){
-      if(error){
+      if(error){ 
         client.close();
       }else{
         console.log('Data sent !!!');
