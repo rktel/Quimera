@@ -31,17 +31,16 @@
 <style>
     .container{
         padding: 20px;
+        width: 100%;
+        height: calc(100vh - 60px);
         display: flex;
         background-color: peru;
-        height: calc(100vh - 60px);
-        width: 100%;
     }
     .left{
         background-color: aquamarine;
     }
     .right{
         background-color: bisque;
-        display: flex;
     }
     .input{
         border: 1px solid red;
