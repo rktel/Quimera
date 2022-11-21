@@ -17,12 +17,12 @@ server.on('message', function(msg, info){
     console.log('Data received from client : ' + msg.toString());
     console.log('Received %d bytes from %s:%d\n',msg.length, info.address, info.port);
     console.log('PORT:',PORT);
-    udpStreamer.emit('galileoskyData', msg.toString('hex'))
+    udpStreamer.emit('galileoskyData', msg)
 })
 //  'rxUDP'
 udpStreamer.on('rxUDP', function(data){
-    const msg = Buffer.from(data, 'hex')
-    server.send(msg,portClient,ipClient,function(error){
+    //const msg = Buffer.from(data, 'hex')
+    server.send(data,portClient,ipClient,function(error){
       if(error){ 
         client.close();
       }else{

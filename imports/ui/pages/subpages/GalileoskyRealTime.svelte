@@ -12,7 +12,7 @@
     })
     function sendMessage(){
         if(message.length > 0)
-            udpStreamer.emit('rxUDP', message)
+            udpStreamer.emit('rxUDP', Buffer.from(message))
     }
 </script>
 
